@@ -1,0 +1,59 @@
+//? main styles
+
+@import "styles/fonts";
+@import "styles/mixins";
+
+//colors
+$white: #fafafa;
+$black: #2b2b2b;
+
+$main-blue: #00afff;
+$light-blue: #36c0ff;
+$dark-blue: #009ee6;
+$sky-blue: #37bdfd;
+
+$blue: #dce2ff;
+$grey: #878787;
+$red: #ff0000;
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape & safari*/
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+main {
+	position: relative;
+	flex: 1 1 auto;
+	@include transition(0.3s ease-out 0s);
+	margin-top: 122px;
+	@include lg-max {
+		margin-top: 138px;
+	}
+	@include md-max {
+		margin-top: 109px;
+	}
+	@include sm-max {
+		margin-top: 64px;
+	}
+}
+
+// @import "typografy";
+
+//?include header=======================================================================================================//
+@import "parts/header";
+//?=====================================================================================================================//
+
+//!main styles==========================================================================================================//
+@import "styles";
+//!=====================================================================================================================//
+
+//?include footer=======================================================================================================//
+@import "parts/footer";
+//?=====================================================================================================================//

@@ -1,0 +1,1681 @@
+//reset style
+*:focus {
+	//відключення focus bootstrap
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+textarea {
+	resize: none;
+}
+input {
+	min-width: 50px;
+	&::-ms-clear {
+		display: none;
+	}
+	&::-ms-reveal {
+		display: none;
+	}
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		display: none;
+	}
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		transition: background-color 9999s ease-in-out 0s;
+	}
+}
+// width auto input
+.buffer {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	visibility: hidden;
+	white-space: nowrap;
+}
+
+//typografy
+a {
+	@include transition(0.3s ease-out 0s);
+	&:hover {
+		text-decoration: none;
+	}
+}
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+svg {
+	width: 24px;
+	height: 24px;
+}
+hr {
+	width: 100%;
+}
+h1,
+.h1 {
+	font-size: 60px;
+	line-height: 72px;
+	&.font-m,
+	.seo & {
+		@include md-max {
+			font-size: 50px;
+			line-height: 62px;
+		}
+	}
+}
+h2,
+.h2 {
+	font-size: 42px;
+	line-height: 50px;
+	&.font-m,
+	.seo & {
+		@include md-max {
+			font-size: 32px;
+			line-height: 40px;
+		}
+	}
+}
+h3,
+.h3 {
+	font-size: 32px;
+	line-height: 39px;
+	&.font-m,
+	.seo & {
+		@include md-max {
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+}
+.h3-m {
+	font-size: 24px;
+	line-height: 30px;
+	@include lg-max {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+}
+h4,
+.h4 {
+	font-size: 22px;
+	line-height: 28px;
+	&.font-m,
+	.seo & {
+		@include md-max {
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+	}
+}
+h5,
+.h5 {
+	font-size: 16px;
+	line-height: 24px;
+	&.font-m,
+	.seo & {
+		@include md-max {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}
+p {
+	font-size: 14px;
+	line-height: 20px;
+	&.font-m,
+	.seo & {
+		&.font-m {
+			@include md-max {
+				font-size: 12px;
+				line-height: 18px;
+			}
+		}
+	}
+}
+.small-txt {
+	font-size: 12px;
+	line-height: 18px;
+}
+.small-txt--descr {
+	font-size: 10px;
+	line-height: 14px;
+}
+.list-inline-item {
+	&:not(:last-child) {
+		@include lg-max {
+			margin-right: 18px;
+		}
+	}
+}
+.btn {
+	white-space: nowrap;
+	&.btn-text {
+		&:hover {
+			color: $main-blue;
+		}
+	}
+	&.btn-default {
+		&:not(:disabled) {
+			&:hover {
+				border-color: $light-blue;
+				background: $light-blue;
+			}
+			&:active,
+			&:focus {
+				border-color: $dark-blue;
+				background: $dark-blue;
+			}
+		}
+		&:disabled {
+			border-color: $grey;
+			background: $grey;
+			opacity: 1;
+			cursor: not-allowed;
+		}
+	}
+	&.btn-indent {
+		padding-left: 20px;
+		padding-right: 20px;
+		@include md-max {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
+	&-ahead {
+		position: relative;
+		width: max-content;
+		color: $white;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 0;
+			height: 4px;
+			background-color: $white;
+		}
+		&:hover {
+			text-decoration: none;
+			&::after {
+				width: 100%;
+				background: $black;
+			}
+		}
+	}
+	&-chat-bot {
+		color: $main-blue;
+		background: $light-blue;
+		padding: 4px 10px;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		svg {
+			width: 24px;
+			height: 24px;
+			margin-right: 4px;
+		}
+	}
+	&-underline {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			border-top: 1px solid;
+			width: 100%;
+		}
+	}
+}
+.btn-review-add-pic {
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+	&::after {
+		left: 32px;
+	}
+	&:hover {
+		text-decoration: none;
+		&::after {
+			width: calc(100% - 32px);
+			background: $main-blue;
+		}
+	}
+}
+.container-wrap {
+	max-width: 1440px;
+}
+.bg-down {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
+.popup-bg-body {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.48);
+	top: 0;
+	left: 0;
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(0.3s ease-out 0s);
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.popup-bg-body.open {
+	opacity: 1;
+	visibility: visible;
+}
+.lock {
+	overflow: hidden;
+}
+//field //input
+.field {
+	&.field-2 {
+		.form-control {
+			border: 1px solid $blue;
+		}
+		label {
+			color: $grey;
+		}
+		//select
+		.select2-container {
+			.select2-selection {
+				border: 1px solid $blue;
+			}
+		}
+	}
+	&.field--error {
+		//select
+		.select2-container {
+			.select2-selection {
+				border: 1px solid $red;
+			}
+		}
+		.form-control {
+			border: 1px solid $red;
+			background: $blue;
+			&:hover,
+			&:focus,
+			&:not(:placeholder-shown) {
+				border: 1px solid $red !important;
+				background: $blue;
+			}
+		}
+		label {
+			display: none;
+		}
+		.field--help-info {
+			display: block;
+		}
+	}
+	.field--help-info {
+		display: none;
+	}
+	.form-control {
+		background: $white;
+		color: $black;
+		border-radius: 100px;
+		border: 1px solid transparent;
+		padding: 13px 23px;
+		height: 100%;
+		height: 48px;
+		min-width: 100%;
+		&::placeholder {
+			font-size: 16px;
+			line-height: 24px;
+			color: $grey;
+		}
+		&:not(:placeholder-shown) {
+			//коли заповнено хоча б один символ
+			border: 1px solid $blue !important;
+			background: $white;
+		}
+		&:focus {
+			border: 1px solid $blue !important;
+			background: $white;
+		}
+		&:hover {
+			border: 1px solid $blue;
+		}
+	}
+	&.field-compete {
+		.form-control {
+			border: unset !important;
+			padding: 0;
+			background: unset !important;
+			height: auto !important;
+			border-radius: 0;
+			&:active,
+			&:hover,
+			&:focus {
+				outline: 0;
+				outline-offset: 0;
+			}
+		}
+	}
+	textarea {
+		&.form-control {
+			border-radius: 20px;
+			padding: 13px 24px;
+			background: $white;
+		}
+	}
+	.select2-container {
+		width: 100% !important;
+		.select2-selection {
+			border: 1px solid transparent;
+			border-radius: 30px;
+			height: 48px;
+			min-width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 16px;
+			line-height: 24px;
+			color: $grey;
+			padding: 13px 23px;
+			background: $white;
+			.select2-selection__rendered {
+				padding-left: 0;
+				padding-right: 0;
+				color: $grey;
+			}
+			.select2-selection__arrow {
+				all: unset;
+				b {
+					all: unset;
+					&::after {
+						content: "";
+						display: block;
+						margin: 0;
+						border: none;
+						width: 16px;
+						height: 16px;
+						margin-left: 5px;
+						position: relative;
+						background: url(../img/icons/icons.svg#i-arrow-two-right-static) no-repeat center;
+						background-size: cover;
+						@include transition(0.3s ease-out 0s);
+					}
+				}
+			}
+			.select2-results__option {
+				font-size: 16px;
+				line-height: 24px;
+				color: $grey;
+				padding: 13px 23px;
+				background: $white;
+			}
+		}
+		&.select2-container--open {
+			&.select2-container--below {
+				.select2-selection {
+					border-radius: 20px 20px 0 0;
+					border-bottom: 1px solid $blue;
+				}
+				.select2-selection__arrow {
+					b {
+						&::after {
+							transform: rotate(90deg);
+						}
+					}
+				}
+			}
+			&.select2-container--above {
+				.select2-selection {
+					border-radius: 0 0 20px 20px;
+					border-top: 1px solid $blue;
+				}
+				.select2-selection__arrow {
+					b {
+						&::after {
+							transform: rotate(-90deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.select2-container {
+	.select2-dropdown {
+		&.select2-dropdown--below {
+			border-radius: 0 0 20px 20px;
+			overflow: hidden;
+			border: none;
+			border: 1px solid $blue;
+			border-top: none;
+		}
+		&.select2-dropdown--above {
+			border-radius: 20px 20px 0 0;
+			overflow: hidden;
+			border: none;
+			border: 1px solid $blue;
+			border-bottom: none;
+		}
+		.select2-results__option {
+			color: $grey;
+			background: $white;
+			padding: 13px 23px;
+		}
+		.select2-results__option--selected,
+		.select2-results__option--highlighted.select2-results__option--selectable {
+			background: $light-blue;
+		}
+	}
+}
+//checkbox
+.custom-control {
+	&.custom-checkbox {
+		padding-left: 0;
+		margin-bottom: 15px;
+		.custom-control-label {
+			font-size: 16px;
+			line-height: 24px;
+			padding: 3px 0;
+			padding-left: 32px;
+			border-radius: 2px;
+			cursor: pointer;
+			&::after,
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 5px;
+				width: 20px;
+				height: 20px;
+				@include transition(0.3s ease-out 0s);
+				filter: invert(99%) sepia(54%) saturate(21%) hue-rotate(266deg) brightness(118%) contrast(96%);
+			}
+			&::after {
+				background: url(../img/icons/icons.svg#i-check-static) no-repeat center;
+				background-size: cover;
+				opacity: 0;
+				visibility: hidden;
+			}
+			&::before {
+				background: url(../img/icons/icons.svg#i-check-empty-static) no-repeat center;
+				background-size: cover;
+				border-radius: unset;
+				border: unset;
+			}
+			@include xl-min {
+				&:hover {
+					&:after {
+						opacity: 1;
+						visibility: visible;
+						@include transition(0.3s ease-out 0s);
+					}
+					&::before {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+			.custom-checkbox--help-info {
+				display: none;
+			}
+			span {
+				display: block;
+				&.small-txt {
+					margin-top: 2px;
+				}
+				a {
+					color: $white;
+					&:hover {
+						color: $black;
+					}
+				}
+			}
+		}
+		.custom-control-input {
+			&:focus ~ .custom-control-label::before {
+				box-shadow: unset;
+			}
+			&:focus:not(:checked) ~ .custom-control-label::before {
+				// border-color: $white;
+			}
+			&:not(:disabled):active ~ .custom-control-label::before {
+				// background-color: $white;
+				// border-color: $white;
+			}
+			&:checked ~ .custom-control-label {
+				&::before {
+					opacity: 0;
+					visibility: hidden;
+				}
+				&::after {
+					background: url(../img/icons/icons.svg#i-check-static) no-repeat center;
+					background-size: cover;
+					opacity: 1;
+					visibility: visible;
+					@include transition(0.3s ease-out 0s);
+				}
+			}
+		}
+		&.custom-checkbox--error {
+			.custom-control-label {
+				.custom-checkbox--help-info {
+					display: block;
+				}
+				.custom-checkbox--help-info {
+					color: $red;
+				}
+			}
+		}
+	}
+	&.custom-checkbox-2 {
+		.custom-control-label {
+			&::before,
+			&::after {
+				filter: unset;
+			}
+			span a {
+				color: $black;
+				&:hover {
+					color: $main-blue;
+				}
+			}
+		}
+	}
+}
+//radio
+.choose-radio {
+	.custom-control {
+		padding-left: 0;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+	.custom-control-input {
+		cursor: pointer;
+	}
+	.custom-control-label {
+		padding-left: 48px;
+		width: 100%;
+		cursor: pointer;
+		&:before,
+		&:after {
+			position: absolute;
+			left: 0;
+			top: 5px;
+			width: 20px;
+			height: 20px;
+			@include transition(0.3s ease-out 0s);
+		}
+		&::after {
+			background: url(../img/icons/icons.svg#i-check-static) no-repeat center;
+			background-size: cover;
+			opacity: 0;
+			visibility: hidden;
+		}
+		&::before {
+			background: url(../img/icons/icons.svg#i-check-empty-static) no-repeat center;
+			background-size: cover;
+			border-radius: unset;
+			border: unset;
+		}
+	}
+	.custom-control-input:checked ~ .custom-control-label {
+		&::before {
+			opacity: 0;
+			visibility: hidden;
+		}
+		&::after {
+			background: url(../img/icons/icons.svg#i-check-static) no-repeat center;
+			background-size: cover;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.custom-control-input {
+		&:checked ~ .custom-control-label::after {
+		}
+		&:focus ~ .custom-control-label::before {
+			box-shadow: none;
+		}
+		&:focus:not(:checked) ~ .custom-control-label::before {
+		}
+		&:hover:not(:checked) ~ .custom-control-label {
+			&::before {
+				opacity: 0;
+				visibility: hidden;
+			}
+			&::after {
+				background: url(../img/icons/icons.svg#i-check-static) no-repeat center;
+				background-size: cover;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&:not(:disabled):active ~ .custom-control-label::before {
+		}
+	}
+}
+//range
+.slider-range {
+	.currency {
+		font-size: 12px;
+		line-height: 22px;
+		padding: 14px;
+		background: rgba(228, 228, 235, 0.3);
+		border-right: 1px solid $grey;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.rangeSlider {
+		background: transparent;
+		margin: 20px 14px;
+		border-radius: 0;
+		z-index: 2;
+		&.range {
+			.rangeNub {
+				border-radius: 50% !important;
+				transform: unset !important;
+				background: $white;
+				box-shadow:
+					0px 0.5px 4px rgba(0, 0, 0, 0.12),
+					0px 6px 13px rgba(0, 0, 0, 0.12);
+			}
+		}
+		.rangeHandle {
+			width: 28px;
+			height: 28px;
+			cursor: grab;
+			&::before {
+				box-shadow:
+					0px 0.5px 4px rgba(0, 0, 0, 0.12),
+					0px 6px 13px rgba(0, 0, 0, 0.12);
+				border-radius: 50%;
+			}
+			&.active {
+				.rangeNub {
+					background: $white;
+				}
+			}
+		}
+		.rangeBar {
+			background: $main-blue !important;
+			height: 4px;
+		}
+		&.focus {
+			.rangeFloat {
+				background: $blue;
+				color: $main-blue;
+			}
+		}
+		&.hoverable:not(.disabled) {
+			.rangeHandle:hover:before {
+				box-shadow: 0 0 0 8px $blue;
+				border-radius: 50%;
+				opacity: 1;
+			}
+			.rangeHandle.press:before,
+			.rangeHandle.press:hover:before {
+				box-shadow: 0 0 0 12px $blue;
+				opacity: 0.9;
+			}
+		}
+	}
+	.rangeBar-full,
+	.rangeBar-line-start {
+		height: 4px;
+		border-radius: 2px;
+		position: absolute;
+		top: 0px;
+		z-index: 1;
+	}
+	.rangeBar-line-start {
+		width: 18px;
+		left: 0;
+		background: $main-blue;
+	}
+	.rangeBar-full {
+		width: 100%;
+		background: rgba(250, 250, 250, 0.5);
+	}
+	&.price-slider-full-m {
+		.currency-wrap {
+			gap: 0 !important;
+		}
+	}
+}
+//breadcrumb
+.breadcrumb {
+	background: transparent;
+	padding: 0;
+	row-gap: 10px;
+	@include md-max {
+		justify-content: center;
+	}
+	.breadcrumb-item {
+		font-size: 12px;
+		line-height: 18px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		&.active {
+			color: $grey;
+		}
+		+ .breadcrumb-item {
+			padding-left: 0;
+			margin-left: 4px;
+			&::before {
+				all: unset;
+				content: "";
+				display: block;
+				margin: 0;
+				border: none;
+				width: 16px;
+				height: 16px;
+				margin-right: 4px;
+				position: relative;
+				background: url(../img/icons/icons.svg#i-arrow-two-right-static) no-repeat center;
+				background-size: cover;
+			}
+		}
+		a {
+			&:hover {
+				text-decoration: unset;
+				color: $main-blue;
+			}
+		}
+	}
+}
+//spoiler
+.hidden-text {
+	overflow: hidden;
+}
+//swiper arrow
+.button-slider-prev,
+.button-slider-next {
+	cursor: pointer;
+	svg {
+		width: 32px;
+		height: 21px;
+		stroke: $black;
+	}
+	&:not(.swiper-button-disabled):hover {
+		svg {
+			stroke: $main-blue;
+		}
+	}
+	&.swiper-button-disabled {
+		cursor: default;
+		svg {
+			opacity: 0.3;
+			stroke: $grey;
+		}
+	}
+}
+.button-slider-prev {
+	transform: scaleX(-1);
+}
+.swiper-buttons {
+	display: flex;
+	gap: 24px;
+}
+//modal
+.modal--custom {
+	z-index: 1065;
+	&.modal--custom-2 {
+		.close {
+			svg {
+				height: 24px;
+				width: 24px;
+			}
+		}
+	}
+	&.popup-write-review {
+		.modal-content {
+			padding: 32px;
+			@include md-max {
+				padding: 32px 16px;
+			}
+			.card-review--star {
+				.star {
+					cursor: pointer;
+				}
+			}
+		}
+		.field {
+			.small-txt {
+				color: $grey;
+			}
+		}
+	}
+	&.popup-qr-code {
+		.modal-dialog {
+			max-width: 440px;
+		}
+		.modal-content {
+			border-radius: 20px;
+			padding: 32px;
+			background: #ffffff;
+			.content {
+				img {
+					max-width: 256px;
+					height: 256px;
+					margin: 0 auto;
+					margin-bottom: 16px;
+				}
+				svg {
+					width: 32px;
+					height: 32px;
+					margin-right: 12px;
+				}
+			}
+		}
+	}
+	&.popup-user-ipn {
+		.modal-dialog {
+			max-width: 600px;
+		}
+	}
+	&.popup-add-insurance-case {
+		.modal-dialog {
+			max-width: 960px;
+		}
+	}
+}
+//fancybox gallery
+.fancybox__toolbar {
+	.btn-fancybox-close {
+		svg {
+			fill: $white;
+			stroke-width: 0;
+		}
+	}
+}
+.fancybox__nav {
+	.is-next,
+	.is-prev {
+		width: 96px;
+		height: 96px;
+		@include sm-max {
+			width: 50px;
+			height: 50px;
+		}
+		svg {
+			width: inherit;
+			height: inherit;
+			border-radius: 50%;
+			border: 2px solid $main-blue;
+			stroke: $main-blue;
+			padding: 20px;
+			@include sm-max {
+				padding: 10px;
+			}
+		}
+		&:hover {
+			svg {
+				background: $white;
+				border-color: $white;
+			}
+		}
+	}
+	.is-prev {
+		transform: scaleX(-1) translateY(-50%) !important;
+	}
+}
+.fancybox__container {
+	--fancybox-bg: rgba(24, 24, 27, 0.8);
+	.f-button {
+		background: inherit;
+		&:hover {
+			background: rgba(24, 24, 27, 0.65);
+		}
+	}
+}
+//seo
+.seo {
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin-bottom: 25px;
+	}
+	a {
+		color: $main-blue;
+		&:hover {
+			color: $dark-blue;
+		}
+	}
+	#seo-wrapper {
+		@include md-max {
+			max-height: 400px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			/* полоса прокрутки (скроллбар) */
+			&::-webkit-scrollbar {
+				width: 4px; /* ширина для вертикального скролла */
+				height: 4px; /* высота для горизонтального скролла */
+				background-color: $light-blue;
+				border-radius: 20px;
+			}
+			/* ползунок скроллбара */
+			&::-webkit-scrollbar-thumb {
+				background-color: $main-blue;
+				border-radius: 20px;
+			}
+		}
+	}
+}
+//section-top
+.section-top {
+	.container-wrap {
+		overflow: hidden;
+	}
+	.section-top--content {
+		min-height: 384px;
+		@include md-max {
+			min-height: 100%;
+		}
+	}
+	.section-top--img {
+		@include md-max {
+			margin: 0 -16px;
+			.bg-wrap {
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 1;
+					background: rgba(0, 0, 0, 0.3);
+				}
+			}
+		}
+	}
+	.wrap-img {
+		border-radius: 20px 0px 0px 20px;
+		overflow: hidden;
+		position: absolute;
+		height: 384px;
+		width: calc(100% + 56px);
+		@include md-max {
+			position: relative;
+			width: 100%;
+			border-radius: unset;
+		}
+	}
+	.vidznaki-ta-nagorodi-page &,
+	.kerivnicztvo-kompanii-page &,
+	.umovy-dogovoriv-strahuvannya-page &,
+	.strahovi-taryfy-page &,
+	.pravyla-strahuvannya-page & {
+		.h1 {
+			@include xl-max {
+				font-size: 42px;
+				line-height: 50px;
+			}
+			@include md-max {
+				font-size: 32px;
+				line-height: 40px;
+			}
+		}
+	}
+}
+//section-top--down
+.section-top--down {
+	.section-top--content {
+		min-height: 100%;
+		.section-top--info {
+			@include md-max {
+				margin-bottom: 350px !important;
+			}
+		}
+	}
+	.section-top--item {
+		position: relative;
+		z-index: 2;
+	}
+	.section-top--img {
+		&.section-top--img-bg {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 1;
+				background: rgba(0, 0, 0, 0.4);
+			}
+		}
+	}
+	.wrap-img {
+		width: 100%;
+		height: 100%;
+		border-radius: unset;
+		top: 0;
+		@include md-max {
+			position: absolute;
+			left: 0;
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 55%;
+			height: 250%;
+			border-radius: 0 50% 50% 0;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0px;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			@include md-max {
+				width: 150%;
+				height: 60%;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				border-radius: 0 0 50% 50%;
+			}
+		}
+		&::before {
+			background: linear-gradient(90deg, $white 40%, rgb(43 45 130 / 0) 75%);
+			@include md-max {
+				background: linear-gradient(180deg, $white 65%, rgb(43 45 130 / 0) 85%);
+			}
+		}
+		&::after {
+			background: $white;
+			filter: blur(130px);
+			@include md-max {
+				filter: blur(40px);
+			}
+			@include xs-max {
+				filter: blur(70px);
+			}
+		}
+		.bg-down {
+			top: 50%;
+			right: 0;
+			left: unset;
+			transform: translateY(-50%);
+			min-width: 0;
+			.osago-page & {
+				width: 125%;
+				object-position: 460px 85%;
+				@include lg-max {
+					width: 100%;
+					object-position: 30px 85%;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 49% 40px;
+				}
+			}
+			.casco-page & {
+				width: 80%;
+				object-position: 70px 50%;
+				@include lg-max {
+					width: 110%;
+					object-position: 140px 85%;
+				}
+				@include md-max {
+					width: 120%;
+					object-position: 70px 60px;
+				}
+				@include xs-max {
+					width: 280%;
+					object-position: 260px 90px;
+				}
+			}
+			.povniy-zhytlozahyst-page & {
+				width: 80%;
+				object-position: 70px 40%;
+				@include lg-max {
+					width: 110%;
+					object-position: 30px -120px;
+				}
+				@include md-max {
+					object-position: 50% -90px;
+				}
+				@include xs-max {
+					object-position: 50% 140px;
+				}
+			}
+			.strahuvannya-mayna-page & {
+				width: 80%;
+				object-position: 20px -30px;
+				@include lg-max {
+					object-position: 20px 0px;
+					width: 95%;
+				}
+				@include md-max {
+					object-position: 0px 90px;
+					width: 100%;
+				}
+				@include xs-max {
+					object-position: -270px 180px;
+				}
+			}
+			.strahuvanya-vidpovidalnosti-page & {
+				width: 70%;
+				object-position: 20px -40px;
+				@include lg-max {
+					object-position: 60px -130px;
+					width: 105%;
+				}
+				@include md-max {
+					object-position: 0 -50px;
+					width: 100%;
+				}
+				@include xs-max {
+					object-position: -300px 50px;
+				}
+			}
+			.minicasco-page &,
+			.eurocasco-page & {
+				width: 80%;
+				object-position: 0px -60px;
+				@include lg-max {
+					object-position: 0px -30px;
+				}
+				@include md-max {
+					object-position: 0 150px;
+					width: 100%;
+				}
+				@include xs-max {
+					object-position: -300px 210px;
+				}
+			}
+			.full-auto-protection-page & {
+				width: 100%;
+				object-position: 300px 0px;
+				@include lg-max {
+					width: 130%;
+					object-position: 330px 0px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: -270px 220px;
+				}
+			}
+			.medychna-strahovka-page & {
+				width: 100%;
+				object-position: 0 bottom;
+				@include lg-max {
+					width: 120%;
+				}
+				@include md-max {
+					width: 130%;
+				}
+				@include sm-max {
+					object-position: -100px bottom;
+				}
+				@include xs-max {
+					width: 270%;
+					object-position: 120px bottom;
+				}
+			}
+			.tas-territoriya-zdorovya-page & {
+				width: 75%;
+				object-position: top;
+				@include lg-max {
+					width: 130%;
+					object-position: 470px -80px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: left 240px;
+				}
+				@include xs-max {
+					width: 140%;
+					object-position: 60px 240px;
+				}
+			}
+			.strahuvannya-zdorovya-na-vypadok-hvoroby-page & {
+				width: 85%;
+				object-position: 0px bottom;
+				@include lg-max {
+					width: 95%;
+					object-position: 50px -80px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: left 100px;
+				}
+				@include xs-max {
+					width: 140%;
+					object-position: 110px 180px;
+				}
+			}
+			.tas-doctor-medicinskoe-strahovanie-page & {
+				width: 95%;
+				object-position: 200px -160px;
+				@include lg-max {
+					width: 95%;
+					object-position: 40px 50px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 230px;
+				}
+				@include xs-max {
+					object-position: 50% 270px;
+				}
+			}
+			.strahuvannya-vid-neshhasnogo-vypadku-page & {
+				transform: scaleX(-1) translateY(-50%);
+				width: 100%;
+				object-position: -100px -270px;
+				@include lg-max {
+					transform: translateY(-50%);
+					width: 105%;
+					object-position: 40px -200px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 230px;
+				}
+				@include xs-max {
+					object-position: 40% 170px;
+				}
+			}
+			.strahuvannya-vid-neshhasnogo-vypadku-na-transporti-page & {
+				width: 90%;
+				object-position: 0px -40px;
+				@include lg-max {
+					width: 105%;
+					object-position: 40px -40px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 140px;
+				}
+				@include xs-max {
+					object-position: 55% 220px;
+				}
+			}
+			.green-card-page & {
+				width: 80%;
+				object-position: 90px -140px;
+				@include lg-max {
+					width: 105%;
+					object-position: 180px 0px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 140px;
+				}
+				@include xs-max {
+					object-position: 55% 180px;
+				}
+			}
+			.strahovanie-podorozhey-za-kordon-page & {
+				transform: scaleX(-1) translateY(-50%);
+				width: 80%;
+				object-position: -40px -100px;
+				@include lg-max {
+					transform: translateY(-50%);
+					width: 130%;
+					object-position: 430px -180px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 30% 230px;
+				}
+				@include xs-max {
+					object-position: 20% 170px;
+				}
+			}
+			.strahovanie-podorozhey-po-ukraini-page & {
+				width: 130%;
+				object-position: 300px 80%;
+				@include lg-max {
+					width: 105%;
+					object-position: 180px 50%;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 140px;
+				}
+				@include xs-max {
+					object-position: 45% 150px;
+				}
+			}
+			.dobrovilne-medichne-strahuvannya-page & {
+				width: 100%;
+				object-position: 100px 80%;
+				@include lg-max {
+					width: 115%;
+					object-position: 230px 70%;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 60% 100px;
+				}
+				@include xs-max {
+					object-position: 45% 150px;
+				}
+			}
+			.strahuvannya-spivrobitnikiv-vid-neshhasnogo-vypadku-page & {
+				width: 80%;
+				object-position: 50px 80%;
+				@include lg-max {
+					width: 145%;
+					object-position: 430px 60%;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 60% 100px;
+				}
+				@include xs-max {
+					object-position: 47% 90px;
+				}
+			}
+			.strahuvannya-na-vypadok-zahvoryuvannya-page & {
+				width: 80%;
+				object-position: 50px 50%;
+				@include lg-max {
+					width: 125%;
+					object-position: 277px 40%;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 180px;
+				}
+				@include xs-max {
+					object-position: 60% 180px;
+				}
+			}
+			.strahuvannya-spivrobitnikiv-vid-neshhasnogo-vypadku-na-transpotri-business-page & {
+				width: 100%;
+				object-position: 50px 20%;
+				@include lg-max {
+					width: 105%;
+					object-position: 130px -30px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 240px;
+				}
+				@include xs-max {
+					object-position: 50% 260px;
+				}
+			}
+			.povniy-biznes-zahyst-page &,
+			.strahuvannya-obladnannya-page & {
+				width: 90%;
+				object-position: 100px 40%;
+				@include lg-max {
+					width: 85%;
+					object-position: 70px -60px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 140px;
+				}
+				@include xs-max {
+					object-position: 50% 160px;
+				}
+			}
+			.strahuvannya-mayna-yurydychnyh-osib-page & {
+				width: 90%;
+				object-position: 100px 40%;
+				@include lg-max {
+					width: 85%;
+					object-position: 0 0;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% 200px;
+				}
+				@include xs-max {
+					object-position: 50% 260px;
+				}
+			}
+			.strahuvannya-budivelno-montazhnyh-robit-page & {
+				width: 80%;
+				object-position: 0px 40%;
+				@include lg-max {
+					width: 85%;
+					object-position: 0 0;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 70% 200px;
+				}
+				@include xs-max {
+					object-position: 80% 260px;
+				}
+			}
+			.strahuvannya-vantazhiv-v-ukraini-page & {
+				width: 80%;
+				object-position: 0px 10%;
+				@include lg-max {
+					width: 85%;
+					object-position: 0 0;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 70% 200px;
+				}
+				@include xs-max {
+					object-position: 60% 230px;
+				}
+			}
+			.strahuvannya-zaliznichnogo-transportu-page & {
+				width: 90%;
+				object-position: 0px 10%;
+				@include lg-max {
+					width: 85%;
+					object-position: 110px 0px;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 70% 70px;
+				}
+				@include xs-max {
+					object-position: 50% 180px;
+				}
+			}
+			.strahuvannya-avtotransportu-v-ukraini-page & {
+				width: 90%;
+				object-position: 0px 40%;
+				@include lg-max {
+					width: 85%;
+					object-position: 20px 30%;
+				}
+				@include md-max {
+					width: 100%;
+					object-position: 50% -150px;
+				}
+				@include sm-max {
+					width: 100%;
+					object-position: 50% 0px;
+				}
+				@include xs-max {
+					object-position: 50% 200px;
+				}
+			}
+		}
+	}
+}
+//section-top--bg
+.section-top--bg {
+	.breadcrumb {
+		@include md-max {
+			justify-content: left;
+		}
+		.breadcrumb-item {
+			a {
+				color: $white;
+			}
+			+ .breadcrumb-item {
+				&::before {
+					filter: invert(99%) sepia(18%) saturate(262%) hue-rotate(222deg) brightness(112%) contrast(96%);
+				}
+			}
+		}
+	}
+	.section-top--item {
+		position: relative;
+		z-index: 2;
+	}
+	.section-top--content {
+		min-height: 100%;
+		@include md-max {
+			margin-bottom: 180px !important;
+		}
+	}
+	.section-top--img {
+		@include md-max {
+			margin: 0;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			background: rgba(0, 0, 0, 0.6);
+		}
+		.wrap-img {
+			position: absolute;
+			min-height: 100%;
+			top: 0;
+			border-radius: 0;
+			img {
+				object-position: 0 70%;
+			}
+		}
+	}
+	.article-date {
+		position: absolute;
+		bottom: 40px;
+	}
+}
+// google map
+.map {
+	height: 100%;
+	width: 100%;
+}
+.gm-style {
+	.gm-style-iw {
+		padding: 15px 20px;
+		font-size: 20px;
+		button.gm-ui-hover-effect {
+			top: -4px !important;
+			right: -4px !important;
+		}
+	}
+}
+// .gm-style-mtc,
+// .gmnoprint,
+// .gm-svpc,
+// .gm-style button,
+// .gm-style > div > a > div > img {
+// 	display: none;
+// }
+
+//google maps html marker
+.map-marker-place {
+	background: $main-blue;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	margin: 10px;
+	height: 20px;
+	width: 20px;
+	border: 3px solid $white;
+	transform: scale(1);
+	animation: pulse-black 2s infinite;
+}
+@keyframes pulse-black {
+	0% {
+		transform: scale(0.75);
+		box-shadow: 0 0 0 0 rgba(91, 117, 255, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(91, 117, 255, 0);
+	}
+
+	100% {
+		transform: scale(0.75);
+		box-shadow: 0 0 0 0 rgba(91, 117, 255, 0);
+	}
+}
+
+#btnTop {
+	display: inline-block;
+	background-color: $main-blue;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	@include transition(0.3s ease-out 0s);
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+#btnTop.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+//socials
+.socials {
+	a {
+		padding: 4px !important;
+		width: max-content;
+		border: 1px solid rgb(0, 175, 255);
+		border-radius: 8px;
+		display: block;
+		@include transition(0.3s ease-out 0s);
+		&:hover {
+			background: $black;
+			border: 1px solid $black;
+			svg {
+				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(204deg)
+					brightness(104%) contrast(103%);
+			}
+		}
+	}
+	svg {
+		width: 24px;
+		height: 24px;
+		@include transition(0.3s ease-out 0s);
+	}
+}

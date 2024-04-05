@@ -1,0 +1,39 @@
+<div class="modal modal--custom modal--custom-2 popup-user-ipn fade" id="popup-user-ipn" data-keyboard="false" tabindex="-1" aria-labelledby="popup-user-ipnLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-light-blue">
+			<div class="modal-body p-8">
+				<form class="form-ipn">
+					<div class="d-flex align-items-start justify-content-between mb-5">
+						<div class="modal-title h4 font-m mb-0 pr-4">Заповніть поле РНОКПП (ІПН), щоб знайти свої покупки</div>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#i-close"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="field field-2 mb-3">
+								<div class="field--help-info small-txt text-red mb-1">Введіть правильний РНОКПП (ІПН)</div>
+								<label for="ipn" class="small-txt mb-1">РНОКПП (ІПН)</label>
+								<input type="text" id="ipn" class="form-control" placeholder="РНОКПП (ІПН)">
+							</div>
+							<div class="custom-control custom-checkbox position-relative mb-5">
+								<input type="checkbox" class="custom-control-input" id="form-ipn-check">
+								<label class="custom-control-label" for="form-ipn-check">
+									<span class="custom-checkbox--info">У мене немає ІПН</span>
+									<!-- <span class="custom-checkbox--help-info small-txt mt-1">Ваш дозвіл на обробку персональних даних необхідна для подальщого оформлення страхової послуги</span> -->
+								</label>
+							</div>
+						</div>
+						<div class="col-12">
+							<button type="button" class="btn btn-block btn-main-blue btn-default">Підтвердити</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

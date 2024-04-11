@@ -1,7 +1,7 @@
 // import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
-export const images = () => {
+export const images = async () => {
 	return app.gulp.src(app.path.src.images)
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({

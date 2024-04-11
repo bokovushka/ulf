@@ -2,6 +2,8 @@
 $white: #fafafa !default;
 $black: #2b2b2b !default;
 
+$dark-black: #020a18 !default;
+
 $main-blue: #00afff !default;
 $light-blue: #36c0ff !default;
 $dark-blue: #009ee6 !default;
@@ -10,19 +12,22 @@ $blue: #dce2ff !default;
 $grey: #878787 !default;
 $light-grey: #8a90a4 !default;
 $red: #ff0000 !default;
+$orange: #f74e37 !default;
 
 $colors: () !default;
 $colors: map-merge(
 	(
 		"white": $white,
 		"black": $black,
+		"dark-black": $dark-black,
 		"dark-blue": $dark-blue,
 		"main-blue": $main-blue,
 		"blue": $blue,
 		"light-blue": $light-blue,
 		"grey": $grey,
 		"light-grey": $light-grey,
-		"red": $red
+		"red": $red,
+		"orange": $orange
 	),
 	$colors
 );
@@ -32,13 +37,15 @@ $theme-colors: map-merge(
 	(
 		"white": $white,
 		"black": $black,
+		"dark-black": $dark-black,
 		"dark-blue": $dark-blue,
 		"main-blue": $main-blue,
 		"blue": $blue,
 		"light-blue": $light-blue,
 		"grey": $grey,
 		"light-grey": $light-grey,
-		"red": $red
+		"red": $red,
+		"orange": $orange
 	),
 	$theme-colors
 );
@@ -73,7 +80,7 @@ $grid-gutter-widths: (
 $grid-gutter-width: map-get($grid-gutter-widths, lg);
 
 //typography
-$font-family-sans-serif: "Inter", sans-serif !default;
+$font-family-sans-serif: "Montserrat", sans-serif !default;
 $font-family-base: $font-family-sans-serif !default;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
@@ -171,6 +178,18 @@ $spacers: map-merge(
 		),
 		26: (
 			$spacer * 13
+		),
+		34: (
+			$spacer * 17
+		),
+		35: (
+			$spacer * 17.5
+		),
+		40: (
+			$spacer * 20
+		),
+		42: (
+			$spacer * 21
 		)
 	),
 	$spacers

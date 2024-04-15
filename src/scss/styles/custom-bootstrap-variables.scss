@@ -13,6 +13,7 @@ $grey: #878787 !default;
 $light-grey: #8a90a4 !default;
 $red: #ff0000 !default;
 $orange: #f74e37 !default;
+$green: #11b685 !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -27,7 +28,8 @@ $colors: map-merge(
 		"grey": $grey,
 		"light-grey": $light-grey,
 		"red": $red,
-		"orange": $orange
+		"orange": $orange,
+		"green": $green
 	),
 	$colors
 );
@@ -45,7 +47,8 @@ $theme-colors: map-merge(
 		"grey": $grey,
 		"light-grey": $light-grey,
 		"red": $red,
-		"orange": $orange
+		"orange": $orange,
+		"green": $green
 	),
 	$theme-colors
 );

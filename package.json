@@ -48,6 +48,7 @@
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
 		"plyr": "latest",
+		"readmore-js": "^2.2.1",
 		"sass": "1.64.2",
 		"select2": "latest",
 		"svelte-range-slider-pips": "latest",

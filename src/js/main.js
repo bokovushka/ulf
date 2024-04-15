@@ -18,4 +18,5 @@
 
 import "./modules/animate-scroll.js";
 import "./modules/menu.js";
+import "./modules/pagination.js";
 import "./modules/js.js";

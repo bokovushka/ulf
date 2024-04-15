@@ -48,7 +48,7 @@ setInterval(function () {
 
 
 
-// height = max height
+//? height = max height
 // Оголошення функції setEqualHeight
 function setEqualHeight(columns) {
 	var tallestcolumn = 0;

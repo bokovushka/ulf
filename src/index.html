@@ -41,8 +41,8 @@
 														<p class="subhead mb-6">усю рутину <br>ми беремо на себе</p>
 														<div class="row pt-40 pt-lg-0">
 															<div class="col d-flex flex-column flex-lg-row align-items-center">
-																<a href="##" class="btn-default btn-default-orange btn btn-block btn-orange text-uppercase mb-4 mb-lg-0 mr-lg-4">Кермувати</a>
-																<a href="##" class="btn-default btn-default-white btn btn-block btn-outline-white text-uppercase mt-0">Передзвоніть мені</a>
+																<button type="button" class="btn-default btn-default-orange btn btn-block btn-orange text-uppercase mb-4 mb-lg-0 mr-lg-4" data-toggle="modal" data-target="#popup-сar-selection">Кермувати</button>
+																<a href="##" class="btn-default btn-default-white btn btn-block btn-outline-white text-uppercase mt-0" data-toggle="modal" data-target="#popup-any-questions">Передзвоніть мені</a>
 															</div>
 														</div>
 													</div>
@@ -208,6 +208,7 @@
 								</img>
 							</div>
 						</div>
+					</div>
 				</section>
 				<section class="ready-drive pt-7 pt-md-10 pt-lg-14 pb-7 pb-md-10 pb-lg-34">
 					<div class="container">
@@ -238,8 +239,8 @@
 							<div class="col-12 col-lg-8">
 								<div class="row">
 									<div class="col-12 col-lg-7 d-flex flex-column flex-md-row align-items-center">
-										<a href="##" class="btn-default btn btn-block btn-main-blue text-uppercase mb-4 mb-md-0 mr-md-4">ЦІКАВО</a>
-										<a href="##" class="btn-default btn btn-block btn-outline-main-blue text-uppercase mt-0">ХОЧУ КЕРМУВАТИ</a>
+										<button type="button" class="btn-default btn btn-block btn-main-blue text-uppercase mb-4 mb-md-0 mr-md-4" data-toggle="modal" data-target="#popup-any-questions">ЦІКАВО</button>
+										<button type="button" class="btn-default btn btn-block btn-outline-main-blue text-uppercase mt-0" data-toggle="modal" data-target="#popup-сar-selection">ХОЧУ КЕРМУВАТИ</button>
 									</div>
 								</div>
 							</div>
@@ -254,7 +255,7 @@
 									<div class="head font-weight-bolder mb-3 mb-md-6 text-center text-white">Історії клієнтів</div>
 									<div class="horizontal-scoll-wrapper">
 										<div class="scroll-gallery horizontal row flex-nowrap">
-											<div class="scroll-gallery--item col-12 col-sm-6 col-lg-5 col-xl-4">
+											<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 												<div class="inner h-100 position-relative">
 													<div class="scroll-gallery--img">
 														<div class="wrap-img">
@@ -268,7 +269,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="scroll-gallery--item col-12 col-sm-6 col-lg-5 col-xl-4">
+											<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 												<div class="inner h-100 position-relative">
 													<div class="scroll-gallery--img">
 														<div class="wrap-img">
@@ -282,7 +283,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="scroll-gallery--item col-12 col-sm-6 col-lg-5 col-xl-4">
+											<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 												<div class="inner h-100 position-relative">
 													<div class="scroll-gallery--img">
 														<div class="wrap-img">
@@ -296,7 +297,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="scroll-gallery--item col-12 col-sm-6 col-lg-5 col-xl-4">
+											<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 												<div class="inner h-100 position-relative">
 													<div class="scroll-gallery--img">
 														<div class="wrap-img">
@@ -404,54 +405,10 @@
 				</section>
 				<section class="test-drive pb-7 pb-md-10 pb-lg-35">
 					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="inner px-4 px-md-0 py-7">
-									<div class="row">
-										<div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
-											<div class="h3 font-m mb-2 font-weight-bolder text-md-center">Завітай на тест-драйв</div>
-											<div class="h4 font-m font-weight-bolder mb-3 mb-md-9 text-md-center">Можеш спробувати, а потім підписатись</div>
-											<form id="form-test-drive">
-												<div class="row field-wrap">
-													<div class="col-12 col-md-6">
-														<div class="field mb-2 mb-md-8">
-															<label class="control-label" for="name">Ваше ім’я</label>
-															<input type="text" id="name" class="form-control mb-2" placeholder="Введіть ім’я">
-															<div class="field--help-info small-txt text-red mb-2">Введіть Ваше ім’я українськими літерами (кирилицею)</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6">
-														<div class="field mb-2 mb-md-8">
-															<label class="control-label" for="phone">Номер телефону</label>
-															<input type="tel" id="phone" class="form-control mb-2" placeholder="+38 000 0000000">
-															<div class="field--help-info small-txt text-red mb-2">Введіть Ваш номер телефону</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col">
-														<div class="custom-control custom-checkbox position-relative mb-5">
-															<input type="checkbox" class="custom-control-input" id="form-feedback-check">
-															<label class="custom-control-label" for="form-feedback-check">
-																<span class="custom-checkbox--info">Я даю згоду на збір, обробку, зберігання та використання своїх <a href="##">персональних даних</a>.</span>
-															</label>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col col-md-auto mx-auto">
-														<a href="##" class="btn-default btn-default-orange btn btn-block btn-orange text-uppercase">ХОЧУ ЗАТЕСТИТИ</a>
-													</div>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						@@include('html/parts/test-drive.html',{})
 					</div>
 				</section>
-				<section class="asked-questions pb-7 pb-md-10 pb-lg-13">
+				<section class="pb-7 pb-md-10 pb-lg-13">
 					<div class="container">
 						<div class="row mb-6">
 							<div class="col">
@@ -519,71 +476,20 @@
 				</section>
 				<section class="any-questions pb-7 pb-md-10 pb-lg-35">
 					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="inner px-4 px-md-0 py-7">
-									<div class="row">
-										<div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
-											<div class="h3 font-m mb-2 font-weight-bolder text-md-center">Залишились питання?</div>
-											<form id="form-any-questions">
-												<div class="row field-wrap">
-													<div class="col-12 col-md-6">
-														<div class="field mb-2 mb-md-8">
-															<label class="control-label" for="any-questions-name">Ваше ім’я</label>
-															<input type="text" id="any-questions-name" class="form-control mb-2" placeholder="Введіть ім’я">
-															<div class="field--help-info small-txt text-red mb-2">Введіть Ваше ім’я українськими літерами (кирилицею)</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6">
-														<div class="field mb-2 mb-md-8">
-															<label class="control-label" for="any-questions-phone">Номер телефону</label>
-															<input type="tel" id="any-questions-phone" class="form-control mb-2" placeholder="+38 000 0000000">
-															<div class="field--help-info small-txt text-red mb-2">Введіть Ваш номер телефону</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col">
-														<div class="custom-control custom-checkbox position-relative mb-5">
-															<input type="checkbox" class="custom-control-input" id="form-any-questions">
-															<label class="custom-control-label" for="form-any-questions">
-																<span class="custom-checkbox--info">Я даю згоду на збір, обробку, зберігання та використання своїх <a href="##">персональних даних</a>.</span>
-															</label>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col col-md-auto mx-auto">
-														<a href="##" class="btn-default btn-default-orange btn btn-block btn-orange text-uppercase">ХОЧУ ЗАТЕСТИТИ</a>
-													</div>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						@@include('html/parts/any-questions.html',{})
 					</div>
 				</section>
-				<section class="car-subscription-preview pb-7 pb-md-10 pb-lg-35">
+				<section class="seo pb-7 pb-md-10 pb-lg-35">
 					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="h3 font-m mb-2 font-weight-bolder text-center">Автомобілі за підпискою – мінімум зобов’язань, максимум свободи</div>
-								<div class="h4 font-m mb-2">Поїздки в офіс, зустрічі з партнерами, відрядження – людині, якій за день треба встигати відвідувати багато місць, не обійтися без надійного, потужного, презентабельного авто. Сьогодні в Україні можна купити транспортний засіб будь-якого класу та марки. Але така покупка – це і додаткові турботи: оформлення права власності, КАСКО, ОСЦПВ, витрата часу на техобслуговування...</div>
-								<div class="row">
-									<div class="col-12 col-md-6 col-lg-4 mx-auto">
-										<a href="##" class="btn-default btn btn-block btn-outline-main-blue text-uppercase mt-0">Показати</a>
-									</div>
-								</div>
-							</div>
-						</div>
+						@@include('html/parts/seo.html',{})
 					</div>
 				</section>
 			</div>
 		</main>
 		@@include('html/footer.html',{})
 	</div>
+	@@include('html/popup/popup-сar-selection.html',{})
+	@@include('html/popup/popup-any-questions.html',{})
 
 	@@include('html/scripts.html',{})
 </body>

@@ -1545,10 +1545,6 @@ p {
   color: #00afff;
 }
 
-.hidden-text {
-  overflow: hidden;
-}
-
 .button-slider-prev,
 .button-slider-next {
   cursor: pointer;
@@ -1868,16 +1864,16 @@ p {
 .seo ol li li::before {
   content: counters(item, ".") " ";
 }
-.seo .spoiler--seo {
+.seo .spoiler {
   transition: height 200ms;
   overflow: hidden;
   max-height: 13.5em;
   mask: linear-gradient(0deg, rgba(254, 254, 254, 0) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.8) 30%, rgb(255, 255, 255) 45%, rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 120%);
 }
-.seo .spoiler--seo[aria-expanded=true] {
+.seo .spoiler[aria-expanded=true] {
   mask: unset;
 }
-.seo .spoiler--seo div {
+.seo .spoiler div {
   margin-bottom: 20px;
 }
 

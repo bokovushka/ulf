@@ -1040,10 +1040,6 @@ p {
 		}
 	}
 }
-//spoiler
-.hidden-text {
-	overflow: hidden;
-}
 //swiper arrow
 .button-slider-prev,
 .button-slider-next {
@@ -1366,7 +1362,7 @@ p {
 			}
 		}
 	}
-	.spoiler--seo {
+	.spoiler {
 		transition: height 200ms;
 		overflow: hidden;
 		max-height: 13.5em;

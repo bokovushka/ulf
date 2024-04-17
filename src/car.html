@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Автопарк"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<section class="section-top pt-5">
+					<div class="container">
+						<div class="row">
+							<div class="col mx-auto">
+								<div class="section-top--info">
+									<div class="mb-2">
+										<a href="##" class="btn-ahead btn btn-block rounded-0 p-0 ml-0">Назад</a>
+									</div>
+									<div class="h3 font-m font-weight-bolder mb-2">Hyundai Tucson</div>
+									<nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
+										<ol class="breadcrumb mb-0">
+											<li class="breadcrumb-item"><a href="##">Головна</a></li>
+											<li class="breadcrumb-item"><a href="##">Автопарк</a></li>
+											<li class="breadcrumb-item active" aria-current="page">Hyundai Tucson</li>
+										</ol>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="gallery-car">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="gallery-car--inner pb-9">
+									<!-- main slider -->
+									<div class="gallery-car--swiper mb-5">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" data-src="#gallery-car-video-1">
+														<div class="video-wrap">
+															<img src="img/gallery-car-1.jpeg" alt="img">
+														</div>
+													</a>
+													<div id="gallery-car-video-1" class="video-wrap" style="display:none">
+														<video class="js-player" playsinline controls data-poster="img/gallery-car-1.jpeg">
+															<source src="assets/video/example.mp4" type="video/mp4" />
+														</video>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" data-src="#gallery-car-video-2">
+														<div class="video-wrap">
+															<img src="img/gallery-car-2.jpeg" alt="img">
+														</div>
+													</a>
+													<div id="gallery-car-video-2" class="video-wrap" style="display:none">
+														<video class="js-player" playsinline controls data-poster="img/gallery-car-2.jpeg">
+															<source src="assets/video/example.mp4" type="video/mp4" />
+														</video>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" href="img/gallery-car-3.jpeg">
+														<img src="img/gallery-car-3.jpeg" alt="img">
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" href="img/gallery-car-4.jpeg">
+														<img src="img/gallery-car-4.jpeg" alt="img">
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" href="img/gallery-car-5.jpeg">
+														<img src="img/gallery-car-5.jpeg" alt="img">
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" href="img/gallery-car-6.jpeg">
+														<img src="img/gallery-car-6.jpeg" alt="img">
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" href="img/gallery-car-7.jpeg">
+														<img src="img/gallery-car-7.jpeg" alt="img">
+													</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<a data-fancybox="gallery" href="img/gallery-car-8.jpeg">
+														<img src="img/gallery-car-8.jpeg" alt="img">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- thumbs slider -->
+									<div class="gallery-car-thumbs--swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-1.jpeg" alt="img">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-2.jpeg" alt="img">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-3.jpeg" alt="img">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-4.jpeg" alt="img">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-5.jpeg" alt="img">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-6.jpeg" alt="img">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-7.jpeg" alt="img">
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="wrap-img">
+													<img src="img/gallery-car-8.jpeg" alt="img">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="test-drive pb-7 pb-md-10 pb-lg-13">
+					<div class="container">
+						@@include('html/parts/test-drive.html',{})
+					</div>
+				</section>
+				<section class="our-fleet pb-7 pb-md-10 pb-lg-25">
+					<div class="container">
+						<div class="row mb-6">
+							<div class="col">
+								<div class="head font-weight-bolder mb-3 mb-md-6 text-center">Може вас зацікавити</div>
+								<div class="our-fleet-preview row">
+									<div class="col-12 col-md-6 col-lg-4">
+										<div class="our-fleet-preview--item">
+											<div class="name">Hyundai Tucson</div>
+											<div class="wrap-img">
+												<img src="img/car-1.png" alt="Image">
+											</div>
+											<a href="##" class="btn-arrow btn btn-block">
+												<span>Бензин, Автомат, Повний привод</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-12 col-md-6 col-lg-4">
+										<div class="our-fleet-preview--item">
+											<div class="name">Toyota Camry</div>
+											<div class="wrap-img">
+												<img src="img/car-2.png" alt="Image">
+											</div>
+											<a href="##" class="btn-arrow btn btn-block">
+												<span>Бензин, Автомат, Передній привод</span>
+											</a>
+										</div>
+									</div>
+									<div class="col-12 col-md-6 col-lg-4">
+										<div class="our-fleet-preview--item">
+											<div class="name">Toyota RAV4</div>
+											<div class="wrap-img">
+												<img src="img/car-3.png" alt="Image">
+											</div>
+											<a href="##" class="btn-arrow btn btn-block">
+												<span>Гібрид, Автомат, Повний привод</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 col-md-6 col-lg-4 mx-auto">
+								<a href="##" class="btn-default btn btn-block btn-outline-main-blue text-uppercase mt-0">Більше авто</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="asked-questions pb-7 pb-md-10 pb-lg-13">
+					<div class="container">
+						@@include('html/parts/asked-questions.html',{})
+					</div>
+				</section>
+				<section class="any-questions pb-7 pb-md-10 pb-lg-13">
+					<div class="container">
+						@@include('html/parts/any-questions.html',{})
+					</div>
+				</section>
+				<section class="seo pb-7 pb-md-10 pb-lg-13">
+					<div class="container">
+						@@include('html/parts/seo.html',{})
+					</div>
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+
+	@@include('html/popup/popup-сar-selection.html',{})
+	@@include('html/popup/popup-any-questions.html',{})
+
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

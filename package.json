@@ -19,6 +19,7 @@
 	},
 	"devDependencies": {
 		"@fancyapps/ui": "latest",
+		"@popperjs/core": "^2.11.8",
 		"air-datepicker": "latest",
 		"bootstrap": "4.6.2",
 		"browser-sync": "latest",

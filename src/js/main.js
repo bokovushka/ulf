@@ -15,8 +15,10 @@
 // import * as CountTourist from "./modules/count-tourist.js";
 // import * as MetaWidthFunction from "./modules/transform-function.js";
 
-
 import "./modules/animate-scroll.js";
 import "./modules/menu.js";
+import "./modules/menu-scroll.js";
+import "./modules/height-max-height.js";
 import "./modules/pagination.js";
+import "./modules/filter.js";
 import "./modules/js.js";

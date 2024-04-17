@@ -225,11 +225,7 @@ p {
 }
 .small-txt {
 	font-size: 12px;
-	line-height: 18px;
-}
-.small-txt--descr {
-	font-size: 10px;
-	line-height: 14px;
+	line-height: 16px;
 }
 .list-inline-item {
 	&:not(:last-child) {
@@ -240,6 +236,22 @@ p {
 }
 .btn {
 	white-space: nowrap;
+	&.btn-reset {
+		padding: 0;
+		background: unset;
+		border: unset;
+		&:hover {
+			svg {
+				filter: brightness(0) saturate(100%) invert(54%) sepia(16%) saturate(6497%) hue-rotate(166deg)
+					brightness(100%) contrast(102%);
+			}
+		}
+		svg {
+			filter: brightness(0) saturate(100%) invert(0%) sepia(25%) saturate(0%) hue-rotate(226deg) brightness(91%)
+				contrast(105%);
+			@include transition(0.3s ease-out 0s);
+		}
+	}
 	&.btn-text {
 		&:hover {
 			color: $main-blue;
@@ -292,6 +304,28 @@ p {
 			background: $grey;
 			opacity: 1;
 			cursor: not-allowed;
+		}
+		.our-fleet-search & {
+			&:not(:disabled) {
+				&:hover {
+					border: 1px solid rgb(231, 243, 255);
+					background: rgba(255, 255, 255, 0.12);
+					color: $white;
+				}
+				&:active,
+				&:focus {
+					color: $white;
+				}
+				&:active {
+					border: 1px solid rgb(231, 243, 255);
+					background: rgba(255, 255, 255, 0.24);
+				}
+				&:focus {
+					border: 1px solid rgb(231, 243, 255);
+					background: unset;
+					color: $white;
+				}
+			}
 		}
 	}
 	&.btn-white {
@@ -492,7 +526,8 @@ p {
 	min-height: 100%;
 	object-fit: cover;
 }
-.popup-bg-body {
+.popup-bg-body,
+.popup-bg-body-filter {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -505,30 +540,18 @@ p {
 	@include transition(0.3s ease-out 0s);
 	overflow-y: auto;
 	overflow-x: hidden;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
 }
-.popup-bg-body.open {
-	opacity: 1;
-	visibility: visible;
-}
-.lock {
+
+.lock,
+.lock-filter {
 	overflow: hidden;
 }
 //field //input
 .field {
-	&.field-2 {
-		.form-control {
-			border: 1px solid $blue;
-		}
-		label {
-			color: $grey;
-		}
-		//select
-		.select2-container {
-			.select2-selection {
-				border: 1px solid $blue;
-			}
-		}
-	}
 	&.error {
 		//select
 		.select2-container {
@@ -589,6 +612,15 @@ p {
 			border: 1px solid $blue;
 		}
 	}
+	.inner {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		.form-control {
+			border-radius: 8px;
+			min-width: auto;
+		}
+	}
 	&.field-compete {
 		.form-control {
 			border: unset !important;
@@ -614,9 +646,9 @@ p {
 	.select2-container {
 		width: 100% !important;
 		.select2-selection {
-			border: 1px solid transparent;
-			border-radius: 30px;
-			height: 48px;
+			border: 1px solid rgb(216, 219, 231);
+			border-radius: 8px;
+			height: 44px;
 			min-width: 100%;
 			display: flex;
 			align-items: center;
@@ -640,11 +672,10 @@ p {
 						display: block;
 						margin: 0;
 						border: none;
-						width: 16px;
-						height: 16px;
-						margin-left: 5px;
+						width: 24px;
+						height: 24px;
 						position: relative;
-						background: url(../img/icons/icons.svg#i-arrow-two-right-static) no-repeat center;
+						background: url(../img/icons/icons.svg#i-triangle-arrow) no-repeat center;
 						background-size: cover;
 						@include transition(0.3s ease-out 0s);
 					}
@@ -661,26 +692,26 @@ p {
 		&.select2-container--open {
 			&.select2-container--below {
 				.select2-selection {
-					border-radius: 20px 20px 0 0;
+					border-radius: 8px 8px 0 0;
 					border-bottom: 1px solid $blue;
 				}
 				.select2-selection__arrow {
 					b {
-						&::after {
-							transform: rotate(90deg);
-						}
+						// &::after {
+						// 	transform: rotate(90deg);
+						// }
 					}
 				}
 			}
 			&.select2-container--above {
 				.select2-selection {
-					border-radius: 0 0 20px 20px;
+					border-radius: 0 0 8px 8px;
 					border-top: 1px solid $blue;
 				}
 				.select2-selection__arrow {
 					b {
 						&::after {
-							transform: rotate(-90deg);
+							transform: rotate(-180deg);
 						}
 					}
 				}
@@ -691,27 +722,28 @@ p {
 .select2-container {
 	.select2-dropdown {
 		&.select2-dropdown--below {
-			border-radius: 0 0 20px 20px;
+			border-radius: 0 0 8px 8px;
 			overflow: hidden;
 			border: none;
 			border: 1px solid $blue;
 			border-top: none;
 		}
 		&.select2-dropdown--above {
-			border-radius: 20px 20px 0 0;
+			border-radius: 8px 8px 0 0;
 			overflow: hidden;
 			border: none;
 			border: 1px solid $blue;
 			border-bottom: none;
 		}
 		.select2-results__option {
-			color: $grey;
+			color: $black;
 			background: $white;
 			padding: 13px 23px;
 		}
 		.select2-results__option--selected,
 		.select2-results__option--highlighted.select2-results__option--selectable {
 			background: $light-blue;
+			color: $white;
 		}
 	}
 }
@@ -751,6 +783,9 @@ p {
 				border: unset;
 				filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(93deg)
 					brightness(105%) contrast(105%);
+				.filter-item & {
+					filter: unset;
+				}
 			}
 			@include xl-min {
 				&:hover {
@@ -818,20 +853,6 @@ p {
 				}
 				.custom-checkbox--help-info {
 					color: $red;
-				}
-			}
-		}
-	}
-	&.custom-checkbox-2 {
-		.custom-control-label {
-			&::before,
-			&::after {
-				filter: unset;
-			}
-			span a {
-				color: $black;
-				&:hover {
-					color: $main-blue;
 				}
 			}
 		}
@@ -976,7 +997,7 @@ p {
 			}
 		}
 	}
-	.rangeBar-full,
+	.range-bar-full,
 	.rangeBar-line-start {
 		height: 4px;
 		border-radius: 2px;
@@ -989,9 +1010,9 @@ p {
 		left: 0;
 		background: $main-blue;
 	}
-	.rangeBar-full {
+	.range-bar-full {
 		width: 100%;
-		background: rgba(250, 250, 250, 0.5);
+		background: rgba(190, 194, 212, 1);
 	}
 	&.price-slider-full-m {
 		.currency-wrap {
@@ -1183,27 +1204,21 @@ p {
 .fancybox__nav {
 	.is-next,
 	.is-prev {
-		width: 96px;
-		height: 96px;
-		@include sm-max {
-			width: 50px;
-			height: 50px;
+		background: rgba(24, 24, 27, 0.8);
+		&::after,
+		&::before {
+			all: unset;
 		}
 		svg {
-			width: inherit;
-			height: inherit;
-			border-radius: 50%;
-			border: 2px solid $main-blue;
-			stroke: $main-blue;
-			padding: 20px;
-			@include sm-max {
-				padding: 10px;
-			}
+			width: 34px;
+			height: 34px;
+			filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(7485%) hue-rotate(175deg) brightness(105%)
+				contrast(97%);
 		}
 		&:hover {
 			svg {
-				background: $white;
-				border-color: $white;
+				filter: brightness(0) saturate(100%) invert(51%) sepia(43%) saturate(2610%) hue-rotate(168deg)
+					brightness(100%) contrast(104%);
 			}
 		}
 	}
@@ -1213,11 +1228,14 @@ p {
 }
 .fancybox__container {
 	--fancybox-bg: rgba(24, 24, 27, 0.8);
+	z-index: 1070;
 	.f-button {
 		background: inherit;
-		&:hover {
-			background: rgba(24, 24, 27, 0.65);
-		}
+		background: rgba(24, 24, 27, 0.65);
+		z-index: 1080;
+	}
+	.fancybox__content {
+		background: unset;
 	}
 }
 //seo
@@ -1507,19 +1525,18 @@ p {
 	.plyr__control--overlaid {
 		width: 60px;
 		height: 60px;
-		border: 2px solid $main-blue;
-		background: $main-blue;
+		border: unset;
+		background: rgba(25, 27, 39, 0.7);
 		padding: 5px;
 		&:hover {
-			border-color: #fff;
-			background: #fff;
+			background: $white;
 			svg {
-				fill: $black;
-				stroke: $black;
+				fill: $main-blue;
+				stroke: $main-blue;
 			}
 		}
 		svg {
-			width: 28px;
+			width: 24px;
 			height: 28px;
 			margin: 0 auto;
 			fill: $white;
@@ -1605,5 +1622,94 @@ p {
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 20px;
+	}
+}
+
+//air-datepicker
+.datepicker {
+	position: relative;
+}
+.air-datepicker {
+	--adp-width: 293px;
+	.air-datepicker--navigation {
+		.air-datepicker-nav {
+			.air-datepicker-nav--title {
+				width: 100%;
+				gap: 5px;
+				&:active,
+				&:hover {
+					background: none;
+				}
+				span {
+					width: 100%;
+					font-size: 14px;
+					padding: 4px 10px;
+					background: $light-blue;
+					border-radius: 5px;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.air-datepicker-body--day-name {
+		color: $black;
+		font-weight: 600;
+	}
+	.air-datepicker-nav--action {
+		&:hover {
+			background: $main-blue;
+			path {
+				stroke: $white;
+			}
+		}
+	}
+	.air-datepicker-cell {
+		&.-disabled- {
+			color: var(--adp-color-disabled) !important;
+		}
+		&.-focus- {
+			background: $main-blue;
+			color: $white;
+			&.-disabled- {
+				background: $grey;
+				opacity: 0.3;
+			}
+		}
+		&.-year- {
+			&.-other-decade- {
+				color: $black;
+				&.-focus- {
+					color: $white;
+				}
+			}
+		}
+		&.-selected- {
+			background: $main-blue;
+			&.-range-from-,
+			&.-range-to- {
+				background: $dark-blue;
+			}
+		}
+		&.-range-from-,
+		&.-range-to- {
+			border: none;
+			background: $dark-blue;
+			color: $white;
+		}
+		&.-in-range- {
+			background: $main-blue;
+			color: $white;
+		}
+	}
+	.air-datepicker-body--cells {
+		&.-days- {
+			row-gap: 5px;
+		}
+		&.-years- {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		&.-months- {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }

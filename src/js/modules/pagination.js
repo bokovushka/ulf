@@ -1,3 +1,25 @@
+import $ from 'jquery';
+
+$(document).ready(function () {
+	// Функція, що додає клас на екранах від 1024 пікселів
+	function addClassOnLargeScreens() {
+		var windowWidth = $(window).width();
+		if (windowWidth >= 1024) {
+			$('.our-fleet .our-fleet-search').addClass('content');
+		} else {
+			$('.our-fleet .our-fleet-search').removeClass('content');
+		}
+	}
+
+	// Викликати функцію при завантаженні сторінки
+	addClassOnLargeScreens();
+
+	// Викликати функцію при зміні розміру вікна
+	$(window).resize(function () {
+		addClassOnLargeScreens();
+	});
+});
+
 //? pagination
 function getPageList(totalPages, page, maxLength) {
 	if (maxLength < 5) throw "maxLength must be at least 5";
@@ -131,7 +153,7 @@ $(function () {
 	// });
 });
 
-//? pagination questions
+//? pagination our-fleet
 $(function () {
 	// Number of items and limits the number of items per page
 	var numberOfItems = $(".our-fleet .content").length;
@@ -223,4 +245,21 @@ $(function () {
 	// $(".pagination").on("click", function () {
 	// 	$("html,body").animate({ scrollTop: 0 }, 0);
 	// });
+
+	$(".our-fleet .btn-show-more").on("click", function () {
+		var w = screen.width;
+		if (w < '768') {
+			limitPerPage += 5;
+		} else
+			if (w < '1024') {
+				limitPerPage += 4;
+			}
+			else {
+				limitPerPage += 3;
+			}
+		// limitPerPage += 3; // Increase limitPerPage by its initial value
+		totalPages = Math.ceil(numberOfItems / limitPerPage);
+		showPage(currentPage); // Show the current page with the updated limitPerPage
+	});
+
 });

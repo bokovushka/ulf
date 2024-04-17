@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 var btn = $('#btnTop');
 
 $(window).scroll(function () {

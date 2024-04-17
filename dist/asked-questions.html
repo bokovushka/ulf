@@ -12,7 +12,7 @@
 
 <body>
 	<div class="wrapper">
-		<div class="popup-bg-body" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"></div>
+		<div class="popup-bg-body collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
 <header class="header">
 	<div class="header-main">
 		<div class="container position-relative">
@@ -744,7 +744,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content py-4 px-2 p-md-5">
 			<div class="modal-body p-0">
-				<form class="form-popup-сar-selection">
+				<form class="form-popup-сar-selection" autocomplete="off">
 					<div class="row">
 						<div class="col">
 							<div class="d-flex align-items-start justify-content-between mb-3">
@@ -764,21 +764,21 @@
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-сar-selection--car-make-model">Марка та модель авто</label>
-								<input type="text" id="popup-сar-selection--car-make-model" class="form-control mb-3" placeholder="Напр. Hyundai Santa FE">
+								<input type="text" id="popup-сar-selection--car-make-model" class="form-control mb-3" placeholder="Напр. Hyundai Santa FE" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть марку та модель авто</div>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-сar-selection--name">Ваше ім’я</label>
-								<input type="text" id="popup-сar-selection---name" class="form-control mb-3" placeholder="Введіть ім’я">
+								<input type="text" id="popup-сar-selection---name" class="form-control mb-3" placeholder="Введіть ім’я" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваше ім’я українськими літерами (кирилицею)</div>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-сar-selection--phone">Номер телефону</label>
-								<input type="tel" id="popup-сar-selection--phone" class="form-control mb-3" placeholder="+38 000 0000000">
+								<input type="tel" id="popup-сar-selection--phone" class="form-control mb-3" placeholder="+38 000 0000000" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваш номер телефону</div>
 							</div>
 						</div>
@@ -803,7 +803,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content py-4 px-2 p-md-5">
 			<div class="modal-body p-0">
-				<form class="form-popup-any-questions">
+				<form class="form-popup-any-questions" autocomplete="off">
 					<div class="row">
 						<div class="col">
 							<div class="d-flex align-items-start justify-content-between mb-3">
@@ -822,14 +822,14 @@
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-any-questions--name">Ваше ім’я</label>
-								<input type="text" id="popup-any-questions---name" class="form-control mb-3" placeholder="Введіть ім’я">
+								<input type="text" id="popup-any-questions---name" class="form-control mb-3" placeholder="Введіть ім’я" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваше ім’я українськими літерами (кирилицею)</div>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-any-questions--phone">Номер телефону</label>
-								<input type="tel" id="popup-any-questions--phone" class="form-control mb-3" placeholder="+38 000 0000000">
+								<input type="tel" id="popup-any-questions--phone" class="form-control mb-3" placeholder="+38 000 0000000" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваш номер телефону</div>
 							</div>
 						</div>

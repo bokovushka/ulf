@@ -12,7 +12,8 @@
 
 <body>
 	<div class="wrapper">
-		<div class="popup-bg-body" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"></div>
+		<div class="popup-bg-body-filter collapsed" data-toggle="collapse" data-target="#navbarFilters" aria-controls="navbarFilters" aria-expanded="false" aria-label="Toggle navigation"></div>
+		<div class="popup-bg-body collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
 <header class="header">
 	<div class="header-main">
 		<div class="container position-relative">
@@ -211,7 +212,22 @@
 									<div class="mb-2">
 										<a href="##" class="btn-ahead btn btn-block rounded-0 p-0 ml-0">Назад</a>
 									</div>
-									<div class="h3 font-m font-weight-bolder mb-2">Наш автопарк <br class="d-sm-none"><span class="text-main-blue">=</span><br class="d-sm-none"> Твій автопарк</div>
+									<div class="d-flex justify-content-between align-items-center mb-2">
+										<div class="h3 font-m font-weight-bolder d-none d-lg-block">Наш автопарк <br class="d-sm-none"><span class="text-main-blue">=</span><br class="d-sm-none"> Твій автопарк</div>
+										<div class="h3 font-m font-weight-bolder d-lg-none">Автопарк</div>
+										<div class="filters-button ml-4">
+											<button type="button" class="btn btn-reset">
+												<svg class="i-sorting">
+													<use xlink:href="img/icons/icons.svg#i-sorting"></use>
+												</svg>
+											</button>
+											<button type="button" class="btn btn-reset btn-filter collapsed" data-toggle="collapse" data-target="#navbarFilters" aria-controls="navbarFilters" aria-expanded="false" aria-label="Toggle navigation" id="toggleFilter">
+												<svg class="i-filters-menu">
+													<use xlink:href="img/icons/icons.svg#i-filters-menu"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
 									<nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
 										<ol class="breadcrumb mb-0">
 											<li class="breadcrumb-item"><a href="##">Головна</a></li>
@@ -234,6 +250,7 @@
 											<div class="wrap-img">
 												<img src="img/car-1.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -245,6 +262,7 @@
 											<div class="wrap-img">
 												<img src="img/car-2.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Передній привод</span>
 											</a>
@@ -256,6 +274,7 @@
 											<div class="wrap-img">
 												<img src="img/car-3.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Гібрид, Автомат, Повний привод</span>
 											</a>
@@ -267,6 +286,7 @@
 											<div class="wrap-img">
 												<img src="img/car-4.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -278,6 +298,7 @@
 											<div class="wrap-img">
 												<img src="img/car-5.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -289,6 +310,7 @@
 											<div class="wrap-img">
 												<img src="img/car-1.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -300,6 +322,7 @@
 											<div class="wrap-img">
 												<img src="img/car-2.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Передній привод</span>
 											</a>
@@ -311,6 +334,7 @@
 											<div class="wrap-img">
 												<img src="img/car-3.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Гібрид, Автомат, Повний привод</span>
 											</a>
@@ -322,6 +346,7 @@
 											<div class="wrap-img">
 												<img src="img/car-4.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -333,6 +358,7 @@
 											<div class="wrap-img">
 												<img src="img/car-5.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -344,18 +370,20 @@
 											<div class="wrap-img">
 												<img src="img/car-2.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Передній привод</span>
 											</a>
 										</div>
 									</div>
-									<div class="content col-12 col-md-6 col-lg-4 d-none d-lg-flex">
-										<div class="our-fleet-preview--item bg-main-blue our-fleet-preview--search">
+									<div class="our-fleet-search col-12 col-md-6 col-lg-4 d-none d-lg-flex">
+										<div class="our-fleet-preview--item bg-main-blue">
 											<div class="name text-white">Не знайшов авто мрії в нашому автопарку?</div>
 											<div class="wrap-img">
 												<img src="img/car-6.png" alt="Image">
 											</div>
-											<a href="##" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold mb-4 mb-lg-0 mr-lg-4">НА ПОШУКИ АВТО</a>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
+											<a href="##" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold">НА ПОШУКИ АВТО</a>
 										</div>
 									</div>
 									<div class="content col-12 col-md-6 col-lg-4">
@@ -364,6 +392,7 @@
 											<div class="wrap-img">
 												<img src="img/car-4.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -375,6 +404,7 @@
 											<div class="wrap-img">
 												<img src="img/car-5.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -386,6 +416,7 @@
 											<div class="wrap-img">
 												<img src="img/car-1.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -397,6 +428,7 @@
 											<div class="wrap-img">
 												<img src="img/car-2.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Передній привод</span>
 											</a>
@@ -408,6 +440,7 @@
 											<div class="wrap-img">
 												<img src="img/car-3.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Гібрид, Автомат, Повний привод</span>
 											</a>
@@ -419,6 +452,7 @@
 											<div class="wrap-img">
 												<img src="img/car-4.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -430,6 +464,7 @@
 											<div class="wrap-img">
 												<img src="img/car-5.png" alt="Image">
 											</div>
+											<div class="price mb-1"><span class="currency">$</span> <span class="value">1 080</span> / міс.</div>
 											<a href="##" class="btn-arrow btn btn-block">
 												<span>Бензин, Автомат, Повний привод</span>
 											</a>
@@ -438,14 +473,29 @@
 								</div>
 							</div>
 						</div>
-						<div class="row mt-5">
+						<div class="row mt-5 mb-5 mb-lg-0">
 							<div class="col-auto mx-auto ">
-								<button type="button" class="btn btn-main-blue btn-default text-uppercase">Показати більше</button>
+								<button type="button" class="btn-show-more btn btn-main-blue btn-default text-uppercase">Показати більше</button>
 							</div>
 							<div class="col-12">
 								<nav class="bg-white mt-5 mt-md-2">
 									<ul class="pagination justify-content-center mb-0"></ul>
 								</nav>
+							</div>
+						</div>
+						<div class="row d-lg-none">
+							<div class="our-fleet-search col">
+								<div class="our-fleet-preview--item bg-main-blue">
+									<div class="name text-white text-center">Не знайшов авто мрії в нашому автопарку?</div>
+									<div class="wrap-img">
+										<img src="img/car-6.png" alt="Image">
+									</div>
+									<div class="row">
+										<div class="col col-sm-auto mx-auto">
+											<a href="##" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold">НА ПОШУКИ АВТО</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -555,6 +605,168 @@
 </div>
 					</div>
 				</section>
+				<div class="sidebar collapse" id="navbarFilters">
+	<div class="d-flex justify-content-between mb-3">
+		<div class="filter-title mr-4">Фільтри</div>
+		<button type="button" class="btn-close btn btn-reset" data-toggle="collapse" href="#navbarFilters" role="button" aria-expanded="false" aria-controls="navbarFilters">
+			<svg class="i-close">
+				<use xlink:href="img/icons/icons.svg#i-close"></use>
+			</svg>
+		</button>
+	</div>
+	<div class="sidebar-filter">
+		<div class="filter-item">
+			<div class="field-wrap mb-3">
+				<div class="field">
+					<div class="field--help-info small-txt text-red mb-1">Оберіть ваше місто</div>
+					<label for="select-choose-city" class="small-txt font-weight-bold text-grey mb-1">Місто</label>
+					<div class="select-wrap">
+						<select class="select-choose-city" name="select-choose-city">
+							<option></option>
+							<option value="1">Луцьк</option>
+							<option value="2">Львів</option>
+							<option value="3">Київ</option>
+							<option value="4">Володимир</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="filter-item">
+			<div class="field-wrap mb-3">
+				<div class="field">
+					<div class="field--help-info small-txt text-red mb-1">Оберіть марку авто</div>
+					<label for="select-choose-brand" class="small-txt font-weight-bold text-grey mb-1">Марка авто</label>
+					<div class="select-wrap">
+						<select class="select-choose-brand" name="select-choose-brand">
+							<option></option>
+							<option value="1">Ford</option>
+							<option value="2">Volvo</option>
+							<option value="3">Nissan</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="filter-item">
+			<div class="field-wrap mb-6">
+				<div class="field">
+					<div class="field--help-info small-txt text-red mb-1">Вкажіть ціну</div>
+					<div class="small-txt font-weight-bold text-grey mb-1">Ціна $ / міс.</div>
+					<div class="inner">
+						<input class="currency-first form-control" type="number" value="0" min="0" max="50000" step="1">
+						<input class="currency-last form-control" type="number" value="50000" min="0" max="50000" step="1">
+					</div>
+				</div>
+			</div>
+			<div class="mb-6">
+				<div id="currency-range-slider" class="price-slider slider-range position-relative">
+					<div class="range-bar-full"></div>
+				</div>
+			</div>
+		</div>
+		<div class="filter-item">
+			<div class="field-wrap mb-6">
+				<div class="field">
+					<div class="field--help-info small-txt text-red mb-1">Вкажіть рік випуску</div>
+					<div class="small-txt font-weight-bold text-grey mb-1">Рік випуску</div>
+					<div class="inner">
+						<div class="datepicker">
+							<input id="graduation-year-first" class="form-control" type="text" readonly data-input autocomplete="no-autofill-please">
+						</div>
+						<div class="datepicker">
+							<input id="graduation-year-last" class="form-control" type="text" readonly data-input autocomplete="no-autofill-please">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="filter-item">
+			<div class="small-txt font-weight-bold text-grey mb-1">Тип кузову</div>
+			<div class="mb-6">
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="body-type-1">
+					<label class="custom-control-label" for="body-type-1">
+						<span class="custom-checkbox--info">Тип 1</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="body-type-2">
+					<label class="custom-control-label" for="body-type-2">
+						<span class="custom-checkbox--info">Тип 2</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="body-type-3">
+					<label class="custom-control-label" for="body-type-3">
+						<span class="custom-checkbox--info">Тип 3</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="filter-item">
+			<div class="small-txt font-weight-bold text-grey mb-1">Коробка передач</div>
+			<div class="mb-6">
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="transmission-1">
+					<label class="custom-control-label" for="transmission-1">
+						<span class="custom-checkbox--info">Тип 1</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="transmission-2">
+					<label class="custom-control-label" for="transmission-2">
+						<span class="custom-checkbox--info">Тип 2</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="transmission-3">
+					<label class="custom-control-label" for="transmission-3">
+						<span class="custom-checkbox--info">Тип 3</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="filter-item">
+			<div class="small-txt font-weight-bold text-grey mb-1">Тип палива</div>
+			<div class="mb-6">
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="fuel-type-1">
+					<label class="custom-control-label" for="fuel-type-1">
+						<span class="custom-checkbox--info">Тип 1</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="fuel-type-2">
+					<label class="custom-control-label" for="fuel-type-2">
+						<span class="custom-checkbox--info">Тип 2</span>
+					</label>
+				</div>
+				<div class="custom-control custom-checkbox position-relative mb-2">
+					<input type="checkbox" class="custom-control-input" id="fuel-type-3">
+					<label class="custom-control-label" for="fuel-type-3">
+						<span class="custom-checkbox--info">Тип 3</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="filter-item">
+			<div class="field-wrap mb-3">
+				<div class="field">
+					<div class="field--help-info small-txt text-red mb-1">Вкажіть об‘єм двигуна</div>
+					<div class="small-txt font-weight-bold text-grey mb-1">Об‘єм двигуна (мл)</div>
+					<div class="inner">
+						<input class="form-control" type="number" autocomplete="no-autofill-please">
+						<input class="form-control" type="number" autocomplete="no-autofill-please">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mx-n3">
+		<a class="btn-filter-close btn btn-main-blue btn-default text-uppercase w-100 rounded-0" data-toggle="collapse" href="#navbarFilters" role="button" aria-expanded="false" aria-controls="navbarFilters">Застосувати</a>
+	</div>
+</div>
 			</div>
 		</main>
 		<footer class="footer">
@@ -749,7 +961,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content py-4 px-2 p-md-5">
 			<div class="modal-body p-0">
-				<form class="form-popup-сar-selection">
+				<form class="form-popup-сar-selection" autocomplete="off">
 					<div class="row">
 						<div class="col">
 							<div class="d-flex align-items-start justify-content-between mb-3">
@@ -769,21 +981,21 @@
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-сar-selection--car-make-model">Марка та модель авто</label>
-								<input type="text" id="popup-сar-selection--car-make-model" class="form-control mb-3" placeholder="Напр. Hyundai Santa FE">
+								<input type="text" id="popup-сar-selection--car-make-model" class="form-control mb-3" placeholder="Напр. Hyundai Santa FE" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть марку та модель авто</div>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-сar-selection--name">Ваше ім’я</label>
-								<input type="text" id="popup-сar-selection---name" class="form-control mb-3" placeholder="Введіть ім’я">
+								<input type="text" id="popup-сar-selection---name" class="form-control mb-3" placeholder="Введіть ім’я" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваше ім’я українськими літерами (кирилицею)</div>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-сar-selection--phone">Номер телефону</label>
-								<input type="tel" id="popup-сar-selection--phone" class="form-control mb-3" placeholder="+38 000 0000000">
+								<input type="tel" id="popup-сar-selection--phone" class="form-control mb-3" placeholder="+38 000 0000000" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваш номер телефону</div>
 							</div>
 						</div>
@@ -808,7 +1020,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content py-4 px-2 p-md-5">
 			<div class="modal-body p-0">
-				<form class="form-popup-any-questions">
+				<form class="form-popup-any-questions" autocomplete="off">
 					<div class="row">
 						<div class="col">
 							<div class="d-flex align-items-start justify-content-between mb-3">
@@ -827,14 +1039,14 @@
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-any-questions--name">Ваше ім’я</label>
-								<input type="text" id="popup-any-questions---name" class="form-control mb-3" placeholder="Введіть ім’я">
+								<input type="text" id="popup-any-questions---name" class="form-control mb-3" placeholder="Введіть ім’я" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваше ім’я українськими літерами (кирилицею)</div>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="field mb-3">
 								<label class="control-label" for="popup-any-questions--phone">Номер телефону</label>
-								<input type="tel" id="popup-any-questions--phone" class="form-control mb-3" placeholder="+38 000 0000000">
+								<input type="tel" id="popup-any-questions--phone" class="form-control mb-3" placeholder="+38 000 0000000" autocomplete="no-autofill-please">
 								<div class="field--help-info small-txt text-red mb-2">Введіть Ваш номер телефону</div>
 							</div>
 						</div>

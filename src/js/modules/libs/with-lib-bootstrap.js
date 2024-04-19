@@ -19,4 +19,17 @@ $('.btn-modal-close').on('click', function () {
 
 });
 
-
+//? tooltip info field
+$(function () {
+	var tooltipInfo = ['<div class="tooltip tooltip-help-info" role="tooltip">',
+		'<div class="tooltip-inner">',
+		'</div>',
+		'</div>'].join('');
+	$('.i-info').tooltip({
+		trigger: "hover", //hover focus click manual
+		html: true,
+		placement: "top",
+		template: tooltipInfo,
+		// fallbackPlacement: [], // строго в заданому напрямку, не дає можливості при скролі позиціонувати в інші сторони
+	});
+});

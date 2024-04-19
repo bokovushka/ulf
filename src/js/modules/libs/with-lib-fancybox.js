@@ -4,8 +4,13 @@ import { Fancybox } from "@fancyapps/ui";
 //? gallery-car
 Fancybox.bind('.gallery-car [data-fancybox="gallery"]', {
 	Toolbar: {
+		items: {
+			carName: {
+				tpl: `<div class="h4 font-m mb-0 font-weight-bolder text-white">Hyundai Tucson</div>`,
+			}
+		},
 		display: {
-			left: ["infobar"],
+			left: ["carName"],
 			right: ["iterateZoom", "close"],
 		},
 	},
@@ -22,4 +27,10 @@ Fancybox.bind('.gallery-car [data-fancybox="gallery"]', {
 		},
 	},
 	Thumbs: false,
+	caption: (fancybox, slide) => {
+		const caption = slide.caption || "";
+
+		return `${slide.index + 1} / ${fancybox.carousel?.slides.length
+			} <br /> ${caption}`;
+	},
 });

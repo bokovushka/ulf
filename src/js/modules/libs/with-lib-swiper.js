@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 //? section-top--swiper
-var SectionTopSwiper = new Swiper('.section-top--swiper', {
+new Swiper('.section-top--swiper', {
 	slidesPerView: 7.5,
 	spaceBetween: 16,
 	loop: true,
@@ -32,48 +32,48 @@ var SectionTopSwiper = new Swiper('.section-top--swiper', {
 
 //loan-leasing
 var SwiperWallpaperCollectionThumbs = new Swiper(".gallery-car-thumbs--swiper", {
-	spaceBetween: 25,
-	// grabCursor: true,
-	// loop: true,
-	// watchSlidesProgress: true,
+	grabCursor: true,
 	breakpoints: {
-		992: {
+		1200: {
 			slidesPerView: 6.4,
+			spaceBetween: 25,
 		},
-		640: {
-			slidesPerView: 2,
+		1024: {
+			slidesPerView: 5.5,
+			spaceBetween: 15,
 		},
-		360: {
-			slidesPerView: 1.15,
+		768: {
+			slidesPerView: 3.5,
+			spaceBetween: 15,
+		},
+		575: {
+			slidesPerView: 3.3,
+			spaceBetween: 10,
 		}
 	},
 })
 
-var SwiperWallpaperCollection = new Swiper(".gallery-car--swiper", {
-	spaceBetween: 25,
-	// grabCursor: true,
-	// loop: true,
+new Swiper(".gallery-car--swiper", {
+	grabCursor: true,
+	slidesPerView: 1,
+	loop: true,
 	breakpoints: {
-		1024: {
-			slidesPerView: 1,
+		1200: {
+			spaceBetween: 25,
 		},
-		992: {
-			slidesPerView: 3,
+		576: {
+			spaceBetween: 20,
 		},
-		640: {
-			slidesPerView: 2,
-		},
-		360: {
-			slidesPerView: 1.15,
+		0: {
 		}
+	},
+	pagination: {
+		el: ".gallery-car--swiper .swiper-pagination",
+		clickable: true,
 	},
 	thumbs: {
 		swiper: SwiperWallpaperCollectionThumbs,
-	},
-	navigation: {
-		prevEl: ".loan-leasing .leasing-swiper__buttons .icon-u_arrow-left",
-		nextEl: ".loan-leasing .leasing-swiper__buttons .icon-u_arrow-right"
-	},
+	}
 })
 
 // //передача контролю управління SwiperWallpaperCollection & SwiperWallpaperCollectionThumbs

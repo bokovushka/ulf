@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
+//left to right
 let horizontalSection = document.querySelector('.horizontal');
 
 console.log(horizontalSection.scrollWidth);
@@ -16,9 +17,8 @@ gsap.to('.horizontal', {
 		trigger: '.horizontal',
 		start: () => "center 50%",
 		end: () => "+=" + document.querySelector(".horizontal").offsetWidth,
-		pin: '.customer-stories .container-wrap',
+		pin: '.scroll-trigger .container-wrap',
 		scrub: true,
 		invalidateOnRefresh: true
 	}
 });
-

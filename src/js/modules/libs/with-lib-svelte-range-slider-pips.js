@@ -3,7 +3,8 @@ import RangeSlider from "../../../../node_modules/svelte-range-slider-pips/dist/
 //? price-slider-casco
 
 // if (window.location.toString().indexOf('catalog') === 0) { //добавляє виконання скрипту на сторінках з таким вмістом
-if (window.location.pathname === "/catalog.html") { //добавляє виконання скрипту лиш на певній сторінці
+// if (window.location.pathname === "/catalog.html") { //добавляє виконання скрипту лиш на певній сторінці
+if (window.location.toString().indexOf('catalog') === 0 || window.location.pathname === "/catalog.html") {
 	var CurrencyRangeSlider = new RangeSlider({
 		target: document.getElementById("currency-range-slider"),
 		props: {

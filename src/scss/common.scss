@@ -305,7 +305,9 @@ p {
 			opacity: 1;
 			cursor: not-allowed;
 		}
-		.our-fleet-search & {
+		.our-fleet-search &,
+		.car-content &,
+		.subscription-features-content & {
 			&:not(:disabled) {
 				&:hover {
 					border: 1px solid rgb(231, 243, 255);
@@ -1237,6 +1239,33 @@ p {
 	.fancybox__content {
 		background: unset;
 	}
+	&.is-compact {
+		.fancybox__footer {
+			background: unset;
+			text-align: center;
+		}
+	}
+	.fancybox__toolbar {
+		padding: 0 2rem;
+		margin-top: 40px;
+		.fancybox__toolbar__column {
+			&.is-left {
+				align-content: center;
+			}
+		}
+		.f-button {
+			background: unset;
+			filter: brightness(0) saturate(100%) invert(79%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(110%)
+				contrast(101%);
+			svg {
+				opacity: 1;
+			}
+			&:hover {
+				filter: brightness(0) saturate(100%) invert(49%) sepia(69%) saturate(1889%) hue-rotate(167deg)
+					brightness(100%) contrast(104%);
+			}
+		}
+	}
 }
 //seo
 .seo {
@@ -1455,7 +1484,7 @@ p {
 
 #btnTop {
 	display: inline-block;
-	background-color: $main-blue;
+	background: $main-blue;
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
@@ -1473,6 +1502,14 @@ p {
 	svg {
 		width: 24px;
 		height: 24px;
+		@include transition(0.3s ease-out 0s);
+	}
+	&:hover {
+		background: $white;
+		svg {
+			filter: brightness(0) saturate(100%) invert(49%) sepia(69%) saturate(1889%) hue-rotate(167deg) brightness(100%)
+				contrast(104%);
+		}
 	}
 }
 #btnTop.show {
@@ -1508,6 +1545,15 @@ p {
 .plyr--video {
 	height: 100%;
 	border-radius: 20px;
+	&:hover {
+		.plyr__control--overlaid {
+			background: $white;
+			svg {
+				fill: $main-blue;
+				stroke: $main-blue;
+			}
+		}
+	}
 	.plyr__video-wrapper {
 		//safari video poster work
 		z-index: 0;
@@ -1528,13 +1574,6 @@ p {
 		border: unset;
 		background: rgba(25, 27, 39, 0.7);
 		padding: 5px;
-		&:hover {
-			background: $white;
-			svg {
-				fill: $main-blue;
-				stroke: $main-blue;
-			}
-		}
 		svg {
 			width: 24px;
 			height: 28px;

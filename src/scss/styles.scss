@@ -53,6 +53,7 @@
 			}
 		}
 		.swiper-wrapper {
+			transition-timing-function: linear;
 			.swiper-slide {
 				height: auto;
 				.slider-content {
@@ -85,6 +86,9 @@
 			height: 100%;
 			border-radius: unset;
 			top: 0;
+			@include xs-max {
+				background: rgb(6, 32, 44);
+			}
 			.bg-down {
 				top: 50%;
 				// right: 0;
@@ -106,9 +110,13 @@
 				@include sm-max {
 					z-index: 1;
 				}
+				@include xs-max {
+					top: 35%;
+				}
 				@media (max-width: 425px) {
-					top: 40%;
 					object-fit: contain;
+					width: 100%;
+					top: 40%;
 				}
 			}
 		}
@@ -172,6 +180,13 @@
 
 //section ready-drive
 .ready-drive {
+	.h4 {
+		@include sm-max {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+		}
+	}
 	ul {
 		&.list-decimal {
 			counter-reset: items;
@@ -237,20 +252,39 @@
 		}
 	}
 	.video-wrap {
+		position: relative;
 		@include md-max {
 			height: 500px;
-			.plyr--video {
-				max-width: 360px;
-			}
+			max-width: 360px;
+			margin: 0 auto;
 		}
 		@include xs-max {
 			position: relative;
-			.plyr--video {
+		}
+		.plyr--video {
+			pointer-events: none;
+			@include xs-max {
 				position: absolute;
 				height: calc(100% + 30px);
 				max-width: 100%;
 			}
 		}
+		.btn-video-play-pause {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			z-index: 2;
+			width: max-content;
+			padding: 0;
+			border: unset;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	.plyr__control--overlaid {
+		display: none !important;
 	}
 }
 

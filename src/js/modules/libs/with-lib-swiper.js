@@ -5,11 +5,12 @@ new Swiper('.section-top--swiper', {
 	slidesPerView: 7.5,
 	spaceBetween: 16,
 	loop: true,
+	speed: 4000,
 	autoplay: {
-		delay: 2000,
-		disableOnInteraction: false,
+		enabled: true,
+		delay: 1,
+		// disableOnInteraction: false,
 	},
-	speed: 800,
 	centeredSlides: true,
 	allowTouchMove: false,
 	breakpoints: {

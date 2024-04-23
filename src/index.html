@@ -217,8 +217,8 @@
 								<div class="col-12 col-lg-8">
 									<div class="head font-weight-bolder mb-3 mb-md-6 text-center text-lg-left">Готовий кермувати?</div>
 									<div class="h4 mb-3 mb-lg-7">Знайомся, це — <strong>ULFAUTO-підписка</strong>. Сервіс, з яким авто — це тільки про кайф під час поїздки. Вся інша відповідальність — на нашому боці. Так, ми не перебільшуємо: ТО, шиномонтаж, страхування, тюнінг, зберігання гуми, ремонт, заміна авто... Вигадав щось своє? Приймаємо і цей виклик.</div>
-									<div class="video-wrap w-100 d-lg-none d-flex justify-content-center mb-sm-3">
-										<a class="w-100" data-fancybox="specific-player-mob" data-src="#specific-player">
+									<div class="video-wrap video-wrap--vissible w-100 d-lg-none d-flex justify-content-center mb-sm-3">
+										<a class="w-100" data-fancybox="specific-player-mob" data-src="#specific-player" data-thumb="img/AvnjahftKA.jpeg">
 											<video class="js-player specific-player" playsinline controls data-poster="img/AvnjahftKA.jpeg">
 												<source src="assets/video/example.mp4" type="video/mp4" />
 											</video>
@@ -234,15 +234,15 @@
 									</ul>
 								</div>
 								<div class="col-4 d-none d-lg-flex">
-									<div class="video-wrap">
-										<a data-fancybox="specific-player" data-src="#specific-player">
+									<div class="video-wrap video-wrap--vissible">
+										<a data-fancybox="specific-player" data-src="#specific-player" data-thumb="img/AvnjahftKA.jpeg">
 											<video class="js-player specific-player" playsinline controls data-poster="img/AvnjahftKA.jpeg">
 												<source src="assets/video/example.mp4" type="video/mp4" />
 											</video>
 										</a>
 										<button type="button" class="btn btn-video-play-pause"></button>
 									</div>
-									<div id="specific-player" class="video-wrap" style="display:none">
+									<div id="specific-player" class="video-wrap hidden" style="display:none">
 										<video class="js-player specific-player" playsinline controls data-poster="img/AvnjahftKA.jpeg">
 											<source src="assets/video/example.mp4" type="video/mp4" />
 										</video>
@@ -261,70 +261,129 @@
 							</div>
 						</div>
 					</section>
-					<section class="customer-stories bg-dark-black py-13">
+					<section class="customer-stories bg-dark-black py-7 py-md-10 py-lg-13">
 						<div class="container-wrap">
 							<div class="container">
 								<div class="row mb-6">
 									<div class="col">
 										<div class="head font-weight-bolder mb-3 mb-md-6 text-center text-white">Історії клієнтів</div>
-										<div class="horizontal-scoll-wrapper">
+										<div class="horizontal-scoll-wrapper d-none d-md-block">
 											<div class="scroll-gallery horizontal row flex-nowrap">
 												<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 													<div class="inner h-100 position-relative">
-														<div class="scroll-gallery--img">
-															<div class="wrap-img">
-																<img class="bg-down" src="img/customer-stories-1.jpeg" alt="img">
-															</div>
+														<div class="video-wrap video-wrap--vissible h-100">
+															<a data-fancybox="scroll-gallery" data-src="#scroll-gallery-player-1" data-thumb="img/customer-stories-1.jpeg">
+																<video class=" js-player specific-player" playsinline controls data-poster="img/customer-stories-1.jpeg">
+																	<source src="assets/video/example.mp4" type="video/mp4" />
+																</video>
+															</a>
+															<button type="button" class="btn btn-video-play-pause"></button>
 														</div>
-														<div class="scroll-gallery--content">
-															<div class="scroll-gallery--head mb-2">Моє перше авто</div>
-															<p class="mb-2">Взяв авто в підписку на пів року для того щоб визначитись з вподобаннями...</p>
-															<a href="##">Читати далі</a>
+														<div id="scroll-gallery-player-1" class="video-wrap hidden" style="display:none">
+															<video class="js-player specific-player" playsinline controls data-poster="img/customer-stories-1.jpeg">
+																<source src="assets/video/example.mp4" type="video/mp4" />
+															</video>
 														</div>
+														<div class="scroll-gallery--content"></div>
 													</div>
 												</div>
 												<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 													<div class="inner h-100 position-relative">
-														<div class="scroll-gallery--img">
-															<div class="wrap-img">
-																<img class="bg-down" src="img/customer-stories-2.jpeg" alt="img">
+														<a data-fancybox="scroll-gallery" href="img/customer-stories-2.jpeg">
+															<div class="scroll-gallery--img">
+																<div class="wrap-img">
+																	<img class="bg-down" src="img/customer-stories-2.jpeg" alt="img">
+																</div>
 															</div>
-														</div>
-														<div class="scroll-gallery--content">
-															<div class="scroll-gallery--head mb-2">Моє перше авто</div>
-															<p class="mb-2">Взяв авто в підписку на пів року для того щоб визначитись з вподобаннями...</p>
-															<a href="##">Читати далі</a>
-														</div>
+															<div class="scroll-gallery--content"></div>
+														</a>
 													</div>
 												</div>
 												<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 													<div class="inner h-100 position-relative">
-														<div class="scroll-gallery--img">
-															<div class="wrap-img">
-																<img class="bg-down" src="img/customer-stories-3.jpeg" alt="img">
-															</div>
+														<div class="video-wrap video-wrap--vissible h-100">
+															<a data-fancybox="scroll-gallery" data-src="#scroll-gallery-player-3" data-thumb="img/customer-stories-3.jpeg">
+																<video class="js-player specific-player" playsinline controls data-poster="img/customer-stories-3.jpeg">
+																	<source src="assets/video/example.mp4" type="video/mp4" />
+																</video>
+															</a>
+															<button type="button" class="btn btn-video-play-pause"></button>
 														</div>
-														<div class="scroll-gallery--content">
-															<div class="scroll-gallery--head mb-2">Моє перше авто</div>
-															<p class="mb-2">Взяв авто в підписку на пів року для того щоб визначитись з вподобаннями...</p>
-															<a href="##">Читати далі</a>
+														<div id="scroll-gallery-player-3" class="video-wrap hidden" style="display:none">
+															<video class="js-player specific-player" playsinline controls data-poster="img/customer-stories-3.jpeg">
+																<source src="assets/video/example.mp4" type="video/mp4" />
+															</video>
 														</div>
+														<div class="scroll-gallery--content"></div>
 													</div>
 												</div>
 												<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
 													<div class="inner h-100 position-relative">
-														<div class="scroll-gallery--img">
-															<div class="wrap-img">
-																<img class="bg-down" src="img/customer-stories-4.jpeg" alt="img">
+														<a data-fancybox="scroll-gallery" href="img/customer-stories-4.jpeg">
+															<div class="scroll-gallery--img">
+																<div class="wrap-img">
+																	<img class="bg-down" src="img/customer-stories-4.jpeg" alt="img">
+																</div>
 															</div>
-														</div>
-														<div class="scroll-gallery--content">
-															<div class="scroll-gallery--head mb-2">Моє перше авто</div>
-															<p class="mb-2">Взяв авто в підписку на пів року для того щоб визначитись з вподобаннями...</p>
-															<a href="##">Читати далі</a>
-														</div>
+															<div class="scroll-gallery--content"></div>
+														</a>
 													</div>
 												</div>
+												<div class="scroll-gallery--item col-12 col-sm-6 col-xl-4">
+													<div class="inner h-100 position-relative">
+														<a data-fancybox="scroll-gallery" href="img/scroll-gallery-car-1.jpeg">
+															<div class="scroll-gallery--img">
+																<div class="wrap-img">
+																	<img class="bg-down" src="img/scroll-gallery-car-1.jpeg" alt="img">
+																</div>
+															</div>
+															<div class="scroll-gallery--content"></div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="story-cube d-md-none">
+											<div class="story-cube--swiper">
+												<div class="story-cube--wrapper swiper-wrapper">
+													<div class="story-cube--slide swiper-slide">
+														<a class="h-100" data-fancybox="story-cube-gallery" data-src="#scroll-gallery-player-1" data-thumb="img/customer-stories-1.jpeg">
+															<div class="scroll-gallery--img h-100">
+																<div class="wrap-img h-100">
+																	<div class="video-wrap">
+																		<img class="bg-down" src="img/customer-stories-1.jpeg" alt="img">
+																	</div>
+																</div>
+															</div>
+															<div class="scroll-gallery--content"></div>
+														</a>
+													</div>
+													<div class="story-cube--slide swiper-slide">
+														<a data-fancybox="story-cube-gallery" href="img/customer-stories-2.jpeg">
+															<div class="scroll-gallery--img">
+																<div class="wrap-img">
+																	<img class="bg-down" src="img/customer-stories-2.jpeg" alt="img">
+																</div>
+															</div>
+															<div class="scroll-gallery--content"></div>
+														</a>
+													</div>
+													<div class="story-cube--slide swiper-slide">
+														<a data-fancybox="story-cube-gallery" href="img/customer-stories-3.jpeg">
+															<div class="scroll-gallery--img">
+																<div class="wrap-img">
+																	<img class="bg-down" src="img/customer-stories-3.jpeg" alt="img">
+																</div>
+															</div>
+															<div class="scroll-gallery--content"></div>
+														</a>
+													</div>
+												</div>
+
+												<div class="story-cube--next swiper-button-next"></div>
+												<div class="story-cube--prev swiper-button-prev"></div>
+
+												<div class="story-cube--pagination swiper-pagination"></div>
 											</div>
 										</div>
 									</div>

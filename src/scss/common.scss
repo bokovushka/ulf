@@ -1300,6 +1300,13 @@ p {
 		}
 	}
 }
+.fancybox__footer {
+	.is-classic .is-nav-selected .f-thumbs__slide__button {
+		&::after {
+			border: unset;
+		}
+	}
+}
 //seo
 .seo {
 	.h1,

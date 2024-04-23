@@ -1,3 +1,4 @@
+import { gsap } from "gsap";
 import Swiper from 'swiper/bundle';
 
 //? section-top--swiper
@@ -78,3 +79,59 @@ new Swiper(".gallery-car--swiper", {
 	}
 })
 
+
+
+
+
+const slider = new Swiper(".story-cube--swiper", {
+	speed: 1000, // Adjust the speed of the transition as needed
+	effect: 'cube', // Set the effect to 'cube'
+	cubeEffect: {
+		slideShadows: true, // Enable slide shadows
+		shadow: true, // Enable shadows on the cube faces
+		shadowOffset: 20, // Adjust the shadow offset
+		shadowScale: 0.94 // Adjust the shadow scale
+	},
+	// Other options remain unchanged
+	watchSlidesProgress: true,
+	loop: true,
+	autoplay: {
+		delay: 15000,
+		disableOnInteraction: false
+	},
+	slidesPerView: 1,
+	navigation: {
+		nextEl: ".story-cube--next",
+		prevEl: ".story-cube--prev",
+	},
+	pagination: {
+		el: '.story-cube--pagination',
+		clickable: true,
+		renderBullet: function (index, className) {
+			return '<div class="' + className + '"> <div class="swiper-pagination-progress"></div> </div>';
+		}
+	},
+	on: {
+		autoplayTimeLeft(swiper, time, progress) {
+			let currentSlide = document.querySelectorAll('.story-cube--swiper .swiper-slide')[swiper.activeIndex]
+			let currentBullet = document.querySelectorAll('.story-cube--swiper .swiper-pagination-progress')[swiper.realIndex]
+			let fullTime = currentSlide.dataset.swiperAutoplay ? parseInt(currentSlide.dataset.swiperAutoplay) : swiper.params.autoplay.delay;
+
+			let percentage = Math.min(Math.max(parseFloat(((fullTime - time) * 100 / fullTime).toFixed(1)), 0), 100) + '%';
+
+			gsap.set(currentBullet, { width: percentage });
+		},
+		transitionEnd(swiper) {
+			let allBullets = $('.story-cube--swiper .swiper-pagination-progress');
+			let bulletsBefore = allBullets.slice(0, swiper.realIndex);
+			let bulletsAfter = allBullets.slice(swiper.realIndex, allBullets.length);
+			if (bulletsBefore.length) { gsap.set(bulletsBefore, { width: '100%' }) }
+			if (bulletsAfter.length) { gsap.set(bulletsAfter, { width: '0%' }) }
+
+			let activeSlide = document.querySelectorAll('.story-cube--swiper .swiper-slide')[swiper.realIndex];
+			if (activeSlide.querySelector('video')) {
+				activeSlide.querySelector('video').currentTime = 0;
+			}
+		},
+	}
+});

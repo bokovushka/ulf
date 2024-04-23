@@ -83,3 +83,65 @@ Fancybox.bind('[data-fancybox="specific-player-mob"]', {
 	},
 	Thumbs: false,
 });
+
+//? scroll-gallery
+Fancybox.bind('[data-fancybox="scroll-gallery"]', {
+	Toolbar: {
+		display: {
+			left: [],
+			right: ["iterateZoom", "close"],
+		},
+	},
+	Carousel: {
+		Navigation: {
+			nextTpl: `<svg><use xlink:href="img/icons/icons.svg#i-arrow-right"></use></svg>`,
+			prevTpl: `<svg><use xlink:href="img/icons/icons.svg#i-arrow-right"></use></svg>`,
+		},
+	},
+	contentClick: "iterateZoom",
+	Images: {
+		Panzoom: {
+			maxScale: 3,
+		},
+	},
+	Thumbs: {
+		type: "classic",
+	},
+	caption: (fancybox, slide) => {
+		const caption = slide.caption || "";
+
+		return `${slide.index + 1} / ${fancybox.carousel?.slides.length
+			} <br /> ${caption}`;
+	},
+});
+
+//? cube-gallery
+Fancybox.bind('[data-fancybox="story-cube-gallery"]', {
+	Toolbar: {
+		display: {
+			left: [],
+			right: ["iterateZoom", "close"],
+		},
+	},
+	Carousel: {
+		Navigation: {
+			nextTpl: `<svg><use xlink:href="img/icons/icons.svg#i-arrow-right"></use></svg>`,
+			prevTpl: `<svg><use xlink:href="img/icons/icons.svg#i-arrow-right"></use></svg>`,
+		},
+	},
+	contentClick: "iterateZoom",
+	Images: {
+		Panzoom: {
+			maxScale: 3,
+		},
+	},
+	Thumbs: {
+		type: "classic",
+	},
+	caption: (fancybox, slide) => {
+		const caption = slide.caption || "";
+
+		return `${slide.index + 1} / ${fancybox.carousel?.slides.length
+			} <br /> ${caption}`;
+	},
+});

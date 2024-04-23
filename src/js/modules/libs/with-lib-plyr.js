@@ -6,6 +6,7 @@ if (audioPlayers.length > 0) {
 	// Створення аудіоплеєрів з використанням Plyr та отримання посилань на них
 	const players = Plyr.setup('.js-player', {
 		// Параметри конфігурації
+		clickToPlay: false
 	});
 
 	// Додаємо обробник подій для кожного аудіоплеєра
@@ -20,48 +21,83 @@ if (audioPlayers.length > 0) {
 		});
 	});
 }
-// else {
-//     console.log("На сторінці немає аудіоплеєрів.");
+
+
+// const videoPlayers = document.querySelectorAll('.specific-player');
+// const playPauseButtons = document.querySelectorAll('.btn-video-play-pause');
+
+// // Перевіряємо, чи є принаймні один елемент з класом `.specific-player` і один з класом `.btn-video-play-pause` на сторінці
+// if (videoPlayers.length > 0 && playPauseButtons.length > 0) {
+// 	videoPlayers.forEach((videoPlayer, index) => {
+// 		const playPauseButton = playPauseButtons[index];
+// 		if (videoPlayer && playPauseButton) {
+// 			const plyrVideoPlayer = videoPlayer.plyr;
+
+// 			playPauseButton.addEventListener('click', () => {
+// 				if (plyrVideoPlayer.paused) {
+// 					plyrVideoPlayer.play();
+// 					playPauseButton.classList.add('active');
+// 				} else {
+// 					plyrVideoPlayer.pause();
+// 					playPauseButton.classList.remove('active');
+// 				}
+// 			});
+
+// 			plyrVideoPlayer.on('ended', () => {
+// 				playPauseButton.classList.remove('active');
+// 			});
+
+// 			videoPlayer.addEventListener('click', (event) => {
+// 				event.stopPropagation();
+// 			});
+
+// 			// Перевіряємо, чи відео на паузі, і видаляємо клас "active" з кнопки, якщо він присутній
+// 			plyrVideoPlayer.on('pause', () => {
+// 				if (!plyrVideoPlayer.playing) {
+// 					playPauseButton.classList.remove('active');
+// 				}
+// 			});
+// 		}
+// 	});
 // }
 
 
-const videoPlayers = document.querySelectorAll('.specific-player');
-const playPauseButtons = document.querySelectorAll('.btn-video-play-pause');
 
-// Перевіряємо, чи є принаймні один елемент з класом `.specific-player` і один з класом `.btn-video-play-pause` на сторінці
-if (videoPlayers.length > 0 && playPauseButtons.length > 0) {
-	videoPlayers.forEach((videoPlayer, index) => {
-		const playPauseButton = playPauseButtons[index];
-		if (videoPlayer && playPauseButton) {
-			const plyrVideoPlayer = videoPlayer.plyr;
 
-			playPauseButton.addEventListener('click', () => {
-				if (plyrVideoPlayer.paused) {
-					plyrVideoPlayer.play();
-					playPauseButton.classList.add('active');
-				} else {
-					plyrVideoPlayer.pause();
-					playPauseButton.classList.remove('active');
-				}
-			});
 
-			plyrVideoPlayer.on('ended', () => {
+// Знаходимо всі контейнери відео, які мають клас .video-wrap--vissible
+const videoWraps = document.querySelectorAll('.video-wrap--vissible');
+
+videoWraps.forEach((videoWrap) => {
+	// Знаходимо відеоплеєр і кнопку відтворення для поточного контейнера відео
+	const videoPlayer = videoWrap.querySelector('.specific-player');
+	const playPauseButton = videoWrap.querySelector('.btn-video-play-pause');
+
+	if (videoPlayer && playPauseButton) {
+		const plyrVideoPlayer = videoPlayer.plyr;
+
+		playPauseButton.addEventListener('click', () => {
+			if (plyrVideoPlayer.paused) {
+				plyrVideoPlayer.play();
+				playPauseButton.classList.add('active');
+			} else {
+				plyrVideoPlayer.pause();
 				playPauseButton.classList.remove('active');
-			});
+			}
+		});
 
-			videoPlayer.addEventListener('click', (event) => {
-				event.stopPropagation();
-			});
+		plyrVideoPlayer.on('ended', () => {
+			playPauseButton.classList.remove('active');
+		});
 
-			// Перевіряємо, чи відео на паузі, і видаляємо клас "active" з кнопки, якщо він присутній
-			plyrVideoPlayer.on('pause', () => {
-				if (!plyrVideoPlayer.playing) {
-					playPauseButton.classList.remove('active');
-				}
-			});
-		}
-	});
-}
-// else {
-// 	console.log('Принаймні один з елементів з класом `.specific-player` або `.btn-video-play-pause` відсутні на сторінці.');
-// }
+		videoPlayer.addEventListener('click', (event) => {
+			event.stopPropagation();
+		});
+
+		plyrVideoPlayer.on('pause', () => {
+			if (!plyrVideoPlayer.playing) {
+				playPauseButton.classList.remove('active');
+			}
+		});
+	}
+});

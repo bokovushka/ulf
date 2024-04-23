@@ -1635,6 +1635,11 @@ p {
 		width: 101%;
 	}
 }
+.video-wrap--vissible {
+	.plyr--video {
+		pointer-events: none;
+	}
+}
 //accordion
 .accordion {
 	position: relative;

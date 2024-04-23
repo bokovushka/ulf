@@ -6,7 +6,7 @@ if (audioPlayers.length > 0) {
 	// Створення аудіоплеєрів з використанням Plyr та отримання посилань на них
 	const players = Plyr.setup('.js-player', {
 		// Параметри конфігурації
-		clickToPlay: false
+		// clickToPlay: false
 	});
 
 	// Додаємо обробник подій для кожного аудіоплеєра

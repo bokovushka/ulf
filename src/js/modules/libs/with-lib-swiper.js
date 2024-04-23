@@ -81,9 +81,8 @@ new Swiper(".gallery-car--swiper", {
 
 
 
-
-
-const slider = new Swiper(".story-cube--swiper", {
+//story-cube
+new Swiper(".story-cube--swiper", {
 	speed: 1000, // Adjust the speed of the transition as needed
 	effect: 'cube', // Set the effect to 'cube'
 	cubeEffect: {

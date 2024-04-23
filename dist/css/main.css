@@ -2092,6 +2092,10 @@ p {
   width: 101%;
 }
 
+.video-wrap--vissible .plyr--video {
+  pointer-events: none;
+}
+
 .accordion {
   position: relative;
 }

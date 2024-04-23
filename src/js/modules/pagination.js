@@ -159,15 +159,14 @@ $(function () {
 	var numberOfItems = $(".our-fleet .content").length;
 
 	var w = screen.width;
-	if (w < '768') {
+	if (w < 768) {
 		var limitPerPage = 5;
-	} else
-		if (w < '1024') {
-			var limitPerPage = 8;
-		}
-		else {
-			var limitPerPage = 12;
-		}
+	} else if (w < 1024) {
+		var limitPerPage = 8;
+	} else {
+		var limitPerPage = 12;
+	}
+
 
 	// Total pages rounded upwards
 	var totalPages = Math.ceil(numberOfItems / limitPerPage);

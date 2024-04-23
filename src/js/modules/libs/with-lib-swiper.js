@@ -31,7 +31,7 @@ new Swiper('.section-top--swiper', {
 	},
 });
 
-//loan-leasing
+//? gallery-car-thumbs--swiper
 var SwiperWallpaperCollectionThumbs = new Swiper(".gallery-car-thumbs--swiper", {
 	grabCursor: true,
 	breakpoints: {
@@ -54,6 +54,7 @@ var SwiperWallpaperCollectionThumbs = new Swiper(".gallery-car-thumbs--swiper", 
 	},
 })
 
+//? gallery-car--swiper
 new Swiper(".gallery-car--swiper", {
 	grabCursor: true,
 	slidesPerView: 1,
@@ -77,6 +78,3 @@ new Swiper(".gallery-car--swiper", {
 	}
 })
 
-// //передача контролю управління SwiperWallpaperCollection & SwiperWallpaperCollectionThumbs
-// SwiperWallpaperCollection.controller.control = SwiperWallpaperCollectionThumbs;
-// SwiperWallpaperCollectionThumbs.controller.control = SwiperWallpaperCollection;

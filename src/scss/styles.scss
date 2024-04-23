@@ -1305,3 +1305,377 @@
 		}
 	}
 }
+
+//tinder
+.tinder {
+	@include sm-min {
+		background: $dark-black;
+	}
+	.inner {
+		@include xs-max {
+			border-radius: 40px;
+			background: $dark-black;
+		}
+	}
+	.tinder-cards {
+		position: relative;
+		width: 325px;
+		height: 465px;
+		z-index: 1;
+		margin-left: auto;
+		@include sm-max {
+			margin: 0 auto;
+		}
+		@media (max-width: 425px) {
+			width: 100%;
+		}
+	}
+	.card {
+		position: absolute;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		user-select: none;
+		z-index: 1;
+		cursor: pointer;
+		overflow: hidden;
+		touch-action: none;
+		opacity: 1;
+		right: 0;
+		scale: 1;
+		border: unset;
+		background: unset;
+		@include transition(0.3s ease-out 0s);
+		cursor: default;
+		&:first-child {
+			cursor: grab;
+			.content {
+				.price,
+				.name,
+				.btn-arrow {
+					opacity: 1;
+				}
+			}
+		}
+		&:nth-child(2) {
+			right: 40%;
+			scale: 0.95;
+			@include sm-max {
+				right: 0;
+				bottom: 5%;
+			}
+			.content {
+				&::before {
+					background: rgb(0 0 0 / 0.5);
+				}
+			}
+		}
+		&:nth-child(3) {
+			right: 80%;
+			scale: 0.9;
+			@include sm-max {
+				right: 0;
+				bottom: 10%;
+			}
+			.content {
+				&::before {
+					background: rgb(0 0 0 / 0.65);
+				}
+			}
+		}
+		&:nth-child(4) {
+			right: 120%;
+			scale: 0.85;
+			@include sm-max {
+				right: 0;
+				scale: 1;
+				opacity: 0;
+			}
+			.content {
+				&::before {
+					background: rgb(0 0 0 / 0.8);
+					@include sm-max {
+						background: unset;
+					}
+				}
+			}
+		}
+		@include md-min {
+			&:nth-child(n + 5) {
+				opacity: 0;
+			}
+		}
+		@include sm-max {
+			&:nth-child(n + 4) {
+				opacity: 0;
+			}
+		}
+		&.end {
+			animation: fadeIn 0.5s ease forwards;
+			background: $white;
+			align-items: center;
+			text-align: center;
+			right: 0 !important;
+			scale: 1 !important;
+			bottom: 0 !important;
+		}
+		&.favorite {
+			.like {
+				&::after {
+					content: "";
+					background: url(../img/icons/icons.svg#i-favorite) no-repeat center;
+					background-size: 100%;
+				}
+				&::before {
+					background: linear-gradient(
+							180deg,
+							rgba(7, 16, 35, 0.6) 8.039%,
+							rgba(7, 16, 35, 0) 24.082%,
+							rgba(7, 16, 35, 0) 78.472%,
+							rgba(7, 16, 35, 0.6) 91.189%
+						),
+						rgba(235, 107, 45, 0.44);
+				}
+			}
+		}
+		.is-like {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			opacity: 0;
+			&::after {
+				position: absolute;
+				left: 50%;
+				bottom: 30%;
+				transform: translateX(-50%) rotate(-10deg);
+				width: 70%;
+				height: 13%;
+				font-size: 3em;
+				letter-spacing: 0.2em;
+				font-weight: 600;
+				border-radius: 0.15em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		.like {
+			&::after {
+				content: "";
+				background: url(../img/icons/icons.svg#i-like) no-repeat center;
+				background-size: 100%;
+				max-width: 150px;
+				width: 100%;
+				height: 150px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(6%) hue-rotate(146deg)
+					brightness(103%) contrast(102%);
+				// filter: brightness(0) saturate(100%) invert(74%) sepia(71%) saturate(5519%) hue-rotate(126deg)
+				// 	brightness(95%) contrast(87%);
+			}
+			&::before {
+				content: "";
+				display: block;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(
+						180deg,
+						rgba(7, 16, 35, 0.6) 8.039%,
+						rgba(7, 16, 35, 0) 24.082%,
+						rgba(7, 16, 35, 0) 78.472%,
+						rgba(7, 16, 35, 0.6) 91.189%
+					),
+					rgba(0, 106, 231, 0.44);
+			}
+		}
+		.nope {
+			&::after {
+				content: "";
+				background: url(../img/icons/icons.svg#i-dislike) no-repeat center;
+				background-size: 100%;
+				max-width: 150px;
+				width: 100%;
+				height: 150px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(6%) hue-rotate(146deg)
+					brightness(103%) contrast(102%);
+				// filter: brightness(0) saturate(100%) invert(18%) sepia(99%) saturate(5554%) hue-rotate(358deg)
+				// 	brightness(102%) contrast(123%);
+			}
+			&::before {
+				content: "";
+				display: block;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(
+						180deg,
+						rgba(7, 16, 35, 0.6) 8.039%,
+						rgba(7, 16, 35, 0) 24.082%,
+						rgba(7, 16, 35, 0) 78.472%,
+						rgba(7, 16, 35, 0.6) 91.189%
+					),
+					rgba(235, 107, 45, 0.44);
+			}
+		}
+		.content {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			padding: 16px;
+			color: $white;
+			z-index: 3;
+			&::before {
+				content: "";
+				position: absolute;
+				left: -1px;
+				top: 0;
+				width: 105%;
+				height: 105%;
+				background: rgb(0 0 0 / 0.3);
+				z-index: 2;
+			}
+			.price,
+			.name,
+			.btn-arrow {
+				position: relative;
+				z-index: 2;
+				color: $white;
+				font-weight: 700;
+				opacity: 0;
+				@include transition(0.3s ease-out 0s);
+			}
+			.price {
+				font-size: 12px;
+				line-height: 18px;
+				color: #d8dbe7;
+				span {
+					font-size: 16px;
+					line-height: 24px;
+					color: $white;
+				}
+			}
+			.btn-arrow {
+				font-size: 16px;
+				line-height: 24px;
+			}
+			.btn-arrow {
+				white-space: normal;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 22px;
+				padding: 0;
+				color: #d8dbe7;
+				&:hover {
+					color: $main-blue;
+					span {
+						&:after {
+							filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(2230%) hue-rotate(171deg)
+								brightness(104%) contrast(105%);
+						}
+					}
+				}
+				span {
+					position: relative;
+					display: flex;
+					justify-content: space-between;
+					align-items: self-start;
+					flex-wrap: nowrap;
+					gap: 20px;
+					text-align: left;
+					&:after {
+						content: "";
+						top: 50%;
+						display: block;
+						width: 24px;
+						min-width: 24px;
+						height: 24px;
+						background: url(../img/icons/icons.svg#i-arrow-right) 50% 50% no-repeat;
+						background-size: 100%;
+						filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(89deg)
+							brightness(104%) contrast(103%);
+						@include transition(0.3s ease-out 0s);
+					}
+				}
+			}
+		}
+	}
+
+	/* Додайте стилі для анімації з'явлення карти "No more cards" */
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.icons {
+		.tinder-buttons {
+			gap: 15px;
+			max-width: 325px;
+			@include sm-max {
+				width: 100%;
+			}
+			@media (max-width: 425px) {
+				max-width: 100%;
+			}
+		}
+		.i-like,
+		.i-dislike,
+		.i-favorite {
+			box-sizing: border-box;
+			border-radius: 42px;
+			box-shadow: 0px 3px 4px 0px rgba(10, 26, 33, 0.62);
+			background: $white;
+			padding: 10px;
+			width: max-content;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include transition(0.3s ease-out 0s);
+			cursor: pointer;
+			&:hover,
+			&:active {
+				scale: 1.05;
+			}
+		}
+		.i-like,
+		.i-dislike {
+			min-width: 85px;
+			@include sm-max {
+				width: 100%;
+			}
+		}
+		.i-favorite {
+			min-width: 56px;
+			&:active {
+				svg {
+					scale: 1.1;
+				}
+			}
+		}
+	}
+	svg {
+		width: 32px;
+		min-width: 32px;
+		height: 32px;
+		@include transition(0.3s ease-out 0s);
+	}
+}

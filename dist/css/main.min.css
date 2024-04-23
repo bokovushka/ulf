@@ -814,6 +814,20 @@ h5,
   }
 }
 
+h6,
+.h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 1023px) {
+  h6.font-m, .seo h6,
+  .h6.font-m,
+  .seo .h6 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
 p {
   font-size: 14px;
   line-height: 20px;
@@ -1113,8 +1127,8 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 101%;
+  min-height: 101%;
   object-fit: cover;
 }
 
@@ -3506,4 +3520,363 @@ p {
 }
 .ready-drive-horizontal ul.list-decimal li:nth-child(n+10)::before {
   content: "" counter(items) " ";
+}
+
+.tinder {
+  /* Додайте стилі для анімації з'явлення карти "No more cards" */
+}
+@media (min-width: 576px) {
+  .tinder {
+    background: #020a18;
+  }
+}
+@media (max-width: 575px) {
+  .tinder .inner {
+    border-radius: 40px;
+    background: #020a18;
+  }
+}
+.tinder .tinder-cards {
+  position: relative;
+  width: 325px;
+  height: 465px;
+  z-index: 1;
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .tinder .tinder-cards {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 425px) {
+  .tinder .tinder-cards {
+    width: 100%;
+  }
+}
+.tinder .card {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  user-select: none;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  touch-action: none;
+  opacity: 1;
+  right: 0;
+  scale: 1;
+  border: unset;
+  background: unset;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+  cursor: default;
+}
+.tinder .card:first-child {
+  cursor: grab;
+}
+.tinder .card:first-child .content .price,
+.tinder .card:first-child .content .name,
+.tinder .card:first-child .content .btn-arrow {
+  opacity: 1;
+}
+.tinder .card:nth-child(2) {
+  right: 40%;
+  scale: 0.95;
+}
+@media (max-width: 767px) {
+  .tinder .card:nth-child(2) {
+    right: 0;
+    bottom: 5%;
+  }
+}
+.tinder .card:nth-child(2) .content::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+.tinder .card:nth-child(3) {
+  right: 80%;
+  scale: 0.9;
+}
+@media (max-width: 767px) {
+  .tinder .card:nth-child(3) {
+    right: 0;
+    bottom: 10%;
+  }
+}
+.tinder .card:nth-child(3) .content::before {
+  background: rgba(0, 0, 0, 0.65);
+}
+.tinder .card:nth-child(4) {
+  right: 120%;
+  scale: 0.85;
+}
+@media (max-width: 767px) {
+  .tinder .card:nth-child(4) {
+    right: 0;
+    scale: 1;
+    opacity: 0;
+  }
+}
+.tinder .card:nth-child(4) .content::before {
+  background: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 767px) {
+  .tinder .card:nth-child(4) .content::before {
+    background: unset;
+  }
+}
+@media (min-width: 768px) {
+  .tinder .card:nth-child(n+5) {
+    opacity: 0;
+  }
+}
+@media (max-width: 767px) {
+  .tinder .card:nth-child(n+4) {
+    opacity: 0;
+  }
+}
+.tinder .card.end {
+  animation: fadeIn 0.5s ease forwards;
+  background: #fafafa;
+  align-items: center;
+  text-align: center;
+  right: 0 !important;
+  scale: 1 !important;
+  bottom: 0 !important;
+}
+.tinder .card.favorite .like::after {
+  content: "";
+  background: url(../img/icons/icons.svg#i-favorite) no-repeat center;
+  background-size: 100%;
+}
+.tinder .card.favorite .like::before {
+  background: linear-gradient(180deg, rgba(7, 16, 35, 0.6) 8.039%, rgba(7, 16, 35, 0) 24.082%, rgba(7, 16, 35, 0) 78.472%, rgba(7, 16, 35, 0.6) 91.189%), rgba(235, 107, 45, 0.44);
+}
+.tinder .card .is-like {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.tinder .card .is-like::after {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%) rotate(-10deg);
+  width: 70%;
+  height: 13%;
+  font-size: 3em;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  border-radius: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tinder .card .like::after {
+  content: "";
+  background: url(../img/icons/icons.svg#i-like) no-repeat center;
+  background-size: 100%;
+  max-width: 150px;
+  width: 100%;
+  height: 150px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(6%) hue-rotate(146deg) brightness(103%) contrast(102%);
+}
+.tinder .card .like::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(7, 16, 35, 0.6) 8.039%, rgba(7, 16, 35, 0) 24.082%, rgba(7, 16, 35, 0) 78.472%, rgba(7, 16, 35, 0.6) 91.189%), rgba(0, 106, 231, 0.44);
+}
+.tinder .card .nope::after {
+  content: "";
+  background: url(../img/icons/icons.svg#i-dislike) no-repeat center;
+  background-size: 100%;
+  max-width: 150px;
+  width: 100%;
+  height: 150px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(6%) hue-rotate(146deg) brightness(103%) contrast(102%);
+}
+.tinder .card .nope::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(7, 16, 35, 0.6) 8.039%, rgba(7, 16, 35, 0) 24.082%, rgba(7, 16, 35, 0) 78.472%, rgba(7, 16, 35, 0.6) 91.189%), rgba(235, 107, 45, 0.44);
+}
+.tinder .card .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  color: #fafafa;
+  z-index: 3;
+}
+.tinder .card .content::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 105%;
+  height: 105%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.tinder .card .content .price,
+.tinder .card .content .name,
+.tinder .card .content .btn-arrow {
+  position: relative;
+  z-index: 2;
+  color: #fafafa;
+  font-weight: 700;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+}
+.tinder .card .content .price {
+  font-size: 12px;
+  line-height: 18px;
+  color: #d8dbe7;
+}
+.tinder .card .content .price span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fafafa;
+}
+.tinder .card .content .btn-arrow {
+  font-size: 16px;
+  line-height: 24px;
+}
+.tinder .card .content .btn-arrow {
+  white-space: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 0;
+  color: #d8dbe7;
+}
+.tinder .card .content .btn-arrow:hover {
+  color: #00afff;
+}
+.tinder .card .content .btn-arrow:hover span:after {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(2230%) hue-rotate(171deg) brightness(104%) contrast(105%);
+}
+.tinder .card .content .btn-arrow span {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  text-align: left;
+}
+.tinder .card .content .btn-arrow span:after {
+  content: "";
+  top: 50%;
+  display: block;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  background: url(../img/icons/icons.svg#i-arrow-right) 50% 50% no-repeat;
+  background-size: 100%;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(89deg) brightness(104%) contrast(103%);
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tinder .icons .tinder-buttons {
+  gap: 15px;
+  max-width: 325px;
+}
+@media (max-width: 767px) {
+  .tinder .icons .tinder-buttons {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .tinder .icons .tinder-buttons {
+    max-width: 100%;
+  }
+}
+.tinder .icons .i-like,
+.tinder .icons .i-dislike,
+.tinder .icons .i-favorite {
+  box-sizing: border-box;
+  border-radius: 42px;
+  box-shadow: 0px 3px 4px 0px rgba(10, 26, 33, 0.62);
+  background: #fafafa;
+  padding: 10px;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+  cursor: pointer;
+}
+.tinder .icons .i-like:hover, .tinder .icons .i-like:active,
+.tinder .icons .i-dislike:hover,
+.tinder .icons .i-dislike:active,
+.tinder .icons .i-favorite:hover,
+.tinder .icons .i-favorite:active {
+  scale: 1.05;
+}
+.tinder .icons .i-like,
+.tinder .icons .i-dislike {
+  min-width: 85px;
+}
+@media (max-width: 767px) {
+  .tinder .icons .i-like,
+  .tinder .icons .i-dislike {
+    width: 100%;
+  }
+}
+.tinder .icons .i-favorite {
+  min-width: 56px;
+}
+.tinder .icons .i-favorite:active svg {
+  scale: 1.1;
+}
+.tinder svg {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }

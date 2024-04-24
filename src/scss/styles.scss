@@ -415,9 +415,9 @@
 			}
 			.scroll-gallery--content {
 				color: $white;
-				position: relative;
+				position: absolute;
 				z-index: 2;
-				height: 100%;
+				height: auto;
 				.customer-stories-main & {
 					justify-content: end;
 					display: flex;
@@ -451,7 +451,7 @@
 		position: absolute;
 		top: 15px;
 		right: 15px;
-		z-index: 2;
+		z-index: 3;
 		width: max-content;
 		padding: 0;
 		border: unset;
@@ -951,14 +951,15 @@
 	}
 }
 .fancybox__content {
-	min-width: 850px;
+	height: inherit;
+	// min-width: 850px;
 	min-height: 440px !important;
 	@include md-max {
-		min-width: 450px;
-		min-height: 340px !important;
+		// min-width: 450px;
+		height: 340px !important;
 	}
 	@include sm-max {
-		min-width: 280px;
+		// min-width: 280px;
 		min-height: 280px !important;
 	}
 

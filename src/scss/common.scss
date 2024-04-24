@@ -1627,19 +1627,23 @@ p {
 		}
 	}
 	.plyr__poster {
-		background-size: 115%;
+		background-size: 135%;
 		@include lg-max {
 			background-size: 175%;
 		}
 	}
 	video {
-		object-fit: cover;
+		// object-fit: cover;
 		width: 101%;
 	}
 }
 .video-wrap--vissible {
+	width: 100%;
 	.plyr--video {
 		pointer-events: none;
+		video {
+			object-fit: cover;
+		}
 	}
 }
 //accordion

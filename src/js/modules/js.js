@@ -77,3 +77,50 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+//? Підрахунок кількості історій користувачів & відповідна к-ть мініатюр у fancybox
+document.addEventListener("DOMContentLoaded", function () {
+	var itemsPerPage = window.innerWidth >= 1024 ? 6 : 4;
+	var currentIndex = itemsPerPage;
+
+	var items = document.querySelectorAll('.scroll-gallery--item');
+	var showMoreButton = document.querySelector('.btn-show-more');
+
+	// Функція для показу додаткових елементів при натисканні на кнопку
+	function showMore() {
+		var nextIndex = Math.min(currentIndex + itemsPerPage, items.length);
+		for (var i = currentIndex; i < nextIndex; i++) {
+			items[i].style.display = 'block';
+			var link = items[i].querySelector('a');
+			if (link) {
+				link.setAttribute('data-fancybox', 'scroll-gallery');
+			}
+		}
+		currentIndex = nextIndex;
+
+		// Перевірка, чи ще є елементи, які можна показати
+		if (currentIndex >= items.length) {
+			showMoreButton.style.display = 'none'; // Приховати кнопку, якщо елементів не залишилося
+		}
+	}
+
+	// Додати обробник подій для кнопки "Показати більше"
+	showMoreButton.addEventListener('click', showMore);
+
+	// Приховати всі елементи, крім перших `itemsPerPage`
+	for (var i = itemsPerPage; i < items.length; i++) {
+		items[i].style.display = 'none';
+	}
+
+	// Додати атрибут data-fancybox="scroll-gallery" для <a> елементів у видимих блоках при завантаженні сторінки
+	items.forEach(function (item, index) {
+		if (index < itemsPerPage) {
+			var link = item.querySelector('a');
+			if (link) {
+				link.setAttribute('data-fancybox', 'scroll-gallery');
+			}
+		}
+	});
+});
+
+

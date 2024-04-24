@@ -2081,7 +2081,7 @@ p {
   stroke-linejoin: round;
 }
 .plyr--video .plyr__poster {
-  background-size: 115%;
+  background-size: 135%;
 }
 @media (max-width: 1199px) {
   .plyr--video .plyr__poster {
@@ -2089,12 +2089,17 @@ p {
   }
 }
 .plyr--video video {
-  object-fit: cover;
   width: 101%;
 }
 
+.video-wrap--vissible {
+  width: 100%;
+}
 .video-wrap--vissible .plyr--video {
   pointer-events: none;
+}
+.video-wrap--vissible .plyr--video video {
+  object-fit: cover;
 }
 
 .accordion {
@@ -2645,9 +2650,9 @@ p {
 }
 .scroll-gallery .scroll-gallery--item .inner .scroll-gallery--content {
   color: #fafafa;
-  position: relative;
+  position: absolute;
   z-index: 2;
-  height: 100%;
+  height: auto;
 }
 .customer-stories-main .scroll-gallery .scroll-gallery--item .inner .scroll-gallery--content {
   justify-content: end;
@@ -2679,7 +2684,7 @@ p {
   position: absolute;
   top: 15px;
   right: 15px;
-  z-index: 2;
+  z-index: 3;
   width: max-content;
   padding: 0;
   border: unset;
@@ -3153,18 +3158,16 @@ p {
 }
 
 .fancybox__content {
-  min-width: 850px;
+  height: inherit;
   min-height: 440px !important;
 }
 @media (max-width: 1023px) {
   .fancybox__content {
-    min-width: 450px;
-    min-height: 340px !important;
+    height: 340px !important;
   }
 }
 @media (max-width: 767px) {
   .fancybox__content {
-    min-width: 280px;
     min-height: 280px !important;
   }
 }

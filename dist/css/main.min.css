@@ -873,6 +873,7 @@ p {
 }
 .btn.btn-default {
   min-width: 225px;
+  min-height: 46px;
 }
 .btn.btn-default:not(:disabled):hover {
   border-color: #36c0ff;
@@ -912,19 +913,19 @@ p {
   opacity: 1;
   cursor: not-allowed;
 }
-.our-fleet-search .btn.btn-default-white:not(:disabled):hover, .car-content .btn.btn-default-white:not(:disabled):hover, .subscription-features-content .btn.btn-default-white:not(:disabled):hover {
+.our-fleet-search .btn.btn-default-white:not(:disabled):hover, .our-fleet-preview--search .btn.btn-default-white:not(:disabled):hover, .car-content .btn.btn-default-white:not(:disabled):hover, .subscription-features-content .btn.btn-default-white:not(:disabled):hover {
   border: 1px solid rgb(231, 243, 255);
   background: rgba(255, 255, 255, 0.12);
   color: #fafafa;
 }
-.our-fleet-search .btn.btn-default-white:not(:disabled):active, .our-fleet-search .btn.btn-default-white:not(:disabled):focus, .car-content .btn.btn-default-white:not(:disabled):active, .car-content .btn.btn-default-white:not(:disabled):focus, .subscription-features-content .btn.btn-default-white:not(:disabled):active, .subscription-features-content .btn.btn-default-white:not(:disabled):focus {
+.our-fleet-search .btn.btn-default-white:not(:disabled):active, .our-fleet-search .btn.btn-default-white:not(:disabled):focus, .our-fleet-preview--search .btn.btn-default-white:not(:disabled):active, .our-fleet-preview--search .btn.btn-default-white:not(:disabled):focus, .car-content .btn.btn-default-white:not(:disabled):active, .car-content .btn.btn-default-white:not(:disabled):focus, .subscription-features-content .btn.btn-default-white:not(:disabled):active, .subscription-features-content .btn.btn-default-white:not(:disabled):focus {
   color: #fafafa;
 }
-.our-fleet-search .btn.btn-default-white:not(:disabled):active, .car-content .btn.btn-default-white:not(:disabled):active, .subscription-features-content .btn.btn-default-white:not(:disabled):active {
+.our-fleet-search .btn.btn-default-white:not(:disabled):active, .our-fleet-preview--search .btn.btn-default-white:not(:disabled):active, .car-content .btn.btn-default-white:not(:disabled):active, .subscription-features-content .btn.btn-default-white:not(:disabled):active {
   border: 1px solid rgb(231, 243, 255);
   background: rgba(255, 255, 255, 0.24);
 }
-.our-fleet-search .btn.btn-default-white:not(:disabled):focus, .car-content .btn.btn-default-white:not(:disabled):focus, .subscription-features-content .btn.btn-default-white:not(:disabled):focus {
+.our-fleet-search .btn.btn-default-white:not(:disabled):focus, .our-fleet-preview--search .btn.btn-default-white:not(:disabled):focus, .car-content .btn.btn-default-white:not(:disabled):focus, .subscription-features-content .btn.btn-default-white:not(:disabled):focus {
   border: 1px solid rgb(231, 243, 255);
   background: unset;
   color: #fafafa;
@@ -2698,6 +2699,14 @@ p {
 .our-fleet .our-fleet-preview {
   row-gap: 32px;
 }
+.our-fleet .our-fleet-preview .our-fleet-search {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .our-fleet .our-fleet-preview .our-fleet-search {
+    display: block;
+  }
+}
 .our-fleet .our-fleet-preview--item {
   border: 1px solid rgb(245, 247, 247);
   border-radius: 10px;
@@ -3955,6 +3964,7 @@ p {
   border-radius: 42px;
   box-shadow: 0px 3px 4px 0px rgba(10, 26, 33, 0.62);
   background: #fafafa;
+  border: unset;
   padding: 10px;
   width: max-content;
   display: flex;

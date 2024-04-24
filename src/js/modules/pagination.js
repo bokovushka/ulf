@@ -1,5 +1,14 @@
 import $ from 'jquery';
 
+// Функція для плавної прокрутки до елемента
+function scrollToElement(element) {
+	if ($(element).length > 0) {
+		var headerHeight = $('header').outerHeight();
+		var targetScroll = $(element).offset().top - headerHeight - 20;
+		$('html, body').animate({ scrollTop: targetScroll }, 'slow');
+	}
+}
+
 $(document).ready(function () {
 	// Функція, що додає клас на екранах від 1024 пікселів
 	function addClassOnLargeScreens() {
@@ -18,6 +27,9 @@ $(document).ready(function () {
 	$(window).resize(function () {
 		addClassOnLargeScreens();
 	});
+
+	// Перевірка на пристрій
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 });
 
 //? pagination
@@ -59,55 +71,22 @@ function getPageList(totalPages, page, maxLength) {
 
 //? pagination questions
 $(function () {
-	// Number of items and limits the number of items per page
+	var targetElement = '#questions';
 	var numberOfItems = $("#questions .content").length;
-
-	// var w = screen.width;
-	// if (w < '768') {
-	// 	var limitPerPage = 6;
-	// } else
-	// 	if (w < '1024') {
-	// 		var limitPerPage = 6;
-	// 	}
-	// 	else {
-	// 		var limitPerPage = 11;
-	// 	}
-
 	var limitPerPage = 11;
-
-	// Total pages rounded upwards
 	var totalPages = Math.ceil(numberOfItems / limitPerPage);
-	// Number of buttons at the top, not counting prev/next,
-	// but including the dotted buttons.
-	// Must be at least 5:
 	var paginationSize = 7;
 	var currentPage;
 
 	function showPage(whichPage) {
 		if (whichPage < 1 || whichPage > totalPages) return false;
 		currentPage = whichPage;
-		$("#questions .content")
-			.hide()
-			.slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage)
-			.show();
-		// Replace the navigation items (not prev/next):
-		$("#questions .pagination li").slice(1, -1).remove();
+		$(targetElement + " .content").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+		$(targetElement + " .pagination li").slice(1, -1).remove();
 		getPageList(totalPages, currentPage, paginationSize).forEach(item => {
-			$("<li>")
-				.addClass(
-					"page-item " +
-					(item ? "current-page " : "") +
-					(item === currentPage ? "active " : "")
-				)
-				.append(
-					$("<a>")
-						.addClass("page-link")
-						.attr({
-							href: "javascript:void(0)"
-						})
-						.text(item || "...")
-				)
-				.insertBefore("#next-page");
+			$("<li>").addClass("page-item " + (item ? "current-page " : "") + (item === currentPage ? "active " : ""))
+				.append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "..."))
+				.insertBefore(targetElement + " #next-page");
 		});
 		return true;
 	}
@@ -135,29 +114,29 @@ $(function () {
 	$("#questions").show();
 	showPage(1);
 
-	// Use event delegation, as these items are recreated later
-	$(
-		document
-	).on("click", "#questions .pagination li.current-page:not(.active)", function () {
-		return showPage(+$(this).text());
-	});
-	$("#questions #next-page").on("click", function () {
-		return showPage(currentPage + 1);
+	$(document).on("click", targetElement + " .pagination li.current-page:not(.active)", function () {
+		var targetPage = +$(this).text();
+		showPage(targetPage);
+		scrollToElement(targetElement);
 	});
 
-	$("#questions #previous-page").on("click", function () {
-		return showPage(currentPage - 1);
+	$(targetElement + " #next-page").on("click", function () {
+		var nextPage = currentPage + 1;
+		showPage(nextPage);
+		scrollToElement(targetElement);
 	});
-	// $(".pagination").on("click", function () {
-	// 	$("html,body").animate({ scrollTop: 0 }, 0);
-	// });
+
+	$(targetElement + " #previous-page").on("click", function () {
+		var prevPage = currentPage - 1;
+		showPage(prevPage);
+		scrollToElement(targetElement);
+	});
 });
 
 //? pagination our-fleet
 $(function () {
-	// Number of items and limits the number of items per page
+	var targetElement = '.our-fleet';
 	var numberOfItems = $(".our-fleet .content").length;
-
 	var w = screen.width;
 	if (w < 768) {
 		var limitPerPage = 5;
@@ -166,41 +145,19 @@ $(function () {
 	} else {
 		var limitPerPage = 12;
 	}
-
-
-	// Total pages rounded upwards
 	var totalPages = Math.ceil(numberOfItems / limitPerPage);
-	// Number of buttons at the top, not counting prev/next,
-	// but including the dotted buttons.
-	// Must be at least 5:
 	var paginationSize = 7;
 	var currentPage;
 
 	function showPage(whichPage) {
 		if (whichPage < 1 || whichPage > totalPages) return false;
 		currentPage = whichPage;
-		$(".our-fleet .content")
-			.hide()
-			.slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage)
-			.show();
-		// Replace the navigation items (not prev/next):
-		$(".our-fleet .pagination li").slice(1, -1).remove();
+		$(targetElement + " .content").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+		$(targetElement + " .pagination li").slice(1, -1).remove();
 		getPageList(totalPages, currentPage, paginationSize).forEach(item => {
-			$("<li>")
-				.addClass(
-					"page-item " +
-					(item ? "current-page " : "") +
-					(item === currentPage ? "active " : "")
-				)
-				.append(
-					$("<a>")
-						.addClass("page-link")
-						.attr({
-							href: "javascript:void(0)"
-						})
-						.text(item || "...")
-				)
-				.insertBefore("#next-page");
+			$("<li>").addClass("page-item " + (item ? "current-page " : "") + (item === currentPage ? "active " : ""))
+				.append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "..."))
+				.insertBefore(targetElement + " #next-page");
 		});
 		return true;
 	}
@@ -228,22 +185,24 @@ $(function () {
 	$(".our-fleet").show();
 	showPage(1);
 
-	// Use event delegation, as these items are recreated later
-	$(
-		document
-	).on("click", ".our-fleet .pagination li.current-page:not(.active)", function () {
-		return showPage(+$(this).text());
-	});
-	$(".our-fleet #next-page").on("click", function () {
-		return showPage(currentPage + 1);
+
+	$(document).on("click", targetElement + " .pagination li.current-page:not(.active)", function () {
+		var targetPage = +$(this).text();
+		showPage(targetPage);
+		scrollToElement(targetElement);
 	});
 
-	$(".our-fleet #previous-page").on("click", function () {
-		return showPage(currentPage - 1);
+	$(targetElement + " #next-page").on("click", function () {
+		var nextPage = currentPage + 1;
+		showPage(nextPage);
+		scrollToElement(targetElement);
 	});
-	// $(".pagination").on("click", function () {
-	// 	$("html,body").animate({ scrollTop: 0 }, 0);
-	// });
+
+	$(targetElement + " #previous-page").on("click", function () {
+		var prevPage = currentPage - 1;
+		showPage(prevPage);
+		scrollToElement(targetElement);
+	});
 
 	$(".our-fleet .btn-show-more").on("click", function () {
 		var w = screen.width;

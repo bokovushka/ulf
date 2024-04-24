@@ -271,6 +271,7 @@ p {
 	}
 	&.btn-default {
 		min-width: 225px;
+		min-height: 46px;
 		&:not(:disabled) {
 			&:hover {
 				border-color: $light-blue;
@@ -318,6 +319,7 @@ p {
 			cursor: not-allowed;
 		}
 		.our-fleet-search &,
+		.our-fleet-preview--search &,
 		.car-content &,
 		.subscription-features-content & {
 			&:not(:disabled) {

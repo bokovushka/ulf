@@ -1,8 +1,41 @@
 @use "sass:math";
 
+.home-page {
+	// .content {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	@include sm-max {
+	// 		.section-top {
+	// 			order: 1;
+	// 		}
+	// 		.pin-spacer {
+	// 			order: 2 !important;
+	// 		}
+	// 		.tinder {
+	// 			order: 3;
+	// 		}
+	// 		.our-fleet {
+	// 			order: 4;
+	// 		}
+	// 		.test-drive {
+	// 			order: 5;
+	// 		}
+	// 		.asked-questions {
+	// 			order: 6;
+	// 		}
+	// 		.any-questions {
+	// 			order: 7;
+	// 		}
+	// 		.seo {
+	// 			order: 8;
+	// 		}
+	// 	}
+	// }
+}
+
 //section-top
 .section-top {
-	.home & {
+	.home-page & {
 		@include sm-max {
 			background: rgb(6, 32, 44);
 		}
@@ -605,6 +638,9 @@
 		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
 		background: radial-gradient(214.6% 98.86% at 70% 48%, rgb(22, 72, 123), rgb(4, 25, 66) 100%);
 		color: $white;
+		@include sm-max {
+			background: #041942;
+		}
 	}
 }
 
@@ -615,6 +651,9 @@
 		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
 		background: radial-gradient(214.6% 98.86% at 70% 48%, rgb(22, 72, 123), rgb(4, 25, 66) 100%);
 		color: $white;
+		@include sm-max {
+			background: #041942;
+		}
 	}
 }
 
@@ -1021,7 +1060,7 @@
 		.h5 {
 			font-size: 14px;
 			line-height: 20px;
-			font-weight: 500;
+			font-weight: 600;
 		}
 	}
 	.car-properties {
@@ -1164,7 +1203,7 @@
 		.tab-content {
 			.tab-pane {
 				padding: 28px 24px;
-				background: $main-blue;
+				background: linear-gradient(180deg, rgb(0, 175, 255), rgb(0, 102, 255) 100%);
 				border-radius: 10px;
 				.monthly-payment,
 				.first-payment {
@@ -1246,6 +1285,9 @@
 
 //subscription-features-content
 .subscription-features-content {
+	@include md-max {
+		background: linear-gradient(180deg, rgb(0, 175, 255), rgb(0, 102, 255) 100%) !important;
+	}
 	.h1 {
 		@include md-max {
 			font-size: 24px;
@@ -1349,9 +1391,6 @@
 				border-radius: 20px;
 				box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
 			}
-			@include sm-max {
-				padding-top: 60px;
-			}
 			li {
 				font-size: 20px;
 				font-weight: 500;
@@ -1437,12 +1476,12 @@
 //tinder
 .tinder {
 	@include sm-min {
-		background: $dark-black;
+		background: radial-gradient(43% 76% at 50% 57.99999999999999%, rgb(10, 39, 89), rgb(2, 10, 24) 100%);
 	}
 	.inner {
 		@include xs-max {
 			border-radius: 40px;
-			background: $dark-black;
+			background: #041942;
 		}
 	}
 	.tinder-cards {
@@ -1656,7 +1695,7 @@
 					rgba(235, 107, 45, 0.44);
 			}
 		}
-		.content {
+		.card--info {
 			width: 100%;
 			height: 100%;
 			display: flex;

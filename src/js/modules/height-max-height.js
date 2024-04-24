@@ -30,4 +30,5 @@ function cardResize() {
 
 $(document).ready(function () {
 	setEqualHeight($(".our-fleet-preview .content .our-fleet-preview--item .name"));
+	setEqualHeight($(".car-content .subscription-period-tab .tab-content .tab-pane .name"));
 });

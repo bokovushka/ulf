@@ -272,6 +272,7 @@ p {
 	&.btn-default {
 		min-width: 225px;
 		min-height: 46px;
+		font-weight: 600;
 		&:not(:disabled) {
 			&:hover {
 				border-color: $light-blue;

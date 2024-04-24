@@ -10,22 +10,37 @@ function scrollToElement(element) {
 }
 
 $(document).ready(function () {
-	// Функція, що додає клас на екранах від 1024 пікселів
-	function addClassOnLargeScreens() {
+	// Функція, що видяляє our-fleet-search з розмітки на екранах від 1024 пікселів
+
+	function removeElementOnSmallScreens() {
 		var windowWidth = $(window).width();
-		if (windowWidth >= 1024) {
-			$('.our-fleet .our-fleet-search').addClass('content');
-		} else {
-			$('.our-fleet .our-fleet-search').removeClass('content');
+		var isSmallScreen = windowWidth < 1024;
+
+		if (isSmallScreen) {
+			// Видалити .our-fleet-search з DOM, якщо він існує
+			$('.our-fleet .content.our-fleet-search').remove();
 		}
 	}
 
+	function removeElementOnLargeScreens() {
+		var windowWidth = $(window).width();
+		var isLargeScreen = windowWidth >= 768;
+
+		if (isLargeScreen) {
+			// Видалити .tinder з DOM, якщо він існує
+			$('.tinder').remove();
+		}
+	}
+
+
 	// Викликати функцію при завантаженні сторінки
-	addClassOnLargeScreens();
+	removeElementOnSmallScreens();
+	removeElementOnLargeScreens();
 
 	// Викликати функцію при зміні розміру вікна
 	$(window).resize(function () {
-		addClassOnLargeScreens();
+		removeElementOnSmallScreens();
+		removeElementOnLargeScreens();
 	});
 
 	// Перевірка на пристрій
@@ -219,5 +234,7 @@ $(function () {
 		totalPages = Math.ceil(numberOfItems / limitPerPage);
 		showPage(currentPage); // Show the current page with the updated limitPerPage
 	});
+
+
 
 });

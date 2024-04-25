@@ -3762,9 +3762,9 @@ p {
 .tinder .card:first-child {
   cursor: grab;
 }
-.tinder .card:first-child .content .price,
-.tinder .card:first-child .content .name,
-.tinder .card:first-child .content .btn-arrow {
+.tinder .card:first-child .card--info .price,
+.tinder .card:first-child .card--info .name,
+.tinder .card:first-child .card--info .btn-arrow {
   opacity: 1;
 }
 .tinder .card:nth-child(2) {
@@ -3777,7 +3777,7 @@ p {
     bottom: 5%;
   }
 }
-.tinder .card:nth-child(2) .content::before {
+.tinder .card:nth-child(2) .card--info::before {
   background: rgba(0, 0, 0, 0.5);
 }
 .tinder .card:nth-child(3) {
@@ -3790,7 +3790,7 @@ p {
     bottom: 10%;
   }
 }
-.tinder .card:nth-child(3) .content::before {
+.tinder .card:nth-child(3) .card--info::before {
   background: rgba(0, 0, 0, 0.65);
 }
 .tinder .card:nth-child(4) {
@@ -3804,11 +3804,11 @@ p {
     opacity: 0;
   }
 }
-.tinder .card:nth-child(4) .content::before {
+.tinder .card:nth-child(4) .card--info::before {
   background: rgba(0, 0, 0, 0.8);
 }
 @media (max-width: 767px) {
-  .tinder .card:nth-child(4) .content::before {
+  .tinder .card:nth-child(4) .card--info::before {
     background: unset;
   }
 }

@@ -1524,7 +1524,7 @@
 		cursor: default;
 		&:first-child {
 			cursor: grab;
-			.content {
+			.card--info {
 				.price,
 				.name,
 				.btn-arrow {
@@ -1539,7 +1539,7 @@
 				right: 0;
 				bottom: 5%;
 			}
-			.content {
+			.card--info {
 				&::before {
 					background: rgb(0 0 0 / 0.5);
 				}
@@ -1552,7 +1552,7 @@
 				right: 0;
 				bottom: 10%;
 			}
-			.content {
+			.card--info {
 				&::before {
 					background: rgb(0 0 0 / 0.65);
 				}
@@ -1566,7 +1566,7 @@
 				scale: 1;
 				opacity: 0;
 			}
-			.content {
+			.card--info {
 				&::before {
 					background: rgb(0 0 0 / 0.8);
 					@include sm-max {

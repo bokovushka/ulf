@@ -28,7 +28,7 @@ $(document).ready(function () {
 
 		if (isLargeScreen) {
 			// Видалити .tinder з DOM, якщо він існує
-			$('.tinder').remove();
+			$('.tinder-catalog').remove();
 		}
 	}
 

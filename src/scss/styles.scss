@@ -724,8 +724,8 @@
 			background: url(../img/bg-asked-questions-1.png) no-repeat;
 			background-size: contain;
 			position: absolute;
-			top: -15%;
-			left: -70%;
+			top: 5%;
+			left: -65%;
 			width: 395px;
 			height: 395px;
 			z-index: -1;
@@ -737,10 +737,10 @@
 			background: url(../img/bg-asked-questions-2.png) no-repeat;
 			background-size: contain;
 			position: absolute;
-			top: -20%;
-			right: -60%;
-			width: 385px;
-			height: 385px;
+			top: -10%;
+			right: -20%;
+			width: 285px;
+			height: 285px;
 			z-index: -1;
 		}
 	}
@@ -782,6 +782,11 @@
 	@include md-max {
 		top: 70px;
 		height: calc(100% - 70px) !important;
+	}
+	@include sm-max {
+		transform: translateX(100%);
+		left: unset;
+		right: 0;
 	}
 	@include xs-max {
 		min-width: 100%;

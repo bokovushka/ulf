@@ -4,7 +4,7 @@
 	z-index: 1060;
 	position: fixed;
 	width: 100%;
-	@include md-max {
+	@include xs-max {
 		.home-page & {
 			box-shadow: unset;
 			&.header--show {
@@ -100,7 +100,7 @@
 	width: 100%;
 	background: $white;
 	@include transition(0.3s ease-out 0s);
-	@include md-max {
+	@include xs-max {
 		.home-page & {
 			background: transparent;
 			&.header--show {
@@ -122,6 +122,8 @@
 			background: $sky-blue;
 			margin: 0 -16px;
 			@include transition(0.3s ease-out 0s);
+		}
+		@include xs-max {
 			.home-page & {
 				background: transparent;
 			}
@@ -130,9 +132,9 @@
 			gap: 20px;
 			@include md-max {
 				gap: 16px;
-				.lock & {
-					padding-bottom: 0 !important;
-				}
+				// .lock & {
+				// 	padding-bottom: 0 !important;
+				// }
 			}
 			.navbar-brand {
 				max-width: 155px;
@@ -144,6 +146,8 @@
 					max-width: 140px;
 					background: url(../img/logo-2.svg) no-repeat;
 					background-size: contain;
+				}
+				@include xs-max {
 					.home-page & {
 						background: url(../img/logo-3.svg) no-repeat;
 						background-size: contain;
@@ -155,52 +159,69 @@
 			}
 			.navbar-collapse {
 				@include md-max {
-					margin: 0 -16px;
-				}
-			}
-			//header-main--desk
-			.header-main--desk {
-				gap: 20px;
-				@include lg-min {
-					.nav-link {
-						font-size: 14px;
-						line-height: 21px;
-						font-weight: 600;
-						cursor: pointer;
-						@include transition(0.3s ease-out 0s);
+					// margin: 0 -16px;
+					// height: 100% !important;
+					// transition: unset !important;
+					height: 100vh !important;
+					position: absolute;
+					width: 100%;
+					top: 70px;
+					right: 0;
+					transform: translateX(100%);
+					@include transition(0.3s ease-out 0s);
+					@include md-max {
+						&.show {
+							transform: translateX(0);
+						}
 					}
-					.list-inline-item--menu {
+				}
+				//header-main--desk
+				.header-main--desk {
+					gap: 20px;
+					@include lg-min {
 						.nav-link {
-							&:hover,
-							&.active {
-								color: $main-blue;
-								.nav-link--inner {
-									span,
-									span a {
-										color: $main-blue;
-										@include transition(0.3s ease-out 0s);
-									}
-									svg {
-										stroke: $main-blue;
-										transform: rotate(-90deg);
+							font-size: 14px;
+							line-height: 21px;
+							font-weight: 600;
+							cursor: pointer;
+							@include transition(0.3s ease-out 0s);
+						}
+						.list-inline-item--menu {
+							.nav-link {
+								&:hover,
+								&.active {
+									color: $main-blue;
+									.nav-link--inner {
+										span,
+										span a {
+											color: $main-blue;
+											@include transition(0.3s ease-out 0s);
+										}
+										svg {
+											stroke: $main-blue;
+											transform: rotate(-90deg);
+										}
 									}
 								}
 							}
 						}
 					}
+					@include xl-min {
+						font-size: 16px;
+					}
 				}
-				@include xl-min {
-					font-size: 16px;
-				}
-			}
-			//header-main--mob
-			.header-main--mob {
-				@include md-max {
-					.navbar-nav-wrapper {
-						position: relative;
-						width: 100%;
-						height: calc(100vh - 70px);
-						overflow-y: auto;
+				//header-main--mob
+				.header-main--mob {
+					@include md-max {
+						.navbar-nav-wrapper {
+							// position: relative;
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: 100%;
+							height: calc(100vh - 70px);
+							overflow-y: auto;
+						}
 					}
 					.navbar-nav {
 						position: absolute;

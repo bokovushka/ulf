@@ -537,6 +537,24 @@ p {
 			// }
 		}
 	}
+	&-clear-filter {
+		font-size: 14px;
+		font-weight: 500 !important;
+		line-height: 20px;
+		width: max-content;
+		min-height: auto !important;
+		min-width: auto !important;
+		&:not(:disabled) {
+			color: $light-grey;
+			&:hover {
+				color: $red;
+			}
+			&:active,
+			&:focus {
+				color: $red !important;
+			}
+		}
+	}
 }
 .btn-review-add-pic {
 	svg {
@@ -990,7 +1008,7 @@ p {
 			.rangeNub {
 				border-radius: 50% !important;
 				transform: unset !important;
-				background: $white;
+				background: $main-blue;
 				box-shadow:
 					0px 0.5px 4px rgba(0, 0, 0, 0.12),
 					0px 6px 13px rgba(0, 0, 0, 0.12);
@@ -1008,7 +1026,7 @@ p {
 			}
 			&.active {
 				.rangeNub {
-					background: $white;
+					background: $main-blue;
 				}
 			}
 		}
@@ -1102,6 +1120,7 @@ p {
 //swiper arrow
 .button-slider-prev,
 .button-slider-next {
+	display: none;
 	cursor: pointer;
 	svg {
 		width: 32px;
@@ -1165,11 +1184,10 @@ p {
 			font-size: 16px;
 			font-weight: 700;
 			line-height: 24px;
-			color: $black;
+			color: #54596a;
 			background: $white;
-			border: none;
 			padding: 0 5px;
-			border: 1px solid $blue;
+			border: 2px solid $main-blue;
 			border-radius: 10px;
 			cursor: unset;
 		}

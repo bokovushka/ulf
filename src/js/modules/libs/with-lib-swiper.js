@@ -6,7 +6,7 @@ new Swiper('.section-top--swiper', {
 	slidesPerView: 7.5,
 	spaceBetween: 16,
 	loop: true,
-	speed: 4000,
+	speed: 6000,
 	autoplay: {
 		enabled: true,
 		delay: 1,

@@ -2599,6 +2599,9 @@ p {
   border-radius: 50%;
   background: rgba(25, 27, 39, 0.7);
   padding: 5px;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
   transition: 0.3s ease-out 0s;
 }
 .customer-stories .story-cube .story-cube--slide .video-wrap::after {
@@ -2614,6 +2617,9 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(7485%) hue-rotate(175deg) brightness(105%) contrast(97%);
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
   transition: 0.3s ease-out 0s;
 }
 .customer-stories .story-cube .story-cube--pagination {
@@ -4062,4 +4068,85 @@ p {
   -moz-transition: 0.3s ease-out 0s;
   -o-transition: 0.3s ease-out 0s;
   transition: 0.3s ease-out 0s;
+}
+
+.toolbar-fixed {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
+  z-index: 1059;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #fafafa;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+}
+.toolbar-fixed.--show {
+  bottom: 0;
+}
+.toolbar-fixed.--hide {
+  bottom: -70px;
+}
+@media (max-width: 375px) {
+  .toolbar-fixed.--hide {
+    bottom: -86px;
+  }
+}
+.toolbar-fixed svg {
+  width: 24px;
+  height: 24px;
+}
+.toolbar-fixed .toolbar-fixed--head {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #8a90a4;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+}
+.toolbar-fixed .toolbar-fixed--item:hover .toolbar-fixed--head {
+  color: #00afff;
+}
+.toolbar-fixed .toolbar-fixed--item:hover svg {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(49%) saturate(3984%) hue-rotate(170deg) brightness(103%) contrast(105%);
+}
+
+.toolbar-test-drive-request {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
+  border-top: 1px solid rgb(216, 219, 231);
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1059;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+}
+.toolbar-test-drive-request .no-gutters {
+  gap: 10px;
+}
+@media (max-width: 400px) {
+  .toolbar-test-drive-request .no-gutters {
+    flex-direction: column;
+  }
+}
+.toolbar-test-drive-request.--show {
+  bottom: 0;
+}
+.toolbar-test-drive-request.--hide {
+  bottom: -77px;
+}
+@media (max-width: 400px) {
+  .toolbar-test-drive-request.--hide {
+    bottom: -133px;
+  }
+}
+.toolbar-test-drive-request .btn {
+  min-width: auto;
 }

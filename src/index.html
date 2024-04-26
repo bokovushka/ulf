@@ -9,7 +9,7 @@
 		@@include('html/header.html',{})
 		<main class="main">
 			<div class="content">
-				<section class="section-top">
+				<section id="section-top" class="section-top">
 					<div class="mx-auto position-relative">
 						<div class="row pt-18 pt-lg-16 pt-xl-26 pt-xxl-42 pb-8">
 							<div class="col">
@@ -211,7 +211,7 @@
 					</div>
 				</section>
 				<div class="scroll-trigger">
-					<section class="ready-drive pt-7 pt-md-10 pt-lg-14 pb-7 pb-md-10 pb-lg-34">
+					<section id="ready-drive" class="ready-drive pt-7 pt-md-10 pt-lg-14 pb-7 pb-md-10 pb-lg-34">
 						<div class="container">
 							<div class="row">
 								<div class="col-12 col-lg-8">
@@ -261,7 +261,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="customer-stories bg-dark-black py-7 py-md-10 py-lg-13">
+					<section id="customer-stories" class="customer-stories bg-dark-black py-7 py-md-10 py-lg-13">
 						<div class="container-wrap">
 							<div class="container">
 								<div class="row mb-6">
@@ -396,7 +396,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="our-fleet pt-7 pt-md-10 pt-lg-35 pb-7 pb-md-10 pb-lg-13">
+					<section id="our-fleet" class="our-fleet pt-7 pt-md-10 pt-lg-35 pb-7 pb-md-10 pb-lg-13">
 						<div class="container">
 							<div class="row mb-6">
 								<div class="col">
@@ -478,7 +478,7 @@
 					</section>
 				</div>
 				<div class="section-order d-flex flex-column">
-					<section class="test-drive pb-7 pb-md-10 pb-lg-35 order-last order-md-first">
+					<section class="test-drive pb-md-10 pb-lg-35 order-last order-md-first">
 						<div class="container">
 							@@include('html/parts/test-drive.html',{})
 						</div>
@@ -508,7 +508,7 @@
 						</div>
 					</section>
 				</div>
-				<section class="asked-questions pb-7 pb-md-10 pb-lg-13">
+				<section id="asked-questions" class="asked-questions pb-7 pb-md-10 pb-lg-13 pt-7 pt-md-0">
 					<div class="container">
 						@@include('html/parts/asked-questions.html',{})
 					</div>
@@ -526,6 +526,7 @@
 			</div>
 		</main>
 		@@include('html/footer.html',{})
+		@@include('html/parts/toolbar.html',{})
 	</div>
 	@@include('html/popup/popup-сar-selection.html',{})
 	@@include('html/popup/popup-any-questions.html',{})

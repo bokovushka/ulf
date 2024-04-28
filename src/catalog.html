@@ -292,16 +292,21 @@
 								</nav>
 							</div>
 						</div>
-						<div class="row d-lg-none">
+						<div class="row d-lg-none our-fleet--mob">
 							<div class="our-fleet-search col">
-								<div class="our-fleet-preview--item bg-main-blue">
-									<div class="name text-white text-center">Не знайшов авто мрії в нашому автопарку?</div>
-									<div class="wrap-img">
-										<img src="img/car-6.png" alt="Image">
-									</div>
-									<div class="row">
-										<div class="col col-sm-auto mx-auto">
-											<a href="##" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold">НА ПОШУКИ АВТО</a>
+								<div class="our-fleet-search--inner position-relative">
+									<div class="our-fleet-preview--item bg-main-blue">
+										<div class="name text-white text-center">Не знайшов авто мрії в нашому автопарку?</div>
+										<div class="wrap-img">
+											<img src="img/car-6.png" alt="Image">
+										</div>
+										<div class="row">
+											<div class="col col-sm-auto mx-auto">
+												<button type="button" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold" data-toggle="modal" data-target="#popup-any-questions">НА ПОШУКИ АВТО</button>
+											</div>
+										</div>
+										<div class="wrap-img wrap-img--hidden">
+											<img src="img/bg-car-preview.png" class="bg-down" alt="Image">
 										</div>
 									</div>
 								</div>
@@ -323,6 +328,7 @@
 			</div>
 		</main>
 		@@include('html/footer.html',{})
+		@@include('html/parts/toolbar.html',{})
 	</div>
 
 	@@include('html/popup/popup-сar-selection.html',{})

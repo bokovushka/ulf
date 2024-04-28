@@ -347,15 +347,22 @@
 											<div class="story-cube--swiper">
 												<div class="story-cube--wrapper swiper-wrapper">
 													<div class="story-cube--slide swiper-slide">
-														<a class="h-100" data-fancybox="story-cube-gallery" data-src="#scroll-gallery-player-1" data-thumb="img/customer-stories-1.jpeg">
-															<div class="scroll-gallery--img h-100">
-																<div class="wrap-img h-100">
-																	<div class="video-wrap">
-																		<img class="bg-down" src="img/customer-stories-1.jpeg" alt="img">
-																	</div>
-																</div>
+														<div class="inner h-100 position-relative">
+															<div class="video-wrap video-wrap--vissible h-100">
+																<a data-fancybox="story-cube-gallery" data-src="#story-cube-gallery-player-1" data-thumb="img/customer-stories-1.jpeg">
+																	<video class="js-player specific-player" playsinline controls data-poster="img/customer-stories-1.jpeg">
+																		<source src="assets/video/example.mp4" type="video/mp4" />
+																	</video>
+																</a>
+																<button type="button" class="btn btn-video-play-pause"></button>
 															</div>
-														</a>
+															<div id="story-cube-gallery-player-1" class="video-wrap hidden" style="display:none">
+																<video class="js-player specific-player" playsinline controls data-poster="img/customer-stories-1.jpeg">
+																	<source src="assets/video/example.mp4" type="video/mp4" />
+																</video>
+															</div>
+															<div class="scroll-gallery--content"></div>
+														</div>
 														<div class="scroll-gallery--content"></div>
 													</div>
 													<div class="story-cube--slide swiper-slide">
@@ -457,7 +464,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-12 col-md-6 col-lg-4 d-none d-md-flex">
+										<div class="col-12 col-md-6 col-lg-4 d-none d-md-flex our-fleet-search">
 											<div class="our-fleet-preview--item bg-main-blue our-fleet-preview--search">
 												<div class="name text-white">Не знайшов авто мрії в нашому автопарку?</div>
 												<div class="wrap-img">
@@ -488,18 +495,23 @@
 							@@include('html/parts/tinder.html',{})
 						</div>
 					</section>
-					<section class="our-fleet pb-7 pb-md-10 pb-lg-13 d-md-none">
+					<section class="our-fleet our-fleet--mob pb-7 pb-md-10 pb-lg-13 d-md-none">
 						<div class="container">
 							<div class="row">
 								<div class="our-fleet-search col">
-									<div class="our-fleet-preview--item bg-main-blue">
-										<div class="name text-white text-center">Не знайшов авто мрії в нашому автопарку?</div>
-										<div class="wrap-img">
-											<img src="img/car-6.png" alt="Image">
-										</div>
-										<div class="row">
-											<div class="col col-sm-auto mx-auto">
-												<button type="button" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold" data-toggle="modal" data-target="#popup-any-questions">НА ПОШУКИ АВТО</button>
+									<div class="our-fleet-search--inner position-relative">
+										<div class="our-fleet-preview--item bg-main-blue">
+											<div class="name text-white text-center">Не знайшов авто мрії в нашому автопарку?</div>
+											<div class="wrap-img">
+												<img src="img/car-6.png" alt="Image">
+											</div>
+											<div class="row">
+												<div class="col col-sm-auto mx-auto">
+													<button type="button" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold" data-toggle="modal" data-target="#popup-any-questions">НА ПОШУКИ АВТО</button>
+												</div>
+											</div>
+											<div class="wrap-img wrap-img--hidden">
+												<img src="img/bg-car-preview.png" class="bg-down" alt="Image">
 											</div>
 										</div>
 									</div>
@@ -526,7 +538,7 @@
 			</div>
 		</main>
 		@@include('html/footer.html',{})
-		@@include('html/parts/toolbar.html',{})
+		@@include('html/parts/toolbar-home.html',{})
 	</div>
 	@@include('html/popup/popup-сar-selection.html',{})
 	@@include('html/popup/popup-any-questions.html',{})

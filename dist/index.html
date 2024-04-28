@@ -541,15 +541,22 @@
 											<div class="story-cube--swiper">
 												<div class="story-cube--wrapper swiper-wrapper">
 													<div class="story-cube--slide swiper-slide">
-														<a class="h-100" data-fancybox="story-cube-gallery" data-src="#scroll-gallery-player-1" data-thumb="img/customer-stories-1.jpeg">
-															<div class="scroll-gallery--img h-100">
-																<div class="wrap-img h-100">
-																	<div class="video-wrap">
-																		<img class="bg-down" src="img/customer-stories-1.jpeg" alt="img">
-																	</div>
-																</div>
+														<div class="inner h-100 position-relative">
+															<div class="video-wrap video-wrap--vissible h-100">
+																<a data-fancybox="story-cube-gallery" data-src="#story-cube-gallery-player-1" data-thumb="img/customer-stories-1.jpeg">
+																	<video class="js-player specific-player" playsinline controls data-poster="img/customer-stories-1.jpeg">
+																		<source src="assets/video/example.mp4" type="video/mp4" />
+																	</video>
+																</a>
+																<button type="button" class="btn btn-video-play-pause"></button>
 															</div>
-														</a>
+															<div id="story-cube-gallery-player-1" class="video-wrap hidden" style="display:none">
+																<video class="js-player specific-player" playsinline controls data-poster="img/customer-stories-1.jpeg">
+																	<source src="assets/video/example.mp4" type="video/mp4" />
+																</video>
+															</div>
+															<div class="scroll-gallery--content"></div>
+														</div>
 														<div class="scroll-gallery--content"></div>
 													</div>
 													<div class="story-cube--slide swiper-slide">
@@ -651,7 +658,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-12 col-md-6 col-lg-4 d-none d-md-flex">
+										<div class="col-12 col-md-6 col-lg-4 d-none d-md-flex our-fleet-search">
 											<div class="our-fleet-preview--item bg-main-blue our-fleet-preview--search">
 												<div class="name text-white">Не знайшов авто мрії в нашому автопарку?</div>
 												<div class="wrap-img">
@@ -854,18 +861,23 @@
 </div>
 						</div>
 					</section>
-					<section class="our-fleet pb-7 pb-md-10 pb-lg-13 d-md-none">
+					<section class="our-fleet our-fleet--mob pb-7 pb-md-10 pb-lg-13 d-md-none">
 						<div class="container">
 							<div class="row">
 								<div class="our-fleet-search col">
-									<div class="our-fleet-preview--item bg-main-blue">
-										<div class="name text-white text-center">Не знайшов авто мрії в нашому автопарку?</div>
-										<div class="wrap-img">
-											<img src="img/car-6.png" alt="Image">
-										</div>
-										<div class="row">
-											<div class="col col-sm-auto mx-auto">
-												<button type="button" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold" data-toggle="modal" data-target="#popup-any-questions">НА ПОШУКИ АВТО</button>
+									<div class="our-fleet-search--inner position-relative">
+										<div class="our-fleet-preview--item bg-main-blue">
+											<div class="name text-white text-center">Не знайшов авто мрії в нашому автопарку?</div>
+											<div class="wrap-img">
+												<img src="img/car-6.png" alt="Image">
+											</div>
+											<div class="row">
+												<div class="col col-sm-auto mx-auto">
+													<button type="button" class="btn-default btn-default-white btn btn-block btn-white text-uppercase font-weight-bold" data-toggle="modal" data-target="#popup-any-questions">НА ПОШУКИ АВТО</button>
+												</div>
+											</div>
+											<div class="wrap-img wrap-img--hidden">
+												<img src="img/bg-car-preview.png" class="bg-down" alt="Image">
 											</div>
 										</div>
 									</div>
@@ -930,12 +942,58 @@
 					<div class="card-body">Чи можу я поміняти авто?</div>
 				</div>
 			</div>
+			<div class="card">
+				<div class="card-header p-0" id="heading-accordion-question-1">
+					<div class="h4 mb-0">
+						<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion-question-1" aria-expanded="false" aria-controls="collapse-accordion-question-1">Що таке підписка на автомобіль?</div>
+					</div>
+				</div>
+				<div id="collapse-accordion-question-1" class="collapse" aria-labelledby="heading-accordion-question-1" data-parent="#accordion-asked-questions">
+					<div class="card-body">Що таке підписка на автомобіль?</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header p-0" id="heading-accordion-question-2">
+					<div class="h4 mb-0">
+						<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion-question-2" aria-expanded="false" aria-controls="collapse-accordion-question-2">Що включає “підписка на авто”?</div>
+					</div>
+				</div>
+				<div id="collapse-accordion-question-2" class="collapse" aria-labelledby="heading-accordion-question-2" data-parent="#accordion-asked-questions">
+					<div class="card-body">Що включає “підписка на авто”?</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header p-0" id="heading-accordion-question-3">
+					<div class="h4 mb-0">
+						<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion-question-3" aria-expanded="false" aria-controls="collapse-accordion-question-3">Як оформити “ULFAUTO [підписка]”?</div>
+					</div>
+				</div>
+				<div id="collapse-accordion-question-3" class="collapse" aria-labelledby="heading-accordion-question-3" data-parent="#accordion-asked-questions">
+					<div class="card-body">Як оформити “ULFAUTO [підписка]”?</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header p-0" id="heading-accordion-question-4">
+					<div class="h4 mb-0">
+						<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion-question-4" aria-expanded="false" aria-controls="collapse-accordion-question-4">Що покриває страховка?</div>
+					</div>
+				</div>
+				<div id="collapse-accordion-question-4" class="collapse" aria-labelledby="heading-accordion-question-4" data-parent="#accordion-asked-questions">
+					<div class="card-body">Що покриває страховка?</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header p-0" id="heading-accordion-question-5">
+					<div class="h4 mb-0">
+						<div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-accordion-question-5" aria-expanded="false" aria-controls="collapse-accordion-question-5">Чи можу я поміняти авто?</div>
+					</div>
+				</div>
+				<div id="collapse-accordion-question-5" class="collapse" aria-labelledby="heading-accordion-question-5" data-parent="#accordion-asked-questions">
+					<div class="card-body">Чи можу я поміняти авто?</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-12 col-md-6 col-lg-4 mx-auto">
-		<a href="asked-questions.html" class="btn-default btn btn-block btn-outline-main-blue text-uppercase mt-0">Більше Відповідей</a>
+		<button type="button" class="btn-more btn-default btn btn-block btn-outline-main-blue text-uppercase mt-2 col-12 col-md-6 col-lg-4 mx-auto">Більше Відповідей</button>
 	</div>
 </div>
 					</div>

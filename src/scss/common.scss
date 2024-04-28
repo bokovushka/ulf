@@ -271,7 +271,8 @@ p {
 	}
 	&.btn-default {
 		min-width: 225px;
-		min-height: 46px;
+		min-height: 48px;
+		align-content: center;
 		font-weight: 600;
 		&:not(:disabled) {
 			&:hover {
@@ -1622,12 +1623,12 @@ p {
 	&.plyr--paused {
 		opacity: 1;
 		cursor: pointer;
-		.plyr__controls {
-			display: none;
-		}
-		.plyr__poster {
-			opacity: 1;
-		}
+		// .plyr__controls {
+		// 	display: none;
+		// }
+		// .plyr__poster {
+		// 	opacity: 1;
+		// }
 	}
 	.plyr__control--overlaid {
 		width: 60px;
@@ -1646,9 +1647,10 @@ p {
 		}
 	}
 	.plyr__poster {
-		background-size: 135%;
+		background-size: 145%;
+		background-position: 20% 20%;
 		@include lg-max {
-			background-size: 175%;
+			background-size: 185%;
 		}
 	}
 	video {
@@ -1662,6 +1664,11 @@ p {
 		pointer-events: none;
 		video {
 			object-fit: cover;
+		}
+		&.plyr--paused {
+			.plyr__controls {
+				display: none;
+			}
 		}
 	}
 }

@@ -335,6 +335,27 @@
 		.story-cube--slide {
 			position: relative;
 			cursor: pointer;
+			.scroll-gallery--content {
+				color: $white;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 2;
+				height: auto;
+				padding: 16px;
+				justify-content: end;
+				display: flex;
+				flex-direction: column;
+				cursor: auto;
+				.scroll-gallery--head {
+					font-size: 20px;
+					font-weight: 700;
+					line-height: 28px;
+				}
+				p {
+					font-weight: 500;
+				}
+			}
 			.plyr__control--overlaid {
 				display: none !important;
 			}
@@ -430,6 +451,7 @@
 				position: absolute;
 				z-index: 2;
 				height: auto;
+				padding: 16px;
 				.customer-stories-main & {
 					justify-content: end;
 					display: flex;
@@ -627,7 +649,7 @@
 				}
 			}
 			.wrap-img:not(.wrap-img--hidden) {
-				scale: 1.35;
+				scale: 1.38;
 			}
 		}
 	}

@@ -2577,6 +2577,27 @@ p {
   position: relative;
   cursor: pointer;
 }
+.customer-stories .story-cube .story-cube--slide .scroll-gallery--content {
+  color: #fafafa;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  height: auto;
+  padding: 16px;
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  cursor: auto;
+}
+.customer-stories .story-cube .story-cube--slide .scroll-gallery--content .scroll-gallery--head {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.customer-stories .story-cube .story-cube--slide .scroll-gallery--content p {
+  font-weight: 500;
+}
 .customer-stories .story-cube .story-cube--slide .plyr__control--overlaid {
   display: none !important;
 }
@@ -2668,6 +2689,7 @@ p {
   position: absolute;
   z-index: 2;
   height: auto;
+  padding: 16px;
 }
 .customer-stories-main .scroll-gallery .scroll-gallery--item .inner .scroll-gallery--content {
   justify-content: end;
@@ -2856,7 +2878,7 @@ p {
   scale: 1.2;
 }
 .our-fleet--mob .our-fleet-search .our-fleet-preview--item .wrap-img:not(.wrap-img--hidden) {
-  scale: 1.35;
+  scale: 1.38;
 }
 
 .test-drive .h3 {

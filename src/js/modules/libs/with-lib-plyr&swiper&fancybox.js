@@ -540,12 +540,13 @@ Fancybox.bind('[data-fancybox="story-cube-gallery"]', {
 
 // Перевірка, чи була взаємодія користувача
 let userInteracted = false;
+let playPauseSelector = '.customer-stories .horizontal-scoll-wrapper .video-wrap--vissible .btn-video-play-pause';
 
 function initScrollTrigger() {
 	gsap.registerPlugin(ScrollTrigger);
 
 	function simulatePlayPauseClick() {
-		const playPauseButton = document.querySelector('.customer-stories .video-wrap--vissible .btn-video-play-pause');
+		const playPauseButton = document.querySelector(playPauseSelector);
 		if (playPauseButton) {
 			playPauseButton.click();
 		}
@@ -558,9 +559,24 @@ function initScrollTrigger() {
 	});
 }
 
+function updatePlayPauseSelector() {
+	if (window.innerWidth >= 768) {
+		playPauseSelector = '.customer-stories .horizontal-scoll-wrapper .video-wrap--vissible .btn-video-play-pause';
+	} else {
+		playPauseSelector = '.customer-stories .story-cube .video-wrap--vissible .btn-video-play-pause';
+	}
+}
+
 document.addEventListener('click', function () {
 	if (!userInteracted) {
 		userInteracted = true;
 		initScrollTrigger();
 	}
 });
+
+window.addEventListener('resize', function () {
+	updatePlayPauseSelector();
+});
+
+// Викликаємо один раз при завантаженні сторінки для ініціалізації початкового значення playPauseSelector
+updatePlayPauseSelector();

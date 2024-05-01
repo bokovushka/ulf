@@ -1,6 +1,7 @@
 // import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 import Plyr from 'plyr';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import Swiper from 'swiper/bundle';
 import { Fancybox } from "@fancyapps/ui";
 
@@ -532,4 +533,34 @@ Fancybox.bind('[data-fancybox="story-cube-gallery"]', {
 		return `${slide.index + 1} / ${fancybox.carousel?.slides.length
 			} <br /> ${caption}`;
 	},
+});
+
+
+
+
+// Перевірка, чи була взаємодія користувача
+let userInteracted = false;
+
+function initScrollTrigger() {
+	gsap.registerPlugin(ScrollTrigger);
+
+	function simulatePlayPauseClick() {
+		const playPauseButton = document.querySelector('.customer-stories .video-wrap--vissible .btn-video-play-pause');
+		if (playPauseButton) {
+			playPauseButton.click();
+		}
+	}
+
+	ScrollTrigger.create({
+		trigger: '.customer-stories',
+		start: 'top center',
+		onEnter: simulatePlayPauseClick
+	});
+}
+
+document.addEventListener('click', function () {
+	if (!userInteracted) {
+		userInteracted = true;
+		initScrollTrigger();
+	}
 });

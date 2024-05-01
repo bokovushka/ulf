@@ -2663,6 +2663,9 @@ p {
     height: 480px;
   }
 }
+.scroll-gallery .scroll-gallery--item .video-wrap {
+  margin-left: -1px;
+}
 .scroll-gallery .scroll-gallery--item .inner {
   display: flex;
   align-items: end;
@@ -2736,6 +2739,12 @@ p {
 
 .customer-stories-main .scroll-gallery {
   row-gap: 32px;
+}
+@media (max-width: 767px) {
+  .customer-stories-main .scroll-gallery {
+    max-width: 360px;
+    margin: 0 auto;
+  }
 }
 
 .our-fleet .our-fleet-preview {
@@ -3944,6 +3953,11 @@ p {
   padding: 16px;
   color: #fafafa;
   z-index: 3;
+}
+@media (max-width: 575px) {
+  .tinder .card .card--info {
+    padding: 8px;
+  }
 }
 .tinder .card .card--info::before {
   content: "";

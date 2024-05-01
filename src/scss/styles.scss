@@ -424,6 +424,9 @@
 		@include sm-max {
 			height: 480px;
 		}
+		.video-wrap {
+			margin-left: -1px;
+		}
 		.inner {
 			display: flex;
 			align-items: end;
@@ -503,6 +506,10 @@
 .customer-stories-main {
 	.scroll-gallery {
 		row-gap: 32px;
+		@include sm-max {
+			max-width: 360px;
+			margin: 0 auto;
+		}
 	}
 }
 //our-fleet
@@ -1746,6 +1753,9 @@
 			padding: 16px;
 			color: $white;
 			z-index: 3;
+			@include xs-max {
+				padding: 8px;
+			}
 			&::before {
 				content: "";
 				position: absolute;

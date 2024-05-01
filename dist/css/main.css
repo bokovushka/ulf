@@ -2660,7 +2660,7 @@ p {
 }
 @media (max-width: 767px) {
   .scroll-gallery .scroll-gallery--item {
-    height: 480px;
+    height: 515px;
   }
 }
 .scroll-gallery .scroll-gallery--item .video-wrap {

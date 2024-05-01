@@ -2746,6 +2746,11 @@ p {
     margin: 0 auto;
   }
 }
+@media (max-width: 767px) {
+  .customer-stories-main .scroll-gallery .scroll-gallery--item {
+    padding: 0;
+  }
+}
 
 .our-fleet .our-fleet-preview {
   row-gap: 32px;

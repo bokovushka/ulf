@@ -510,6 +510,11 @@
 			max-width: 360px;
 			margin: 0 auto;
 		}
+		.scroll-gallery--item {
+			@include sm-max {
+				padding: 0;
+			}
+		}
 	}
 }
 //our-fleet

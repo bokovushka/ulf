@@ -645,7 +645,7 @@ p {
 	.form-control {
 		background: $white;
 		color: $black;
-		border-radius: 100px;
+		border-radius: 8px;
 		border: 1px solid transparent;
 		padding: 13px 23px;
 		height: 100%;
@@ -863,7 +863,7 @@ p {
 				display: none;
 			}
 			span {
-				display: block;
+				display: inline-block;
 				font-size: 14px;
 				font-weight: 500;
 				line-height: 20px;
@@ -1258,6 +1258,9 @@ p {
 		}
 	}
 }
+.fancybox__backdrop {
+	background: rgb(0, 0, 0);
+}
 .fancybox__nav {
 	.is-next,
 	.is-prev {
@@ -1293,6 +1296,8 @@ p {
 	}
 	.fancybox__content {
 		background: unset;
+		padding-right: 0;
+		padding-left: 0;
 	}
 	&.is-compact {
 		.fancybox__footer {
@@ -1827,5 +1832,17 @@ p {
 		&.-months- {
 			grid-template-columns: repeat(2, 1fr);
 		}
+	}
+}
+
+.link-underline {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: $white;
+		height: 1px;
 	}
 }

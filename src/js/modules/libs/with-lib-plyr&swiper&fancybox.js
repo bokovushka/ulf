@@ -269,7 +269,7 @@ Fancybox.bind('[data-fancybox="scroll-gallery"]', {
 	Toolbar: {
 		display: {
 			left: [],
-			right: ["iterateZoom", "close"],
+			right: ["close"],
 		},
 	},
 	Carousel: {
@@ -329,7 +329,7 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 		},
 		display: {
 			left: ["carName"],
-			right: ["iterateZoom", "close"],
+			right: ["close"],
 		},
 	},
 	Carousel: {
@@ -382,7 +382,7 @@ Fancybox.bind('[data-fancybox="gallery-scroll"]', {
 	},
 	Toolbar: {
 		display: {
-			right: ["iterateZoom", "close"],
+			right: ["close"],
 		},
 	},
 	Carousel: {
@@ -509,7 +509,7 @@ Fancybox.bind('[data-fancybox="story-cube-gallery"]', {
 	Toolbar: {
 		display: {
 			left: [],
-			right: ["iterateZoom", "close"],
+			right: ["close"],
 		},
 	},
 	Carousel: {

@@ -563,12 +563,12 @@
 			line-height: 22px;
 			&:hover {
 				color: $main-blue;
-				span {
-					&:after {
-						filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(2230%) hue-rotate(171deg)
-							brightness(104%) contrast(105%);
-					}
-				}
+				// span {
+				// 	&:after {
+				// 		filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(2230%) hue-rotate(171deg)
+				// 			brightness(104%) contrast(105%);
+				// 	}
+				// }
 			}
 			span {
 				position: relative;
@@ -585,6 +585,8 @@
 					height: 24px;
 					background: url(../img/icons/icons.svg#i-arrow-right) 50% 50% no-repeat;
 					background-size: 100%;
+					filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(2230%) hue-rotate(171deg)
+						brightness(104%) contrast(105%);
 					@include transition(0.3s ease-out 0s);
 				}
 			}
@@ -814,7 +816,7 @@
 .sidebar {
 	display: block;
 	position: absolute;
-	z-index: 11;
+	z-index: 1062;
 	position: fixed;
 	overflow: scroll;
 	top: 75px;
@@ -1373,6 +1375,11 @@
 				font-size: 20px;
 				font-weight: 700;
 				line-height: 28px;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				width: 100%;
 				@include sm-max {
 					font-size: 14px;
 					line-height: 17px;
@@ -1950,7 +1957,7 @@
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
 	border-top: 1px solid rgb(216, 219, 231);
 	backdrop-filter: blur(6px);
-	background: rgba(255, 255, 255, 0.9);
+	background: rgba(255, 255, 255, 0.97);
 	z-index: 1059;
 	position: fixed;
 	width: 100%;
@@ -1958,7 +1965,7 @@
 	@include transition(0.3s ease-out 0s);
 	.no-gutters {
 		gap: 10px;
-		@media (max-width: 400px) {
+		@media (max-width: 399px) {
 			flex-direction: column;
 		}
 	}
@@ -1967,11 +1974,29 @@
 	}
 	&.--hide {
 		bottom: -77px;
-		@media (max-width: 400px) {
+		@media (max-width: 399px) {
 			bottom: -133px;
 		}
 	}
 	.btn {
 		min-width: auto;
+	}
+}
+.seo,
+.privacy-terms {
+	a {
+		color: $black !important;
+	}
+	.link-bg {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			background: rgb(154, 223, 255);
+			height: 10px;
+			width: 100%;
+			z-index: -1;
+		}
 	}
 }

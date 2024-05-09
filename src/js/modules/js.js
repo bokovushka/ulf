@@ -88,46 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-//? Підрахунок кількості питань `.asked-questions .accordion .card`
-
-document.addEventListener("DOMContentLoaded", function () {
-	var blocks = document.querySelectorAll('.asked-questions .accordion');
-
-	blocks.forEach(function (block) {
-		var items = block.querySelectorAll('.asked-questions .accordion .card');
-
-		if (items.length > 5) {
-			for (var i = 5; i < items.length; i++) {
-				items[i].classList.add('d-none');
-			}
-		}
-	});
-
-	var showMoreButtons = document.querySelectorAll('.asked-questions .btn-more');
-
-	showMoreButtons.forEach(function (button) {
-		button.addEventListener('click', function () {
-			var parentBlock = this.previousElementSibling;
-			var items = parentBlock.querySelectorAll('.asked-questions .accordion .card');
-
-			for (var i = 5; i < items.length; i++) {
-				if (items[i].classList.contains('d-none')) {
-					items[i].classList.remove('d-none');
-				} else {
-					items[i].classList.add('d-none');
-				}
-			}
-
-			if (parentBlock.querySelectorAll('.d-none').length > 0) {
-				this.textContent = 'Більше відповідей';
-			} else {
-				this.textContent = 'Сховати';
-			}
-		});
-	});
-});
-
-//? Підрахунок кількості історій користувачів & відповідна к-ть мініатюр у fancybox
+// ? Підрахунок кількості історій користувачів & відповідна к-ть мініатюр у fancybox
 document.addEventListener("DOMContentLoaded", function () {
 
 	// Перевірка наявності блоків з класом .scroll-gallery--item

@@ -84,6 +84,7 @@ main {
   -o-transition: 0.3s ease-out 0s;
   transition: 0.3s ease-out 0s;
   margin-top: 78px;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   main {

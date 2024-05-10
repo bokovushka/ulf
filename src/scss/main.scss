@@ -39,6 +39,7 @@ main {
 	flex: 1 1 auto;
 	@include transition(0.3s ease-out 0s);
 	margin-top: 78px;
+	overflow: hidden;
 	@include lg-max {
 	}
 	@include md-max {

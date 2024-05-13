@@ -414,6 +414,7 @@ Fancybox.bind('[data-fancybox="gallery-scroll"]', {
 	},
 	Toolbar: {
 		display: {
+			left: [],
 			right: ["close"],
 		},
 	},
@@ -467,6 +468,7 @@ Fancybox.bind('[data-fancybox="specific-player"]', {
 	},
 	Toolbar: {
 		display: {
+			left: [],
 			right: ["close"],
 		},
 	},
@@ -502,6 +504,7 @@ Fancybox.bind('[data-fancybox="specific-player-mob"]', {
 	},
 	Toolbar: {
 		display: {
+			left: [],
 			right: ["close"],
 		},
 	},

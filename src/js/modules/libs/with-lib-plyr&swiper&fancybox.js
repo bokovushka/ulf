@@ -87,6 +87,20 @@ function pauseAllVideos() {
 	});
 }
 
+// Функція для зупинки всіх відео у історіях користувача
+function pauseCubeVideos() {
+
+	// Зупиняємо відео, які знаходяться в контейнерах .customer-stories
+	document.querySelectorAll('.customer-stories .js-player').forEach(videoPlayer => {
+		const plyrVideoPlayer = videoPlayer.plyr;
+		if (plyrVideoPlayer.playing) {
+			plyrVideoPlayer.pause();
+			videoPlayer.querySelector('.btn-video-play-pause').classList.remove('active');
+		}
+	});
+}
+
+
 //? Swiper
 
 //? section-top--swiper
@@ -168,8 +182,7 @@ new Swiper(".gallery-car--swiper", {
 })
 
 
-
-//story-cube
+//? story-cube
 new Swiper(".story-cube--swiper", {
 	speed: 1000, // Adjust the speed of the transition as needed
 	effect: 'cube', // Set the effect to 'cube'
@@ -220,7 +233,7 @@ new Swiper(".story-cube--swiper", {
 				activeSlide.querySelector('video').currentTime = 0;
 			}
 			// Викликаємо функцію pauseAllVideos при завершенні переходу до нового слайда
-			pauseAllVideos();
+			pauseCubeVideos();
 		},
 	}
 });
@@ -235,6 +248,25 @@ function resumeCubeSlider() {
 	document.querySelector('.story-cube--swiper').swiper.autoplay.start();
 }
 
+
+//? horizontal-scoll-wrapper
+if (window.innerWidth < 1024) {
+	new Swiper('.horizontal-scoll-wrapper', {
+		slidesPerView: 2.2,
+		freeMode: true,
+		spaceBetween: 20,
+		breakpoints: {
+			640: {
+			},
+			480: {
+				slidesPerView: 1.6,
+			},
+			0: {
+				slidesPerView: 1.2,
+			}
+		},
+	});
+}
 
 //?fancybox
 

@@ -1028,24 +1028,12 @@ p {
   transition: 0.3s ease-out 0s;
 }
 .btn.btn-modal-close.active:not(:disabled) {
-  border: 1px solid #11b685;
-  background: #11b685 !important;
+  border: 1px solid rgb(17, 182, 133);
+  background: rgb(17, 182, 133) !important;
 }
-.btn.btn-modal-close.active:not(:disabled):hover {
-  border: 1px solid rgba(17, 182, 133, 0.7);
-  background: rgba(17, 182, 133, 0.7) !important;
-  color: #fafafa;
-}
-.btn.btn-modal-close.active:not(:disabled):active, .btn.btn-modal-close.active:not(:disabled):focus {
-  color: #fafafa;
-}
-.btn.btn-modal-close.active:not(:disabled):active {
-  border: 1px solid #11b685;
-  background: #11b685 !important;
-}
-.btn.btn-modal-close.active:not(:disabled):focus {
-  border: 1px solid #11b685;
-  background: #11b685 !important;
+.btn.btn-modal-close.active:not(:disabled):hover, .btn.btn-modal-close.active:not(:disabled):active, .btn.btn-modal-close.active:not(:disabled):focus {
+  border: 1px solid rgb(17, 182, 133);
+  background: rgb(17, 182, 133) !important;
   color: #fafafa;
 }
 .btn-ahead {
@@ -1966,7 +1954,7 @@ p {
   transition: height 200ms;
   overflow: hidden;
   max-height: 13.5em;
-  mask: linear-gradient(0deg, rgba(254, 254, 254, 0) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0.8) 30%, rgb(255, 255, 255) 45%, rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 120%);
+  mask: linear-gradient(0deg, rgba(254, 254, 254, 0) 0%, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.8) 10%, rgb(255, 255, 255) 45%, rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 120%);
 }
 .seo .spoiler[aria-expanded=true] {
   mask: unset;
@@ -3627,6 +3615,11 @@ p {
 .scroll-gallery-cars .scroll-gallery-cars--item .combine {
   gap: 32px;
 }
+@media (max-width: 1023px) {
+  .scroll-gallery-cars .scroll-gallery-cars--item .combine {
+    gap: 20px;
+  }
+}
 .scroll-gallery-cars .scroll-gallery-cars--item .inner {
   display: flex;
   align-items: end;
@@ -3664,6 +3657,14 @@ p {
   right: unset;
   transform: translateY(-50%);
   min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .horizontal-scoll-wrapper .scroll-gallery-cars--item {
+    flex: 0 0 auto;
+    max-width: unset;
+    padding: 0 !important;
+  }
 }
 
 .ready-drive-horizontal ul {
@@ -4185,7 +4186,7 @@ p {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
   border-top: 1px solid rgb(216, 219, 231);
   backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.97);
+  background: rgb(255, 255, 255);
   z-index: 1059;
   position: fixed;
   width: 100%;

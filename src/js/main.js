@@ -1,8 +1,4 @@
-// import * as InputCounter from "./modules/input-counter.js";
-// import * as MoreBlocks from "./modules/more-blocks.js";
-// import * as Burger from "./modules/burger.js";
-
-
+import "./modules/meta-width-function.js";
 import "./modules/animate-scroll.js";
 import "./modules/menu.js";
 import "./modules/menu-scroll.js";

@@ -1,13 +1,9 @@
 function adaptiveSizePageScaleInit(definedStartWidth) {
 	let startWidth = definedStartWidth;
-	if (!(startWidth / 1)) {
-		let bodyMinWidthStr = getComputedStyle(document.body).minWidth;
-		let bodyMinWidthNumber = Number(bodyMinWidthStr.replace(/[^0-9]/g, ""));
-		startWidth = bodyMinWidthNumber;
-	}
 	let firstViewport;
+
 	function setNewMeta(startWidth) {
-		let screenWidth = screen.width;
+		let screenWidth = window.innerWidth; // Отримуємо ширину вікна браузера
 		if (screenWidth <= startWidth) {
 			if (!firstViewport) {
 				firstViewport = document.querySelector('meta[name="viewport"]');
@@ -22,9 +18,11 @@ function adaptiveSizePageScaleInit(definedStartWidth) {
 			document.head.replaceChild(firstViewport, oldViewport);
 		}
 	}
+
 	window.addEventListener("resize", function () {
 		setNewMeta(startWidth);
 	});
+
 	setNewMeta(startWidth);
 }
 
@@ -56,7 +54,12 @@ function startOnSpecificBrowserInit() {
 		default:
 			browser = "other";
 	}
+
 	if (browser == "safari" || browser == "firefox") {
+		// Передаємо мінімальну ширину 400 пікселів у функцію
 		adaptiveSizePageScaleInit(400);
 	}
 }
+
+// Викликаємо функцію для початку на визначеному браузері
+startOnSpecificBrowserInit();

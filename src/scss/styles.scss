@@ -1924,7 +1924,7 @@
 }
 //toolbar-fixed
 .toolbar-fixed {
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
+	// box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
 	z-index: 1059;
 	position: fixed;
 	width: 100%;
@@ -1966,8 +1966,8 @@
 
 //toolbar-test-drive-request
 .toolbar-test-drive-request {
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
-	border-top: 1px solid rgb(216, 219, 231);
+	// box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.06);
+	// border-top: 1px solid rgb(216, 219, 231);
 	backdrop-filter: blur(6px);
 	background: rgba(255, 255, 255, 1);
 	z-index: 1059;

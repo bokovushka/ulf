@@ -4,8 +4,8 @@ let lastScrollTop = 0;
 
 $(window).scroll(function (event) {
 	let st = $(this).scrollTop();
-	let headerThreshold = 0;
-	let mainThreshold = 0;
+	let headerThreshold = 15;
+	let mainThreshold = 15;
 
 
 	if ($(window).width() <= 1023) {

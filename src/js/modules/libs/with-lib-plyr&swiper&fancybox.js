@@ -1,4 +1,3 @@
-// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 import Plyr from 'plyr';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";

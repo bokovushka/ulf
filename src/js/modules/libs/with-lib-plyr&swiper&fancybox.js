@@ -1,3 +1,4 @@
+// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 import Plyr from 'plyr';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
@@ -248,9 +249,28 @@ function resumeCubeSlider() {
 }
 
 
-//? horizontal-scoll-wrapper
+//? scroll-gallery-cars--swiper
 if (window.innerWidth < 1024) {
-	new Swiper('.horizontal-scoll-wrapper', {
+	new Swiper('.scroll-gallery-cars--swiper', {
+		slidesPerView: 2.2,
+		freeMode: true,
+		spaceBetween: 20,
+		breakpoints: {
+			640: {
+			},
+			480: {
+				slidesPerView: 1.6,
+			},
+			0: {
+				slidesPerView: 1.2,
+			}
+		},
+	});
+}
+
+//? scroll-gallery-cars--swiper
+if (window.innerWidth < 1024) {
+	new Swiper('.horizontal-scoll-wrapper--scroll-gallery', {
 		slidesPerView: 2.2,
 		freeMode: true,
 		spaceBetween: 20,

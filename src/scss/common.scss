@@ -1019,6 +1019,11 @@ p {
 					background: $main-blue;
 				}
 			}
+			&:hover {
+				.rangeFloat {
+					display: none;
+				}
+			}
 		}
 		.rangeBar {
 			background: $main-blue !important;
@@ -1028,6 +1033,7 @@ p {
 			.rangeFloat {
 				background: $blue;
 				color: $main-blue;
+				display: none;
 			}
 		}
 		&.hoverable:not(.disabled) {

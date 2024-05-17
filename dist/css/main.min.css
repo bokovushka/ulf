@@ -1530,6 +1530,9 @@ p {
 .slider-range .rangeSlider .rangeHandle.active .rangeNub {
   background: #00afff;
 }
+.slider-range .rangeSlider .rangeHandle:hover .rangeFloat {
+  display: none;
+}
 .slider-range .rangeSlider .rangeBar {
   background: #00afff !important;
   height: 4px;
@@ -1537,6 +1540,7 @@ p {
 .slider-range .rangeSlider.focus .rangeFloat {
   background: #dce2ff;
   color: #00afff;
+  display: none;
 }
 .slider-range .rangeSlider.hoverable:not(.disabled) .rangeHandle:hover:before {
   box-shadow: 0 0 0 8px #dce2ff;
@@ -3899,6 +3903,7 @@ p {
   right: 0 !important;
   scale: 1 !important;
   bottom: 0 !important;
+  font-weight: 500;
 }
 .tinder .card.favorite .like::after {
   content: "";

@@ -111,7 +111,7 @@ if (TinderCards) {
 			endCard.classList.add('card', 'end');
 			const endText = document.createElement('div');
 			endText.classList.add('card-text');
-			endText.textContent = "Немає доступних позицій";
+			endText.textContent = "Автомобілі за підпискою - мінімум забов'язань, максимум свободи";
 			endCard.appendChild(endText);
 			TinderCards.appendChild(endCard);
 

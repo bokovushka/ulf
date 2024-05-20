@@ -2577,8 +2577,11 @@ p {
   display: none !important;
 }
 
-.customer-stories .story-cube .story-cube--swiper {
+.customer-stories .story-cube {
   max-width: 360px;
+  margin: 0 auto;
+}
+.customer-stories .story-cube .story-cube--swiper {
   width: 100%;
   height: 515px;
   border-radius: 10px;

@@ -325,8 +325,9 @@
 //customer-stories
 .customer-stories {
 	.story-cube {
+		max-width: 360px;
+		margin: 0 auto;
 		.story-cube--swiper {
-			max-width: 360px;
 			width: 100%;
 			height: 515px;
 			border-radius: 10px;

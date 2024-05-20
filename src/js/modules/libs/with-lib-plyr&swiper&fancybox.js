@@ -185,13 +185,13 @@ new Swiper(".gallery-car--swiper", {
 //? story-cube
 new Swiper(".story-cube--swiper", {
 	speed: 1000, // Adjust the speed of the transition as needed
-	effect: 'cube', // Set the effect to 'cube'
-	cubeEffect: {
-		slideShadows: true, // Enable slide shadows
-		shadow: true, // Enable shadows on the cube faces
-		shadowOffset: 20, // Adjust the shadow offset
-		shadowScale: 0.94 // Adjust the shadow scale
-	},
+	effect: 'fade', // Set the effect to 'cube'
+	// cubeEffect: {
+	// 	slideShadows: true, // Enable slide shadows
+	// 	shadow: true, // Enable shadows on the cube faces
+	// 	shadowOffset: 20, // Adjust the shadow offset
+	// 	shadowScale: 0.94 // Adjust the shadow scale
+	// },
 	// Other options remain unchanged
 	watchSlidesProgress: true,
 	loop: true,
@@ -249,7 +249,7 @@ function resumeCubeSlider() {
 }
 
 
-//? scroll-gallery-cars--swiper
+//? scroll-gallery-cars--swiperw
 if (window.innerWidth < 1024) {
 	new Swiper('.scroll-gallery-cars--swiper', {
 		slidesPerView: 2.2,

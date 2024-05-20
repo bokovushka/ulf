@@ -228,7 +228,7 @@
 				padding: 30px 12px;
 				border: 1px solid rgb(245, 247, 247);
 				border-radius: 20px;
-				box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
+				box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.1);
 			}
 			@include sm-max {
 				padding-top: 60px;
@@ -293,6 +293,7 @@
 		}
 		@include xs-max {
 			position: relative;
+			max-width: 100%;
 		}
 		.plyr--video {
 			// pointer-events: none;
@@ -1266,6 +1267,11 @@
 					font-weight: 600;
 					line-height: 22px;
 					color: $white;
+					.new-line {
+						@media (min-width: 440px) {
+							display: none;
+						}
+					}
 					.i-info {
 						filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
 							brightness(103%) contrast(103%);

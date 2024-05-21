@@ -93,7 +93,7 @@
 					font-size: 14px;
 					font-weight: 700;
 					line-height: 17px;
-					box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
+					box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
 					background: linear-gradient(163.06deg, rgb(255, 255, 255) 11.301%, rgb(230, 236, 245) 99.867%);
 					padding: 10px 16px;
 					border-radius: 8px;
@@ -533,7 +533,7 @@
 	.our-fleet-preview--item {
 		border: 1px solid rgb(245, 247, 247);
 		border-radius: 10px;
-		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
+		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
 		padding: 16px;
 		height: 100%;
 		width: 100%;
@@ -687,7 +687,7 @@
 	}
 	.inner {
 		border-radius: 20px;
-		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
+		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
 		background: radial-gradient(214.6% 98.86% at 70% 48%, rgb(22, 72, 123), rgb(4, 25, 66) 100%);
 		color: $white;
 		@include sm-max {
@@ -700,7 +700,7 @@
 .any-questions {
 	.inner {
 		border-radius: 20px;
-		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
+		box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
 		background: radial-gradient(214.6% 98.86% at 70% 48%, rgb(22, 72, 123), rgb(4, 25, 66) 100%);
 		color: $white;
 		@include sm-max {
@@ -1300,7 +1300,7 @@
 						padding: 16px 12px;
 						border: 1px solid rgb(245, 247, 247);
 						border-radius: 10px;
-						box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
+						box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
 						font-size: 16px;
 						font-weight: 700;
 						line-height: 24px;
@@ -1373,7 +1373,7 @@
 			}
 			.inner {
 				border-radius: 10px;
-				box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.05);
+				box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
 				background: linear-gradient(163.06deg, rgb(255, 255, 255) 17.826%, rgb(230, 236, 245) 85.993%);
 				padding: 8px 16px;
 				min-height: 80px;

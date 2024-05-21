@@ -184,7 +184,7 @@ new Swiper(".gallery-car--swiper", {
 
 //? story-cube
 new Swiper(".story-cube--swiper", {
-	speed: 1000, // Adjust the speed of the transition as needed
+	// speed: 1000, // Adjust the speed of the transition as needed
 	effect: 'fade', // Set the effect to 'cube'
 	// cubeEffect: {
 	// 	slideShadows: true, // Enable slide shadows

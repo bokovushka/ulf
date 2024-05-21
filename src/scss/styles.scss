@@ -228,7 +228,7 @@
 				padding: 30px 12px;
 				border: 1px solid rgb(245, 247, 247);
 				border-radius: 20px;
-				box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.1);
+				box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
 			}
 			@include sm-max {
 				padding-top: 60px;
@@ -576,7 +576,7 @@
 				position: relative;
 				display: flex;
 				justify-content: space-between;
-				gap: 20px;
+				gap: 15px;
 				text-align: left;
 				&:after {
 					content: "";

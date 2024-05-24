@@ -1445,11 +1445,11 @@
 }
 .horizontal-scoll-wrapper {
 	.scroll-gallery-cars--item {
-		@include md-max {
-			flex: 0 0 auto;
-			max-width: unset;
-			padding: 0 !important;
-		}
+		// @include md-max {
+		flex: 0 0 auto;
+		max-width: unset;
+		padding: 0 !important;
+		// }
 	}
 }
 

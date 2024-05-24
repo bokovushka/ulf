@@ -2287,6 +2287,10 @@ p {
   height: 1px;
 }
 
+.tooltip-help-info .tooltip-inner {
+  max-width: 65%;
+}
+
 @media (max-width: 767px) {
   .home-page .section-top {
     background: rgb(6, 32, 44);
@@ -3673,12 +3677,10 @@ p {
   min-width: 0;
 }
 
-@media (max-width: 1023px) {
-  .horizontal-scoll-wrapper .scroll-gallery-cars--item {
-    flex: 0 0 auto;
-    max-width: unset;
-    padding: 0 !important;
-  }
+.horizontal-scoll-wrapper .scroll-gallery-cars--item {
+  flex: 0 0 auto;
+  max-width: unset;
+  padding: 0 !important;
 }
 
 .ready-drive-horizontal ul {

@@ -1841,3 +1841,8 @@ p {
 		height: 1px;
 	}
 }
+.tooltip-help-info {
+	.tooltip-inner {
+		max-width: 65%;
+	}
+}

@@ -250,42 +250,39 @@ function resumeCubeSlider() {
 
 
 //? scroll-gallery-cars--swiperw
-if (window.innerWidth < 1024) {
-	new Swiper('.scroll-gallery-cars--swiper', {
-		slidesPerView: 2.2,
-		freeMode: true,
-		spaceBetween: 20,
-		breakpoints: {
-			640: {
-			},
-			480: {
-				slidesPerView: 1.6,
-			},
-			0: {
-				slidesPerView: 1.2,
-			}
+new Swiper('.scroll-gallery-cars--swiper', {
+	slidesPerView: 2.2,
+	freeMode: true,
+	spaceBetween: 20,
+	grabCursor: true,
+	breakpoints: {
+		640: {
 		},
-	});
-}
+		480: {
+			slidesPerView: 1.6,
+		},
+		0: {
+			slidesPerView: 1.2,
+		}
+	},
+});
 
 //? scroll-gallery-cars--swiper
-if (window.innerWidth < 1024) {
-	new Swiper('.horizontal-scoll-wrapper--scroll-gallery', {
-		slidesPerView: 2.2,
-		freeMode: true,
-		spaceBetween: 20,
-		breakpoints: {
-			640: {
-			},
-			480: {
-				slidesPerView: 1.6,
-			},
-			0: {
-				slidesPerView: 1.2,
-			}
+new Swiper('.horizontal-scoll-wrapper--scroll-gallery', {
+	slidesPerView: 2.2,
+	freeMode: true,
+	spaceBetween: 20,
+	breakpoints: {
+		640: {
 		},
-	});
-}
+		480: {
+			slidesPerView: 1.6,
+		},
+		0: {
+			slidesPerView: 1.2,
+		}
+	},
+});
 
 //?fancybox
 

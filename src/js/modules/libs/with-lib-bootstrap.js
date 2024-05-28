@@ -22,6 +22,7 @@ $('.btn-modal-close').on('click', function () {
 //? tooltip info field
 $(function () {
 	var tooltipInfo = ['<div class="tooltip tooltip-help-info" role="tooltip">',
+		'<div class="arrow"></div>',
 		'<div class="tooltip-inner">',
 		'</div>',
 		'</div>'].join('');
@@ -30,6 +31,7 @@ $(function () {
 		html: true,
 		placement: "top",
 		template: tooltipInfo,
-		// fallbackPlacement: [], // строго в заданому напрямку, не дає можливості при скролі позиціонувати в інші сторони
+		// fallbackPlacement: ["top"], 
+		// строго в заданому напрямку, не дає можливості при скролі позиціонувати в інші сторони
 	});
 });

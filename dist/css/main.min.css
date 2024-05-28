@@ -1323,6 +1323,9 @@ p {
   transform: rotate(-180deg);
 }
 
+.select2-container {
+  z-index: 1070;
+}
 .select2-container .select2-dropdown.select2-dropdown--below {
   border-radius: 0 0 8px 8px;
   overflow: hidden;
@@ -2287,8 +2290,17 @@ p {
   height: 1px;
 }
 
+.tooltip-help-info {
+  max-width: 45%;
+  z-index: 1025;
+}
+@media (max-width: 767px) {
+  .tooltip-help-info {
+    max-width: 85%;
+  }
+}
 .tooltip-help-info .tooltip-inner {
-  max-width: 65%;
+  max-width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -2783,7 +2795,6 @@ p {
   }
 }
 .our-fleet .our-fleet-preview--item {
-  border: 1px solid rgb(245, 247, 247);
   border-radius: 10px;
   box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
   padding: 16px;

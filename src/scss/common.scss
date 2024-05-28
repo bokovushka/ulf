@@ -766,6 +766,7 @@ p {
 	}
 }
 .select2-container {
+	z-index: 1070;
 	.select2-dropdown {
 		&.select2-dropdown--below {
 			border-radius: 0 0 8px 8px;
@@ -1842,7 +1843,12 @@ p {
 	}
 }
 .tooltip-help-info {
+	max-width: 45%;
+	z-index: 1025;
+	@include sm-max {
+		max-width: 85%;
+	}
 	.tooltip-inner {
-		max-width: 65%;
+		max-width: 100%;
 	}
 }

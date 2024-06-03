@@ -20,12 +20,15 @@ $('.btn-modal-close').on('click', function () {
 });
 
 //? tooltip info field
+
+
 $(function () {
 	var tooltipInfo = ['<div class="tooltip tooltip-help-info" role="tooltip">',
 		'<div class="arrow"></div>',
 		'<div class="tooltip-inner">',
 		'</div>',
 		'</div>'].join('');
+
 	$('.i-info').tooltip({
 		trigger: "hover", //hover focus click manual
 		html: true,

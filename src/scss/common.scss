@@ -242,7 +242,7 @@ p {
 .list-inline-item {
 	&:not(:last-child) {
 		@include lg-max {
-			margin-right: 18px;
+			margin-right: 12px;
 		}
 	}
 }

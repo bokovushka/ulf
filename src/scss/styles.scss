@@ -652,6 +652,29 @@
 		}
 	}
 }
+.our-fleet-preview--item {
+	position: relative;
+	.discount,
+	.in-subscription {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		padding: 4px 14px;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 20px;
+		border-radius: 16px;
+		width: max-content;
+		color: $white;
+	}
+	.discount {
+		background: $main-blue;
+	}
+	.in-subscription {
+		background: $light-grey;
+		text-transform: uppercase;
+	}
+}
 .our-fleet--mob {
 	.our-fleet-search {
 		.our-fleet-preview--item {
